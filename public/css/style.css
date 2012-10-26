@@ -1,0 +1,67 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+    background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+/*
+Override twitter bootstrap
+*/
+.navbar .nav {
+    display: block;
+    float: right;
+    left: 0;
+    margin: 0;
+    position: relative;
+}
+.navbar .nav li a {
+    color: #777777;
+    float: none;
+    padding: 1px 25px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+/*
+Bringing back the blink tag
+*/
+@-webkit-keyframes blink {
+  0%     { opacity: 0 } 50% { opacity: 0 }
+  50.01% { opacity: 1 } 100% { opacity: 1 }
+}
+ 
+blink {
+  -webkit-animation: blink 0.7s infinite linear alternate;
+  -webkit-font-smoothing: antialiased;
+}

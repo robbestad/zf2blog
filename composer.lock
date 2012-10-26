@@ -1,0 +1,364 @@
+{
+    "hash": "90297a76c3291443b305211819d88267",
+    "packages": [
+        {
+            "name": "twig/twig",
+            "version": "v1.9.2",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/fabpot/Twig.git",
+                "reference": "v1.9.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/fabpot/Twig/zipball/v1.9.2",
+                "reference": "v1.9.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "time": "2012-08-25 10:32:57",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ]
+        },
+        {
+            "name": "zendexperts/ze-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZendExperts/ZeTheme",
+                "reference": "9a2bb5cc39626af9abe247e2623d0b506b8af33b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ZendExperts/ZeTheme/zipball/9a2bb5cc39626af9abe247e2623d0b506b8af33b",
+                "reference": "9a2bb5cc39626af9abe247e2623d0b506b8af33b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "1347733417",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "ZeTheme": "src/"
+                },
+                "classmap": [
+                    "./"
+                ]
+            },
+            "license": [
+                "New BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Cosmin Harangus",
+                    "homepage": "http://www.zendexperts.com"
+                }
+            ],
+            "description": "ZeTheme is a Zend Framework 2 module that allows you to switch between various themes. The module does not contain any themes, but you can create your own.",
+            "homepage": "https://github.com/ZendExperts/ZeTheme",
+            "keywords": [
+                "templating",
+                "zf2",
+                "module",
+                "view"
+            ]
+        },
+        {
+            "name": "zendframework/zendframework",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/zendframework/zf2.git",
+                "reference": "release-2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/zendframework/zf2/zipball/release-2.0.3",
+                "reference": "release-2.0.3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "replace": {
+                "zendframework/zend-acl": "self.version",
+                "zendframework/zend-authentication": "self.version",
+                "zendframework/zend-barcode": "self.version",
+                "zendframework/zend-cache": "self.version",
+                "zendframework/zend-captcha": "self.version",
+                "zendframework/zend-code": "self.version",
+                "zendframework/zend-config": "self.version",
+                "zendframework/zend-console": "self.version",
+                "zendframework/zend-crypt": "self.version",
+                "zendframework/zend-db": "self.version",
+                "zendframework/zend-di": "self.version",
+                "zendframework/zend-dom": "self.version",
+                "zendframework/zend-escaper": "self.version",
+                "zendframework/zend-eventmanager": "self.version",
+                "zendframework/zend-feed": "self.version",
+                "zendframework/zend-file": "self.version",
+                "zendframework/zend-filter": "self.version",
+                "zendframework/zend-form": "self.version",
+                "zendframework/zend-http": "self.version",
+                "zendframework/zend-i18n": "self.version",
+                "zendframework/zend-inputfilter": "self.version",
+                "zendframework/zend-json": "self.version",
+                "zendframework/zend-ldap": "self.version",
+                "zendframework/zend-loader": "self.version",
+                "zendframework/zend-log": "self.version",
+                "zendframework/zend-mail": "self.version",
+                "zendframework/zend-markup": "self.version",
+                "zendframework/zend-math": "self.version",
+                "zendframework/zend-memory": "self.version",
+                "zendframework/zend-mime": "self.version",
+                "zendframework/zend-modulemanager": "self.version",
+                "zendframework/zend-mvc": "self.version",
+                "zendframework/zend-navigation": "self.version",
+                "zendframework/zend-paginator": "self.version",
+                "zendframework/zend-progressbar": "self.version",
+                "zendframework/zend-serializer": "self.version",
+                "zendframework/zend-server": "self.version",
+                "zendframework/zend-servicemanager": "self.version",
+                "zendframework/zend-session": "self.version",
+                "zendframework/zend-soap": "self.version",
+                "zendframework/zend-stdlib": "self.version",
+                "zendframework/zend-tag": "self.version",
+                "zendframework/zend-text": "self.version",
+                "zendframework/zend-uri": "self.version",
+                "zendframework/zend-validator": "self.version",
+                "zendframework/zend-view": "self.version",
+                "zendframework/zend-xmlrpc": "self.version"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.1",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "doctrine/common": "Doctrine\\Common >=2.1 for annotation features",
+                "ext-intl": "ext/intl for i18n features",
+                "pecl-weakref": "Implementation of weak references for Zend\\Stdlib\\CallbackHandler",
+                "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
+                "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
+            },
+            "time": "2012-10-17 14:33:54",
+            "bin": [
+                "bin/classmap_generator.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Zend\\": "library/",
+                    "ZendTest\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 2",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "framework",
+                "zf2"
+            ]
+        },
+        {
+            "name": "zf-commons/zfc-base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/ZF-Commons/ZfcBase.git",
+                "reference": "5057eb22bdc5a97e4b23716079485bfa92e44054"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ZF-Commons/ZfcBase/zipball/5057eb22bdc5a97e4b23716079485bfa92e44054",
+                "reference": "5057eb22bdc5a97e4b23716079485bfa92e44054",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zendframework": "2.*"
+            },
+            "time": "1347633346",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "ZfcBase": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                }
+            ],
+            "description": "A set of genetic (abstract) classes which are commonly used across multiple modules.",
+            "homepage": "https://github.com/ZF-Commons/ZfcBase",
+            "keywords": [
+                "zf2"
+            ]
+        },
+        {
+            "name": "zf-commons/zfc-twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/ZF-Commons/ZfcTwig.git",
+                "reference": "cdc570cff5d710555426a86d9cde967e05867176"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ZF-Commons/ZfcTwig/zipball/cdc570cff5d710555426a86d9cde967e05867176",
+                "reference": "cdc570cff5d710555426a86d9cde967e05867176",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "twig/twig": "1.9.*"
+            },
+            "time": "1347966322",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "ZfcTwig": "src/"
+                },
+                "classmap": [
+                    "./"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Cosmin Harangus",
+                    "email": "cosmin@zendexperts.com",
+                    "homepage": "http://www.zendexperts.com/"
+                }
+            ],
+            "description": "Zend Framework 2 Module that provides a Twig rendering strategy and extensions to render actions or trigger events from your templates",
+            "homepage": "http://www.github.com/ZF-Commons/ZfcTwig/",
+            "keywords": [
+                "twig",
+                "zf2",
+                "module"
+            ]
+        },
+        {
+            "name": "zf-commons/zfc-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/ZF-Commons/ZfcUser.git",
+                "reference": "d2302dd145d113f9bc14067917557fd8d974229d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ZF-Commons/ZfcUser/zipball/53aa3a48c198c3e7e8e6f0261a9e88c7bc1d9cd6",
+                "reference": "53aa3a48c198c3e7e8e6f0261a9e88c7bc1d9cd6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zf-commons/zfc-base": "dev-master",
+                "zendframework/zendframework": "2.*"
+            },
+            "time": "1350303600",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "ZfcUser": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                }
+            ],
+            "description": "A generic user registration and authentication module for ZF2. Supports Zend\\Db and Doctrine2.",
+            "homepage": "https://github.com/ZF-Commons/ZfcUser",
+            "keywords": [
+                "zf2"
+            ]
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "zendexperts/ze-theme": 20,
+        "zf-commons/zfc-user": 20,
+        "zf-commons/zfc-base": 20,
+        "zf-commons/zfc-twig": 20
+    }
+}

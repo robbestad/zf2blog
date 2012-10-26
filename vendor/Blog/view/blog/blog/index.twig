@@ -1,0 +1,27 @@
+
+{% block title %}
+{{ headTitle('Blog - ') }}
+{% endblock %}
+
+
+<pre class="brush: php; ruler: true; first-line: 1; highlight: [2, 3]; collapse: false">
+ public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\ClassMapAutoloader' => array(
+                __DIR__ . '/autoload_classmap.php',
+            ),
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
+        );
+    }
+
+</pre>
+
+
+
+
+{{ 4 + 4 }}
