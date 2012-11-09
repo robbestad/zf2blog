@@ -10,7 +10,7 @@ use Zend\InputFilter\InputFilterInterface;
 class Blog implements InputFilterAwareInterface
 {
     public $id;
-    public $artist;
+    public $content;
     public $title;
 
     protected $inputFilter;
@@ -21,8 +21,9 @@ class Blog implements InputFilterAwareInterface
     public function exchangeArray($data)
     {
         $this->id     = (isset($data['id'])) ? $data['id'] : null;
-        $this->artist = (isset($data['artist'])) ? $data['artist'] : null;
-        $this->title  = (isset($data['title'])) ? $data['title'] : null;
+        $this->title = (isset($data['title'])) ? $data['title'] : null;
+        $this->endret  = (isset($data['endret'])) ? $data['endret'] : null;
+        $this->content  = (isset($data['content'])) ? $data['content'] : null;
     }
 
     public function getArrayCopy()
@@ -51,7 +52,7 @@ class Blog implements InputFilterAwareInterface
             )));
 
             $inputFilter->add($factory->createInput(array(
-                'name'     => 'artist',
+                'name'     => 'content',
                 'required' => true,
                 'filters'  => array(
                     array('name' => 'StripTags'),
@@ -63,7 +64,7 @@ class Blog implements InputFilterAwareInterface
                         'options' => array(
                             'encoding' => 'UTF-8',
                             'min'      => 1,
-                            'max'      => 100,
+                            'max'      => 65536,
                         ),
                     ),
                 ),

@@ -13,26 +13,28 @@ class BlogController extends AbstractActionController
 
     public function indexAction()
     {
-        return new ViewModel();
-/*        return new ViewModel(array(
-            'blogs' => $this->getAlbumTable()->fetchAll(),
-        ));
-  */
+       // return new ViewModel();
+        return new ViewModel(array(
+            'blogs' => $this->getBlogTable()->fetchAll(),
+            'currentRoute' => "blog", 
+       ));
+  
     }
 
     public function addAction()
     {
-        $form = new AlbumForm();
+    
+        $form = new BlogForm();
         $form->get('submit')->setAttribute('value', 'Add');
 
         $request = $this->getRequest();
         if ($request->isPost()) {
-            $blog = new Album();
+            $blog = new Blog();
             $form->setInputFilter($blog->getInputFilter());
             $form->setData($request->getPost());
             if ($form->isValid()) {
                 $blog->exchangeArray($form->getData());
-                $this->getAlbumTable()->saveAlbum($blog);
+                $this->getBlogTable()->saveBlog($blog);
 
                 // Redirect to list of blogs
                 return $this->redirect()->toRoute('blog');
@@ -48,9 +50,9 @@ class BlogController extends AbstractActionController
         if (!$id) {
             return $this->redirect()->toRoute('blog', array('action'=>'add'));
         }
-        $blog = $this->getAlbumTable()->getAlbum($id);
+        $blog = $this->getBlogTable()->getBlog($id);
 
-        $form = new AlbumForm();
+        $form = new BlogForm();
         $form->bind($blog);
         $form->get('submit')->setAttribute('value', 'Edit');
         
@@ -58,7 +60,7 @@ class BlogController extends AbstractActionController
         if ($request->isPost()) {
             $form->setData($request->getPost());
             if ($form->isValid()) {
-                $this->getAlbumTable()->saveAlbum($blog);
+                $this->getBlogTable()->saveBlog($blog);
 
                 // Redirect to list of blogs
                 return $this->redirect()->toRoute('blog');
@@ -83,7 +85,7 @@ class BlogController extends AbstractActionController
             $del = $request->getPost()->get('del', 'No');
             if ($del == 'Yes') {
                 $id = (int)$request->getPost()->get('id');
-                $this->getAlbumTable()->deleteAlbum($id);
+                $this->getBlogTable()->deleteBlog($id);
             }
 
             // Redirect to list of blogs
@@ -92,11 +94,11 @@ class BlogController extends AbstractActionController
 
         return array(
             'id' => $id,
-            'blog' => $this->getAlbumTable()->getAlbum($id)
+            'blog' => $this->getBlogTable()->getBlog($id)
         );
     }
 
-    public function getAlbumTable()
+    public function getBlogTable()
     {
         if (!$this->blogTable) {
             $sm = $this->getServiceLocator();

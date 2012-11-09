@@ -17,11 +17,17 @@ class Module
     public function onBootstrap(MvcEvent $e)
     {
         $e->getApplication()->getServiceManager()->get('translator');
+        $e->getApplication()->getServiceManager()->get('viewhelpermanager')->setFactory('controllerName', function($sm) use ($e) {
+            
+            $viewHelper = new View\Helper\ControllerName($e->getRouteMatch());
+            return $viewHelper;
+        });
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
     }
 
+    
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';

@@ -1,3 +1,8 @@
-index
+applicatin index
+route:{{currentRoute}}
+{% if currentRoute %}
+ {{controllerName()}}
+{% endif %}
+
 {% include basePath('application/content/stuff.twig') %}
     

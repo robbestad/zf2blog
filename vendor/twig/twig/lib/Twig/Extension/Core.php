@@ -1,5 +1,4 @@
 <?php
-
 if (!defined('ENT_SUBSTITUTE')) {
     define('ENT_SUBSTITUTE', 8);
 }
@@ -34,6 +33,8 @@ class Twig_Extension_Core extends Twig_Extension
             $this->dateFormats[1] = $dateIntervalFormat;
         }
     }
+    
+   
 
     /**
      * Gets the default format to be used by the date filter.
@@ -120,6 +121,7 @@ class Twig_Extension_Core extends Twig_Extension
      */
     public function getFilters()
     {
+    
         $filters = array(
             // formatting filters
             'date'          => new Twig_Filter_Function('twig_date_format_filter', array('needs_environment' => true)),
@@ -129,7 +131,7 @@ class Twig_Extension_Core extends Twig_Extension
             'number_format' => new Twig_Filter_Function('twig_number_format_filter', array('needs_environment' => true)),
             'abs'           => new Twig_Filter_Function('abs'),
 
-            // encoding
+                       // encoding
             'url_encode'       => new Twig_Filter_Function('twig_urlencode_filter'),
             'json_encode'      => new Twig_Filter_Function('twig_jsonencode_filter'),
             'convert_encoding' => new Twig_Filter_Function('twig_convert_encoding'),
@@ -140,6 +142,7 @@ class Twig_Extension_Core extends Twig_Extension
             'upper'      => new Twig_Filter_Function('strtoupper'),
             'lower'      => new Twig_Filter_Function('strtolower'),
             'striptags'  => new Twig_Filter_Function('strip_tags'),
+            'rot13'       => new Twig_Filter_Function('str_rot13'),
             'trim'       => new Twig_Filter_Function('trim'),
             'nl2br'      => new Twig_Filter_Function('nl2br', array('pre_escape' => 'html', 'is_safe' => array('html'))),
 
@@ -185,6 +188,9 @@ class Twig_Extension_Core extends Twig_Extension
             'cycle'    => new Twig_Function_Function('twig_cycle'),
             'random'   => new Twig_Function_Function('twig_random', array('needs_environment' => true)),
             'date'     => new Twig_Function_Function('twig_date_converter', array('needs_environment' => true)),
+            'slug'	   => new Twig_Function_Function('getSlug'),
+
+
         );
     }
 

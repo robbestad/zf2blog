@@ -14,15 +14,20 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+	
+
     public function indexAction()
     {
-        return new ViewModel();
+        return new ViewModel(array(
+            'currentRoute' => "home!!!", 
+       ));
     }
     
     public function about()
     {
-         echo "about";
-         return new ViewModel();
+         return new ViewModel(array(
+            'currentRoute' => "about!!", 
+       ));
     }
     
 }
