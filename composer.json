@@ -10,7 +10,6 @@
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*",
-        "zendexperts/ze-theme": "dev-master",
         "zf-commons/zfc-user": "dev-master",
         "zf-commons/zfc-base": "dev-master",
         "zf-commons/zfc-twig": "dev-master"
