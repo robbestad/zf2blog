@@ -91,15 +91,14 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'    	   => __DIR__ . '/../views/layout/layout.twig',
-            'application/index/index'       => __DIR__ . '/../views/application/index/index.twig', 
+            'layout/layout'    	   => __DIR__ . '/../view/layout/layout.twig',
+            'application/index/index'       => __DIR__ . '/../view/application/index/index.twig', 
             //'application/index/about'       => __DIR__ . '/../views/application/index/index.twig', 
-            'error/404'               => __DIR__ . '/../views/error/404.twig',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'error/404'               => __DIR__ . '/../view/error/404.twig',
+            'error/index'             => __DIR__ . '/../view/error/index.twig',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
-            __DIR__ . '/../views',
         ),
     ),
 );

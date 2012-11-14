@@ -3,5 +3,9 @@
 {% endblock %}
 
 <h1>{{blogs.title}}</h1>
-
     {{ blogs.content|raw }}
+
+    {% autoescape true %}
+     {{ blogs.content|raw }}
+     {{ blogs.content }}
+{% endautoescape %}
