@@ -38,6 +38,7 @@ div.container a.brand {
 /*
 Override twitter bootstrap
 */
+/*
 .navbar .nav {
     display: block;
     float: right;
@@ -52,6 +53,7 @@ Override twitter bootstrap
     text-decoration: none;
     text-shadow: 0 1px 0 #FFFFFF;
 }
+*/
 
 /*
 Bringing back the blink tag

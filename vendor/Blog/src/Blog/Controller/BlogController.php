@@ -21,6 +21,17 @@ class BlogController extends AbstractActionController
   
     }
 
+
+    public function viewAction()
+    {
+       $id = (int)$this->params('id');
+        return new ViewModel(array(
+            'blogs' => $this->getBlogTable()->getBlog($id),
+            'currentRoute' => "blog", 
+       ));
+  
+    }
+
     public function addAction()
     {
     

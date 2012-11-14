@@ -36,6 +36,7 @@ class BlogTable extends AbstractTableGateway
         $id  = (int) $id;
         $rowset = $this->select(array('id' => $id));
         $row = $rowset->current();
+    
         if (!$row) {
             throw new \Exception("Could not find row $id");
         }

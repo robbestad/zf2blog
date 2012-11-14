@@ -1,0 +1,7 @@
+{% block title %}
+    {{ headTitle('Blog - ') }}
+{% endblock %}
+
+<h1>{{blogs.title}}</h1>
+
+    {{ blogs.content|raw }}
