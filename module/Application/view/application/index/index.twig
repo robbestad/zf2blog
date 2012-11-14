@@ -1,0 +1,36 @@
+<img class="loader" src="/images/loader.gif">
+
+<a href="#" id="testloader">Test loader</a>
+
+{% include basePath('application/content/stuff.twig') %}
+    
+
+    
+    
+<hr>
+
+
+DEBUG:
+Kontroller: {{controllerName()|raw}}
+<hr>
+
+
+{% if 'Index' in controllerName() %}
+index!!
+{% endif %}
+
+
+{% if 'Blog' in controllerName() %}
+blog!!
+{% endif %}
+
+
+
+
+
+
+{% set someString = 'someRandomCamelCaseString' %}
+{{ someString|rot13}}
+{{ tester }}
+
+<hr>

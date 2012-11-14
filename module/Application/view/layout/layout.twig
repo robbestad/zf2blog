@@ -1,0 +1,152 @@
+{{ doctype() }}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    {% block title %}
+    {{ headTitle('Sven Anders Robbestad') }}
+    {% endblock %}
+
+    {% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ headMeta() }}
+    {% endblock %}
+
+    {% block link %}
+    <link href="{{ basePath('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ basePath('/css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ basePath('/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    {{ headLink() }}
+    {% endblock %}
+    
+                  
+	<!-- Will be displayed in most browsers other than old IE versions -->
+	<link rel="icon" type="image/png" href="images/icons/vector-social-media/32px/star.png" />
+	       
+	<!-- commented, remove this line to use IE & iOS favicons            -->
+	<link rel="shortcut icon" href="images/icons/favicon.ico" />
+	<link rel="apple-touch-icon" href="images/icons/ios-icon.png" />            
+	<!-- end of comment -->
+	
+	
+    {% block headscript %}
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="{{ basePath('/js/html5.js') }}"></script>
+    <![endif]-->
+    {{ headScript() }}
+    {% endblock %}
+</head>
+
+<body>
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="{{ url('home') }}">Sven Anders Robbestad</a>
+            <div class="nav-collapse in" style="height: auto;">
+                <ul class="nav nav-pills">
+                    <li 
+                    {% if 'Index' in controllerName() %}
+					class="active"
+					{% endif %}
+					><a href="{{ url('home') }}">Home</a></li>
+                    <li class=""><a href="{{ url('about') }}">About</a></li>
+                    
+                    <li 
+                    {% if 'Blog' in controllerName() %}
+					class="active"
+					{% endif %}
+					><a href="{{ url('blog') }}">Blog</a></li>
+                 </ul>
+             
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="span8">{{ content | raw }}</div>
+      <div class="span4">sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar </div>
+    </div>
+
+    {% block inlinescript %}
+    {{ inlineScript() }}
+    {% endblock %}
+
+    <footer>
+        <p>&nbsp;</p>
+        <p>&copy; Sven A Robbestad. All rights reserved.</p>
+    </footer>
+    
+</div>
+
+
+<!-- REQUIRED - jQuery library -->            
+<!-- load jQuery from local file -->
+<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>            
+<script type="text/javascript" src="/js/loader.js"></script>            
+<!-- RASTERIZE.js -->
+<!--<script type="text/javascript" src="/js/raster.js"></script>-->
+            
+<!-- REQUIRED - feature detection & script loader -->
+<!--<script type="text/javascript" src="/js/modernizr-2.0.min.js"></script>-->
+
+
+<!-- Syntax highlighter -->
+<!-- Include required JS files -->
+<script type="text/javascript" src="/js/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+<script type="text/javascript" src="/js/shCore.js"></script>
+<script type="text/javascript" src="/js/shBrushPhp.js"></script>
+
+<!-- Include *at least* the core style and default theme -->
+<link href="/css/sh/shCore.css" rel="stylesheet" type="text/css" />
+<link href="/css/sh/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+
+<!-- TWITTER BOOTSTRAP -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+
+
+
+<!-- GOOGLE ANALYTICS -->
+<!--
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-9624976-6']);
+_gaq.push(['_setDomainName', 'robbestad.no']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+-->
+<!-- GA DONE -->
+
+<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+<script type="text/javascript">
+$(document).ready(function() {
+SyntaxHighlighter.all();
+$(".toolbar").css("visibility","hidden");
+
+ $("img").funloader()
+})
+</script>
+
+
+</body>
+</html>
