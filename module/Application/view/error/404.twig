@@ -1,21 +1,54 @@
 
 
 <CENTER><DIV ALIGN="center"> 
-<PRE><CODE> 
-<TABLE BORDER=0 BGCOLOR="#C0C0C0"><TR><TD><CODE><FONT COLOR="#330033">ERR 404</FONT></CODE></TD></TR></TABLE> 
-FFFFFF00 41414141 FF00000F FF00000F 0FFFFF0 FF000FF FF000FF
-FF000FF0 000F000F FF000000 FF00000F FF000FF FF000FF 0FF0FF0
-FFFFFF0F 000F000F FF000000 FF00000F 0FFF000 FF000FF 00FFF00
-FFFFFF0F 000F000F FF000000 FF00000F 000FFF0 FF000FF 00FFF00
-FF000FF0 000F000F FF000000 FF00000F FF000FF FF000FF 0FF0FF0
-FFFFFF0F 41414141 41414141 41414141 0FFFFF0 0FFFFF0 FF000FF
- 
+<CODE> 
  
 You have attempted to access a non-existent page.
 The current HTTP session will be terminated.
- 
+<p>&nbsp;</p>
+Reason:
+<h2>{{ message }}</h2>
+
+{% if reason %}
+    {% if reason == 'error-controller-cannot-dispatch' %}
+        {% set reasonMessage = 'The requested controller was uanble to dispatch the request.' %}
+    {% endif %}
+    {% if reason == 'error-controller-not-found' %}
+        {% set reasonMessage = 'The requested controller could not be mapped to an existing controller class.' %}
+    {% endif %}
+    {% if reason == 'error-controller-invalid' %}
+        {% set reasonMessage = 'The requested controller was not dispatchable.' %}
+    {% endif %}
+    {% if reason == 'error-router-no-match' %}
+        {% set reasonMessage = 'The requested URL could not be matched by routing.' %}
+    {% endif %}
+
+    <p>{{ reasonMessage }}</p>
+
+    {% if controller %}
+        <dl>
+            <dt>Controller</dt>
+            <dd>
+                {{ controller }}
+                {% if controller_class and controller_class != controller%}
+                    resolves to {{ controller_class }}
+                {% endif %}
+            </dd>
+        </dl>
+    {% endif %}
+
+    {% if exception %}
+        <h2>Exception:</h2>
+        <p><b>{{ exception.getMessage() }}</b></p>
+
+        <h3>Stack trace</h3>
+        <pre>
+            {{ exception.getTraceAsString() }}
+        </pre>
+    {% endif %}
+{% endif %}
  
 Press any key to continue<blink>_</blink> 
-</CODE></PRE> 
+</CODE> 
 </DIV></CENTER> 
 

@@ -8,7 +8,7 @@ use Zend\Db\ResultSet\ResultSet;
 
 class BlogTable extends AbstractTableGateway
 {
-    protected $table = 'blog';
+    protected $table = 'posts';
     protected $logger;
 
     public function __construct(Adapter $adapter)
@@ -27,7 +27,9 @@ class BlogTable extends AbstractTableGateway
     
     public function fetchAll()
     {
-        $resultSet = $this->select();
+    	$resultSet = $this->select();
+        
+//        $resultSet = $this->selectWith("SELECT lead FROM blog");
         return $resultSet;
     }
 
@@ -36,7 +38,6 @@ class BlogTable extends AbstractTableGateway
         $id  = (int) $id;
         $rowset = $this->select(array('id' => $id));
         $row = $rowset->current();
-    
         if (!$row) {
             throw new \Exception("Could not find row $id");
         }
@@ -48,6 +49,7 @@ class BlogTable extends AbstractTableGateway
         $data = array(
             'content' => $blog->content,
             'title'  => $blog->title,
+            
         );
 
         $id = (int)$blog->id;

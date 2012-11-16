@@ -16,12 +16,14 @@
     <link href="{{ basePath('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/style.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ basePath('/css/sh/shCore.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ basePath('/css/sh/shCoreEclipse.css') }}" rel="stylesheet" type="text/css" />
+
     <link rel="shortcut icon" href="/images/favicon.ico">
     {{ headLink() }}
     {% endblock %}
     
-                  
-	<!-- Will be displayed in most browsers other than old IE versions -->
+    <!-- Will be displayed in most browsers other than old IE versions -->
 	<link rel="icon" type="image/png" href="images/icons/vector-social-media/32px/star.png" />
 	       
 	<!-- commented, remove this line to use IE & iOS favicons            -->
@@ -39,7 +41,7 @@
     {% endblock %}
 </head>
 
-<body>
+<body onload="prettyPrint()">
 
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -74,24 +76,42 @@
     </div>
 </div>
 
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Welcome</h1>
+    <p class="lead">Welcome to robbestad.com.</p>
+  </div>
+</header>
 
 <div class="container-fluid">
-    <div class="row">
-      <div class="span8">{{ content | raw }}</div>
-      <div class="span4">sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar </div>
-    </div>
+    <div class="span12">
+    	{{ content | raw }}
+		
+		{% block inlinescript %}
+		{{ inlineScript() }}
+		{% endblock %}
 
-    {% block inlinescript %}
-    {{ inlineScript() }}
-    {% endblock %}
+    	</div>
+    <!--
+    	<div class="span3 offset1">
+    		
+    		<hr>
+<a href="http://www.amazon.co.uk/gp/product/1449381561/ref=as_li_qf_sp_asin_il?ie=UTF8&camp=1634&creative=6738&creativeASIN=1449381561&linkCode=as2&tag=svenanderobb-21"><img border="0" src="http://ws.assoc-amazon.co.uk/widgets/q?_encoding=UTF8&ASIN=1449381561&Format=_SL110_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=svenanderobb-21" ></a><img src="http://www.assoc-amazon.co.uk/e/ir?t=svenanderobb-21&l=as2&o=2&a=1449381561" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+    		<hr>
 
+    		
+    	</div>
+    	-->
+</div>
+
+<div class="container-fluid">
+  
     <footer>
         <p>&nbsp;</p>
         <p>&copy; Sven A Robbestad. All rights reserved.</p>
     </footer>
-    
 </div>
-
+  
 
 <!-- REQUIRED - jQuery library -->            
 <!-- load jQuery from local file -->
@@ -110,14 +130,25 @@
 <script type="text/javascript" src="/js/shCore.js"></script>
 <script type="text/javascript" src="/js/shBrushPhp.js"></script>
 
-<!-- Include *at least* the core style and default theme -->
-<link href="/css/sh/shCore.css" rel="stylesheet" type="text/css" />
-<link href="/css/sh/shCoreEclipse.css" rel="stylesheet" type="text/css" />
-
 <!-- TWITTER BOOTSTRAP -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 
-
+ <script type="text/javascript" src="/js/widgets.js"></script>
+   <script src="/js/google-code-prettify/prettify.js"></script>
+    <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+    <script src="/js/bootstrap-affix.js"></script>
+    <script src="/js/application.js"></script>
 
 
 <!-- GOOGLE ANALYTICS -->
@@ -143,7 +174,7 @@ $(document).ready(function() {
 SyntaxHighlighter.all();
 $(".toolbar").css("visibility","hidden");
 
- $("img").funloader()
+ $(".loader").funloader()
 })
 </script>
 

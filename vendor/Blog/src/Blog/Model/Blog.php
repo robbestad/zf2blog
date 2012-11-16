@@ -22,7 +22,7 @@ class Blog implements InputFilterAwareInterface
     {
         $this->id     = (isset($data['id'])) ? $data['id'] : null;
         $this->title = (isset($data['title'])) ? $data['title'] : null;
-        $this->endret  = (isset($data['endret'])) ? $data['endret'] : null;
+        $this->lead  = (isset($data['lead'])) ? $data['lead'] : null;
         $this->content  = (isset($data['content'])) ? $data['content'] : null;
     }
 

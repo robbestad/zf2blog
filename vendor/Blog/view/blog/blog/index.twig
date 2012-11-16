@@ -3,8 +3,13 @@
 {{ headTitle('Blog - ') }}
 {% endblock %}
 
-
+<div class="row">
 {% for blog in blogs %}
-    {{ blog.title }}
-    {{ blog.content|raw }}
+    <div class="span4">
+        <h2>{{ blog.title }}</h2>
+        <p>2{{ blog.lead|raw }}</p>
+        <p><a class="btn btn-success" href="blog/view/{{ blog.id }}" target="_self">{{ blog.title }} &raquo;</a></p>
+    </div>
 {% endfor %}
+
+</div>

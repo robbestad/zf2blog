@@ -131,7 +131,11 @@ class Twig_Extension_Core extends Twig_Extension
             'number_format' => new Twig_Filter_Function('twig_number_format_filter', array('needs_environment' => true)),
             'abs'           => new Twig_Filter_Function('abs'),
 
-                       // encoding
+            // debug
+            'var_dump'       => new Twig_Filter_Function('var_dump'),
+            
+            
+            // encoding
             'url_encode'       => new Twig_Filter_Function('twig_urlencode_filter'),
             'json_encode'      => new Twig_Filter_Function('twig_jsonencode_filter'),
             'convert_encoding' => new Twig_Filter_Function('twig_convert_encoding'),
