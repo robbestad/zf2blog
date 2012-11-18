@@ -28,13 +28,12 @@ class BlogTable extends AbstractTableGateway
     public function fetchAll()
     {
     	$resultSet = $this->select();
-        
-//        $resultSet = $this->selectWith("SELECT lead FROM blog");
         return $resultSet;
     }
 
     public function getBlog($id)
     {
+    
         $id  = (int) $id;
         $rowset = $this->select(array('id' => $id));
         $row = $rowset->current();
@@ -47,18 +46,18 @@ class BlogTable extends AbstractTableGateway
     public function saveBlog(Blog $blog)
     {
         $data = array(
-            'content' => $blog->content,
-            'title'  => $blog->title,
-            
+            'lead' => $blog->lead,
+            'title'  => $blog->title
         );
-
+        
         $id = (int)$blog->id;
         if ($id == 0) {
-            $this->logger->info("New entry added: {$blog->title} ");
+        
+            //$this->logger->info("New entry added: {$blog->title} ");
             $this->insert($data);
         } else {
             if ($this->getBlog($id)) {
-                $this->logger->info("Edit blog ID {$id}: {$blog->title}");
+            //    $this->logger->info("Edit blog ID {$id}: {$blog->title}");
                 $this->update($data, array('id' => $id));
             } else {
                 throw new \Exception('Form id does not exist');
@@ -68,7 +67,7 @@ class BlogTable extends AbstractTableGateway
 
     public function deleteBlog($id)
     {
-        $this->logger->info("Deleted blog ID {$id}");
+       // $this->logger->info("Deleted blog ID {$id}");
         $this->delete(array('id' => $id));
     }
 

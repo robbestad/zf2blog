@@ -27,15 +27,9 @@ class Module
                 'Blog\Model\BlogTable' =>  function($sm) {
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
                     $table = new BlogTable($dbAdapter);
-                    $table->setLogger($sm->get('logger'));
+                   // $table->setLogger($sm->get('logger'));
                     return $table;
-                },
-                'logger' => function($sm) {
-                    $writer = new \Zend\Log\Writer\Stream( 'data/log/blog.log');
-                    $logger = new \Zend\Log\Logger();
-                    $logger->addWriter($writer);
-                    return $logger;
-                },
+                }
             ),
         );
     }

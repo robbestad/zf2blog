@@ -2,7 +2,24 @@
     {{ headTitle('Blog - ') }}
 {% endblock %}
 
+user:{{user}}
 <h1>{{blogs.title}}</h1>
+
+<div class="btn-group">
+  <button class="btn btn-primary">Action</button>
+  <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  
+  <p>
+  <ul class="dropdown-menu btn-warning">
+    <a href="/blog/edit/{{ blogs.id }}">Edit this post</a>
+    <a href="">Hide from the world</a>
+  </ul>
+  </p>
+  
+</div>
+
 {% autoescape true %}
  {{ blogs.content|raw }}
 {% endautoescape %}

@@ -14,19 +14,33 @@ class BlogForm extends Form
         $this->add(array(
             'name' => 'id',
             'attributes' => array(
-                'type'  => 'hidden',
+            'type'  => 'hidden',
             ),
         ));
 
         $this->add(array(
-            'name' => 'artist',
+            'name' => 'lead',
             'attributes' => array(
-                'type'  => 'text',
+                'type'  => 'textarea',
             ),
             'options' => array(
-                'label' => 'Artist',
+                'label' => 'Lead',
             ),
         ));
+        
+        
+        $this->add(array(
+            'name' => 'content',
+            'attributes' => array(
+                'type'  => 'textarea',
+                'width' => '60%',
+                'height' => '300px',	
+            ),
+            'options' => array(
+                'label' => 'Lead',
+            ),
+        ));
+
 
         $this->add(array(
             'name' => 'title',

@@ -76,10 +76,12 @@ class BlogController extends AbstractActionController
                 // Redirect to list of blogs
                 return $this->redirect()->toRoute('blog');
             }
+            
         }
 
         return array(
             'id' => $id,
+            'title' => $form->get('title'),
             'form' => $form,
         );
     }

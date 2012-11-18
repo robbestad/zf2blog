@@ -15,6 +15,9 @@
     {% block link %}
     <link href="{{ basePath('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ basePath('/css/prettify.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ basePath('/css/code.css') }}" rel="stylesheet" type="text/css">
+
     <link href="{{ basePath('/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/sh/shCore.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ basePath('/css/sh/shCoreEclipse.css') }}" rel="stylesheet" type="text/css" />
@@ -43,43 +46,57 @@
 
 <body onload="prettyPrint()">
 
-
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
+      <div class="navbar-inner">
         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="{{ url('home') }}">Sven Anders Robbestad</a>
-            <div class="nav-collapse in" style="height: auto;">
-                <ul class="nav nav-pills">
-                    <li 
+          <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="{{ url('home') }}">Sven A Robbestad</a>
+              
+          <div class="nav-collapse collapse" style="height: 0px;">
+            <ul class="nav">
+            		<li 
                     {% if 'Index' in controllerName() %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('home') }}">Home</a></li>
-                    <li class=""><a href="{{ url('about') }}">About</a></li>
+                
+                	<li 
+                    {% if 'About' in controllerName() %}
+					class="active"
+					{% endif %}
+					><a href="{{ url('home') }}">About</a></li>
+                
+                	<li 
+                    {% if 'Games' in controllerName() %}
+					class="active"
+					{% endif %}
+					><a href="{{ url('home') }}">Games</a></li>
+                
                     
                     <li 
                     {% if 'Blog' in controllerName() %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('blog') }}">Blog</a></li>
-                 </ul>
-             
-
-                
-            </div>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
+    
+    
+    
+    
+    
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <h1>Welcome</h1>
-    <p class="lead">Welcome to robbestad.com.</p>
+    <div class="pull-right"><img class="loader img-rounded"></div>
+    <h1 class="lead">Electric sheep</h1>
+    <p class="lead">A blog about coding.</p>
   </div>
 </header>
 
@@ -132,9 +149,15 @@
 
 <!-- TWITTER BOOTSTRAP -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-
+<script src="/js/google-code-prettify/prettify.js"></script>
+   
+   
+<script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>
+<script src="{{ basePath('/js/google-code-prettify/lang-sql.js') }}"></script>
+   
+   
+   <!--
  <script type="text/javascript" src="/js/widgets.js"></script>
-   <script src="/js/google-code-prettify/prettify.js"></script>
     <script src="/js/bootstrap-transition.js"></script>
     <script src="/js/bootstrap-alert.js"></script>
     <script src="/js/bootstrap-modal.js"></script>
@@ -144,12 +167,11 @@
     <script src="/js/bootstrap-tooltip.js"></script>
     <script src="/js/bootstrap-popover.js"></script>
     <script src="/js/bootstrap-button.js"></script>
-    <script src="/js/bootstrap-collapse.js"></script>
     <script src="/js/bootstrap-carousel.js"></script>
     <script src="/js/bootstrap-typeahead.js"></script>
-    <script src="/js/bootstrap-affix.js"></script>
-    <script src="/js/application.js"></script>
-
+    <script src="/js/bootstrap-affix.js"></script>-->
+    <!-- <script src="/js/application.js"></script>-->
+    
 
 <!-- GOOGLE ANALYTICS -->
 <!--
@@ -178,6 +200,20 @@ $(".toolbar").css("visibility","hidden");
 })
 </script>
 
+<!-- IMPORTANT FOR STYLISH CSS  -->
+<script src="{{ basePath('/js/prefixfree.min.js"') }}></script>
+<script>
+StyleFix.register(function(css, raw) {
+    if (PrefixFree.functions.indexOf('radial-gradient') > -1) {
+        css = css.replace(/radial-gradient\(([a-z-\s]+\s+)?at ([^,]+)(?=,)/g, function($0, shape, center){
+            return 'radial-gradient(' + center + (shape? ', ' + shape : '');
+        });
+    }
+    
+    return css;
+});
+</script>
+   
 
 </body>
 </html>
