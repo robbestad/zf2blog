@@ -9,7 +9,7 @@ use Zend\Db\ResultSet\ResultSet;
 class BlogTable extends AbstractTableGateway
 {
     protected $table = 'posts';
-    protected $logger;
+   // protected $logger;
 
     public function __construct(Adapter $adapter)
     {
