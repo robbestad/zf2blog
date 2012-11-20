@@ -63,8 +63,8 @@
                 $.data(this, 'plugin_' + pluginName, 
                 new Plugin( this, options ));
             }
-            var imagePath="/images/";
-            var imageNumber=Math.floor(Math.random()*14);
+            var imagePath="/images/anim/100/";
+            var imageNumber=Math.floor(Math.random()*35);
             console.log(imageNumber);
             if(imageNumber<10)imageNumber="00"+imageNumber;
             else if(imageNumber<99)imageNumber="0"+imageNumber;
