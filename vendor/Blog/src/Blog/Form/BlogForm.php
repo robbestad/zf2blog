@@ -33,8 +33,6 @@ class BlogForm extends Form
             'name' => 'content',
             'attributes' => array(
                 'type'  => 'textarea',
-                'width' => '60%',
-                'height' => '300px',	
             ),
             'options' => array(
                 'label' => 'Lead',
