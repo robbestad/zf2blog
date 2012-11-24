@@ -5,6 +5,7 @@ return array(
         'ZfcTwig',
         'ZfcBase',
         'ZfcUser',
+        'Mobile_Detect',
         'Blog',
     ),
     'module_listener_options' => array(

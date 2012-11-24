@@ -1284,6 +1284,13 @@ textarea{
 	width:60%;
 }
 
+label{
+	width: 50px;
+}
 form#blog label span{
 	padding: 0px 10px 0px 0px;
+}
+
+.div-center{
+	margin: 15px 0px 0 5px;
 }
