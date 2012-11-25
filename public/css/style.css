@@ -577,9 +577,8 @@ h2 + .row {
     margin-top: -20px; /* Offset bottom margin on .navbar */
   }
   
-  .syntaxhighlighter, .prettyprint{
-	width: 95% !important;
-	}
+ 
+	
   
 }
 
@@ -594,9 +593,7 @@ h2 + .row {
 /* Tablet
 ------------------------- */
 @media (max-width: 767px) {
-	.syntaxhighlighter{
-	width: 95% !important;
-	}
+	
 }
 
 /* Landscape phones
@@ -675,6 +672,12 @@ h2 + .row {
   }
 }
 
+@media (min-width: 480px){
+	 .syntaxhighlighter, .prettyprint{
+	width: 85% !important;
+	}
+
+}
 
 /* OVERRIDE MEDIA QUERIES */
 textarea{
