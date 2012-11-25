@@ -11,6 +11,10 @@ namespace Application;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Application\View\Helper\AbsoluteUrl;
+use Application\View\Helper\DetectMobile;
+use Application\View\Helper\GetPath;
+
 
 class Module
 {
@@ -43,4 +47,28 @@ class Module
             ),
         );
     }
+    
+    public function getViewHelperConfig()
+    {
+        return array(
+            'factories' => array(
+                // the array key here is the name you will call the view helper by in your view scripts
+                'absoluteUrl' => function($sm) {
+                    $locator = $sm->getServiceLocator(); // $sm is the view helper manager, so we need to fetch the main service manager
+                    return new AbsoluteUrl($locator->get('Request'));
+                },
+                'detectMobile' => function($sm) {
+                    $locator = $sm->getServiceLocator(); // $sm is the view helper manager, so we need to fetch the main service manager
+                    return new DetectMobile();
+                },
+                'getPath' => function($sm) {
+                	$locator = $sm->getServiceLocator(); // $sm is the view helper manager, so we need to fetch the main service manager
+                    return new GetPath();
+                },
+                
+
+            ),
+        );
+    }
+  
 }

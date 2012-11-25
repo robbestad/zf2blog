@@ -17,7 +17,6 @@ protected $route;
 
     public function __invoke()
     {
-        $controller = $this->route->getParam('controller', 'index');
-        return $controller;
+        return $this->route->getParam('controller', 'index');
     }
 }

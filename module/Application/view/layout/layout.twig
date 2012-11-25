@@ -1,5 +1,21 @@
 {{ doctype() }}
-<!--route<pre>{{view_manager}}</pre>-->
+{#
+/**
+*
+* Possible vars that can be used:
+* fileabsoluteUrl() <- the absolute URL for the web page
+* detectMobile() <- contains either "computer", "tablet" or "phone"
+* controllerName() <- provides the absolute controllername (eg. Application\Controller\Index)
+* getPath() <- current path (eg. / for index.html, /blog for tld.com/blog)
+*/
+
+#}
+
+
+
+{% if 'computer' in detectMobile() %}
+{% endif %}
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -15,14 +31,14 @@
 
     {% block link %}
     <link href="{{ basePath('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ basePath('/css/style.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/prettify.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/code.css') }}" rel="stylesheet" type="text/css">
 
     <link href="{{ basePath('/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/sh/shCore.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ basePath('/css/sh/shCoreEclipse.css') }}" rel="stylesheet" type="text/css" />
-
+    <link href="{{ basePath('/css/style.css') }}" rel="stylesheet" type="text/css">
+    
     <link rel="shortcut icon" href="/images/favicon.ico">
     {{ headLink() }}
     {% endblock %}
@@ -79,7 +95,7 @@
                 
                     
                     <li 
-                    {% if 'Blog' in controllerName() %}
+                    {% if 'blog' in getPath() %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('blog') }}">Blog</a></li>
@@ -95,7 +111,7 @@
     
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <div class="pull-right div-center"><img height="100" width="100" class="loader img-polaroid"></div>
+    <!-- <div class="pull-right div-center"><img height="100" width="100" class="loader img-polaroid"></div> -->
     <h1 class="lead">Electric sheep</h1>
     <p class="lead">A blog about coding.</p>
   </div>
@@ -120,10 +136,8 @@
     		
     	</div>
     	-->
-</div>
-
-<div class="container-fluid">
   
+   <div class="linebreak">&nbsp;</div>
     <footer>
         <p>&nbsp;</p>
         <p>&copy; Sven A Robbestad. All rights reserved.</p>

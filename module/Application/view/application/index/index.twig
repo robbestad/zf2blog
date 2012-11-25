@@ -7,19 +7,10 @@
 
     
     
-<hr>
-DEBUG:
-{{userAgent}}
-
-userAgent: {{userAgent|raw}}
-<hr>
-
-
-
-
-
-{% set someString = 'someRandomCamelCaseString' %}
-{{ someString|rot13}}
-{{ tester }}
-
-<hr>
+<h3>DEBUG</h3>
+<p>
+mobile: {{mobileDevice|var_dump}}
+</p>
+<p>
+	{{userAgent}}
+</p>

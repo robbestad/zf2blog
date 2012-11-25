@@ -16,14 +16,14 @@ use Mobile_Detect;
 
 class IndexController extends AbstractActionController
 {
-	
-    public function indexAction()
+	public function indexAction()
     {
     
-	    #$detect = new \Modules\Mobile_Detect;
+	    $detect = new Mobile_Detect;
         return new ViewModel(array(
             'currentRoute' => "home!!!", 
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
+            'mobileDevice' => $detect->isMobile(),
        ));
     }
     
