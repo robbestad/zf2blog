@@ -3,26 +3,26 @@
     "packages": [
         {
             "name": "twig/twig",
-            "version": "v1.9.2",
+            "version": "v1.10.3",
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "v1.9.2"
+                "reference": "v1.10.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/zipball/v1.9.2",
-                "reference": "v1.9.2",
+                "url": "https://github.com/fabpot/Twig/zipball/v1.10.3",
+                "reference": "v1.10.3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-08-25 10:32:57",
+            "time": "2012-10-19 03:45:49",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.10-dev"
                 }
             },
             "installation-source": "dist",
@@ -52,16 +52,16 @@
         },
         {
             "name": "zendframework/zendframework",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "git://github.com/zendframework/zf2.git",
-                "reference": "release-2.0.3"
+                "reference": "release-2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/zendframework/zf2/zipball/release-2.0.3",
-                "reference": "release-2.0.3",
+                "url": "https://github.com/zendframework/zf2/archive/release-2.0.4.zip",
+                "reference": "release-2.0.4",
                 "shasum": ""
             },
             "require": {
@@ -127,14 +127,15 @@
                 "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
                 "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
             },
-            "time": "2012-10-17 14:33:54",
+            "time": "2012-11-20 21:14:29",
             "bin": [
                 "bin/classmap_generator.php"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.0-dev",
+                    "dev-develop": "2.1-dev"
                 }
             },
             "installation-source": "dist",
@@ -164,7 +165,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcBase/zipball/38990ad5f51002dd271ab676b90a3d59728190e2",
+                "url": "https://github.com/ZF-Commons/ZfcBase/archive/38990ad5f51002dd271ab676b90a3d59728190e2.zip",
                 "reference": "38990ad5f51002dd271ab676b90a3d59728190e2",
                 "shasum": ""
             },
@@ -172,7 +173,7 @@
                 "php": ">=5.3.3",
                 "zendframework/zendframework": "2.*"
             },
-            "time": "1351100548",
+            "time": "2012-10-24 17:42:28",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -207,18 +208,19 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/ZF-Commons/ZfcTwig.git",
-                "reference": "cdc570cff5d710555426a86d9cde967e05867176"
+                "reference": "4ea92d6100e8be46da10009b282e0c5c0b779670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcTwig/zipball/cdc570cff5d710555426a86d9cde967e05867176",
-                "reference": "cdc570cff5d710555426a86d9cde967e05867176",
+                "url": "https://github.com/ZF-Commons/ZfcTwig/archive/4ea92d6100e8be46da10009b282e0c5c0b779670.zip",
+                "reference": "4ea92d6100e8be46da10009b282e0c5c0b779670",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "twig/twig": "1.9.*"
+                "twig/twig": "1.10.*"
             },
+            "time": "2012-11-13 08:31:28",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -247,8 +249,7 @@
                 "twig",
                 "zf2",
                 "module"
-            ],
-            "time": "1347966322"
+            ]
         },
         {
             "name": "zf-commons/zfc-user",
@@ -256,12 +257,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/ZF-Commons/ZfcUser.git",
-                "reference": "2a30bda620f962b9919459aef5b279bdb5f44bd8"
+                "reference": "ca85fe3799191108e5349e4389a0e386fc236d90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcUser/zipball/2a30bda620f962b9919459aef5b279bdb5f44bd8",
-                "reference": "2a30bda620f962b9919459aef5b279bdb5f44bd8",
+                "url": "https://github.com/ZF-Commons/ZfcUser/archive/ca85fe3799191108e5349e4389a0e386fc236d90.zip",
+                "reference": "ca85fe3799191108e5349e4389a0e386fc236d90",
                 "shasum": ""
             },
             "require": {
@@ -269,7 +270,7 @@
                 "zf-commons/zfc-base": "dev-master",
                 "zendframework/zendframework": "2.*"
             },
-            "time": "1351124306",
+            "time": "2012-11-21 08:32:27",
             "type": "library",
             "installation-source": "source",
             "autoload": {

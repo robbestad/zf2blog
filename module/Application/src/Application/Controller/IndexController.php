@@ -7,19 +7,19 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
+
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Mobile_Detect;
-//$detect = new \Mobile_Detect;
 
 class IndexController extends AbstractActionController
 {
 	public function indexAction()
     {
     
-	    $detect = new Mobile_Detect;
+	    $detect = new Mobile_Detect();
         return new ViewModel(array(
             'currentRoute' => "home!!!", 
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],

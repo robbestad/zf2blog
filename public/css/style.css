@@ -28,7 +28,9 @@ background-size: 13px, 29px, 37px, 53px;
 }
 
 .container-fluid{
-	margin: 0em 1em auto;
+/*	margin: 0em 1em auto;
+	box-shadow: -8px 0 15px -8px rgba(0, 0, 0, .5);
+*/
 	background-color: #fff; 
 	background-image: 
 	linear-gradient(#eee .1em, transparent .1em);
@@ -36,10 +38,11 @@ background-size: 13px, 29px, 37px, 53px;
 	background: url("http://leaverou.github.com/prefixfree/css/../img/noise.png") white;
 	background: url("http://leaverou.github.com/prefixfree/css/../img/raisedfist.png") bottom right no-repeat, -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white), url("http://leaverou.github.com/prefixfree/css/../img/noise.png") white;
 	*/
+/*
 	font: 100%/1.6 Arvo, sans-serif;
 	text-shadow: 1px 2px 3px lightgray;
 		-webkit-hyphens: auto;
-	box-shadow: -8px 0 15px -8px rgba(0, 0, 0, .5);
+*/
 }
 
 .btn-success {
@@ -673,8 +676,9 @@ h2 + .row {
 }
 
 @media (min-width: 480px){
-	 .syntaxhighlighter, .prettyprint{
-	width: 85% !important;
+	
+	.syntaxhighlighter, .prettyprint{
+		 width: 85% !important;
 	}
 
 }

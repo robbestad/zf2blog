@@ -3,7 +3,7 @@
 /**
 *
 * Possible vars that can be used:
-* fileabsoluteUrl() <- the absolute URL for the web page
+* fileabsoluteUrl <- the absolute URL for the web page
 * detectMobile() <- contains either "computer", "tablet" or "phone"
 * controllerName() <- provides the absolute controllername (eg. Application\Controller\Index)
 * getPath() <- current path (eg. / for index.html, /blog for tld.com/blog)
@@ -11,6 +11,9 @@
 
 #}
 
+{{fileabsoluteUrl}}
+{{detectMobile()}}
+{{controllerName}}
 
 
 {% if 'computer' in detectMobile() %}
@@ -31,10 +34,10 @@
 
     {% block link %}
     <link href="{{ basePath('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ basePath('/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/prettify.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/code.css') }}" rel="stylesheet" type="text/css">
 
-    <link href="{{ basePath('/css/bootstrap-responsive.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ basePath('/css/sh/shCore.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ basePath('/css/sh/shCoreEclipse.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ basePath('/css/style.css') }}" rel="stylesheet" type="text/css">
@@ -75,20 +78,21 @@
               
           <div class="nav-collapse collapse" style="height: 0px;">
             <ul class="nav">
+            		
             		<li 
-                    {% if 'Index' in controllerName() %}
+                    {% if 'Index' in controllerName %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('home') }}">Home</a></li>
                 
                 	<li 
-                    {% if 'About' in controllerName() %}
+                    {% if 'About' in controllerName %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('home') }}">About</a></li>
                 
                 	<li 
-                    {% if 'Games' in controllerName() %}
+                    {% if 'Games' in controllerName %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('home') }}">Games</a></li>
@@ -99,6 +103,7 @@
 					class="active"
 					{% endif %}
 					><a href="{{ url('blog') }}">Blog</a></li>
+					
             </ul>
           </div>
         </div>
@@ -118,7 +123,7 @@
 </header>
 
 <div class="container-fluid">
-    <div class="span11 offset1">
+    <div class="span12">
     	{{ content | raw }}
 		
 		{% block inlinescript %}

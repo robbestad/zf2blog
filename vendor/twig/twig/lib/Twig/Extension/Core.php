@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('ENT_SUBSTITUTE')) {
     define('ENT_SUBSTITUTE', 8);
 }
@@ -33,8 +34,6 @@ class Twig_Extension_Core extends Twig_Extension
             $this->dateFormats[1] = $dateIntervalFormat;
         }
     }
-    
-   
 
     /**
      * Gets the default format to be used by the date filter.
@@ -121,7 +120,6 @@ class Twig_Extension_Core extends Twig_Extension
      */
     public function getFilters()
     {
-    
         $filters = array(
             // formatting filters
             'date'          => new Twig_Filter_Function('twig_date_format_filter', array('needs_environment' => true)),
@@ -131,10 +129,6 @@ class Twig_Extension_Core extends Twig_Extension
             'number_format' => new Twig_Filter_Function('twig_number_format_filter', array('needs_environment' => true)),
             'abs'           => new Twig_Filter_Function('abs'),
 
-            // debug
-            'var_dump'       => new Twig_Filter_Function('var_dump'),
-            
-            
             // encoding
             'url_encode'       => new Twig_Filter_Function('twig_urlencode_filter'),
             'json_encode'      => new Twig_Filter_Function('twig_jsonencode_filter'),
@@ -146,12 +140,12 @@ class Twig_Extension_Core extends Twig_Extension
             'upper'      => new Twig_Filter_Function('strtoupper'),
             'lower'      => new Twig_Filter_Function('strtolower'),
             'striptags'  => new Twig_Filter_Function('strip_tags'),
-            'rot13'       => new Twig_Filter_Function('str_rot13'),
             'trim'       => new Twig_Filter_Function('trim'),
             'nl2br'      => new Twig_Filter_Function('nl2br', array('pre_escape' => 'html', 'is_safe' => array('html'))),
 
             // array helpers
             'join'    => new Twig_Filter_Function('twig_join_filter'),
+            'split'   => new Twig_Filter_Function('twig_split_filter'),
             'sort'    => new Twig_Filter_Function('twig_sort_filter'),
             'merge'   => new Twig_Filter_Function('twig_array_merge'),
 
@@ -192,9 +186,6 @@ class Twig_Extension_Core extends Twig_Extension
             'cycle'    => new Twig_Function_Function('twig_cycle'),
             'random'   => new Twig_Function_Function('twig_random', array('needs_environment' => true)),
             'date'     => new Twig_Function_Function('twig_date_converter', array('needs_environment' => true)),
-            'slug'	   => new Twig_Function_Function('getSlug'),
-
-
         );
     }
 
@@ -658,6 +649,38 @@ function twig_join_filter($value, $glue = '')
     }
 
     return implode($glue, (array) $value);
+}
+
+/**
+ * Splits the string into an array.
+ *
+ * <pre>
+ *  {{ "one,two,three"|split(',') }}
+ *  {# returns [one, two, three] #}
+ *
+ *  {{ "one,two,three,four,five"|split(',', 3) }}
+ *  {# returns [one, two, "three,four,five"] #}
+ *
+ *  {{ "123"|split('') }}
+ *  {# returns [1, 2, 3] #}
+ *
+ *  {{ "aabbcc"|split('', 2) }}
+ *  {# returns [aa, bb, cc] #}
+ * </pre>
+ *
+ * @param string  $value     A string
+ * @param string  $delimiter The delimiter
+ * @param integer $limit     The limit
+ *
+ * @return array The split string as an array
+ */
+function twig_split_filter($value, $delimiter, $limit = null)
+{
+    if (empty($delimiter)) {
+        return str_split($value, null === $limit ? 1 : $limit);
+    }
+
+    return null === $limit ? explode($delimiter, $value) : explode($delimiter, $value, $limit);
 }
 
 // The '_default' filter is used internally to avoid using the ternary operator
