@@ -47,7 +47,8 @@ class BlogTable extends AbstractTableGateway
     {
         $data = array(
             'lead' => $blog->lead,
-            'title'  => $blog->title
+            'title'  => $blog->title,
+            'content' => $blog->content,
         );
         
         $id = (int)$blog->id;

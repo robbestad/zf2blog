@@ -55,7 +55,7 @@ class Blog implements InputFilterAwareInterface
                 'name'     => 'content',
                 'required' => true,
                 'filters'  => array(
-                    array('name' => 'StripTags'),
+                   // array('name' => 'StripTags'),
                     array('name' => 'StringTrim'),
                 ),
                 'validators' => array(
