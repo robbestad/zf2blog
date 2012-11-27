@@ -12,6 +12,7 @@
         "zendframework/zendframework": "2.*",
         "zf-commons/zfc-user": "dev-master",
         "zf-commons/zfc-base": "dev-master",
-        "zf-commons/zfc-twig": "dev-master"
+        "zf-commons/zfc-twig": "dev-master",
+        "bjyoungblood/bjy-authorize": "dev-master"
     }
 }

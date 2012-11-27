@@ -12,7 +12,8 @@ class Blog implements InputFilterAwareInterface
     public $id;
     public $content;
     public $title;
-
+    public $badge;
+    
     protected $inputFilter;
 
     /**
@@ -23,6 +24,7 @@ class Blog implements InputFilterAwareInterface
         $this->id     = (isset($data['id'])) ? $data['id'] : null;
         $this->title = (isset($data['title'])) ? $data['title'] : null;
         $this->lead  = (isset($data['lead'])) ? $data['lead'] : null;
+        $this->badge  = (isset($data['badge'])) ? $data['badge'] : null;
         $this->content  = (isset($data['content'])) ? $data['content'] : null;
     }
 
@@ -89,6 +91,27 @@ class Blog implements InputFilterAwareInterface
                 ),
             )));
 
+            
+            $inputFilter->add($factory->createInput(array(
+                'name'     => 'badge',
+                'required' => true,
+                'filters'  => array(
+                    array('name' => 'StripTags'),
+                    array('name' => 'StringTrim'),
+                ),
+                'validators' => array(
+                    array(
+                        'name'    => 'StringLength',
+                        'options' => array(
+                            'encoding' => 'UTF-8',
+                            'min'      => 1,
+                            'max'      => 100,
+                        ),
+                    ),
+                ),
+            )));
+            
+            
             $this->inputFilter = $inputFilter;        
         }
 

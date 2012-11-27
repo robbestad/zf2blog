@@ -6,6 +6,31 @@ use Blog\Model\BlogTable;
 
 class Module
 {
+    
+     public function onBootstrap($e)
+    {
+        $sharedEvents = $e->getApplication()->getServiceManager()->get('moduleManager')->getEventManager()->getSharedManager();
+        $sharedEvents->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e) {
+            $controller    = $e->getTarget();
+            $matchedRoute  = $controller->getEvent()->getRouteMatch()->getMatchedRouteName();
+            $matchedAction = $controller->getEvent()->getRouteMatch()->getParams()['action'];
+            //$allowedRoutes = array('zfcuser/login', 'zfcuser/register','home','about','games','blog');
+            $allowedRoutes = array('zfcuser/login', 'zfcuser/register');
+            //var_dump($controller->zfcUserAuthentication()->getIdentity());
+            
+            if (in_array($matchedRoute, $allowedRoutes) || $controller->zfcUserAuthentication()->hasIdentity()) {
+                return; // they're logged in or on the login page, allow
+            }
+            
+            // otherwise, redirect to the login page
+            return $controller->redirect()->toRoute('zfcuser/login');
+            var_dump($matchedRoute);
+              
+             
+        });
+    }
+    
+
     public function getAutoloaderConfig()
     {
         return array(

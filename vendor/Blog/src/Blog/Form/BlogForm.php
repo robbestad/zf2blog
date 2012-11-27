@@ -53,6 +53,20 @@ class BlogForm extends Form
                 'label' => 'Title',
             ),
         ));
+        
+        
+        
+        $this->add(array(
+            'name' => 'badge',
+            'attributes' => array(
+                'type'  => 'text',
+                'class' => 'input_large',
+            
+            ),
+            'options' => array(
+                'label' => 'Badge',
+            ),
+        ));
 
         $this->add(array(
             'name' => 'submit',

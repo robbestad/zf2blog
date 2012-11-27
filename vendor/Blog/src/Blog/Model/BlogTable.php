@@ -49,7 +49,8 @@ class BlogTable extends AbstractTableGateway
             'lead' => $blog->lead,
             'title'  => $blog->title,
             'content' => $blog->content,
-        );
+            'badge'  => $blog->badge,
+         );
         
         $id = (int)$blog->id;
         if ($id == 0) {

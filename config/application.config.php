@@ -2,9 +2,9 @@
 return array(
     'modules' => array(
         'Application',
-        'ZfcTwig',
         'ZfcBase',
         'ZfcUser',
+        'ZfcTwig',
         'Mobile_Detect',
         'Blog',
     ),

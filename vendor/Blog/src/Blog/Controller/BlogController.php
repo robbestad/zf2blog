@@ -6,8 +6,9 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Blog\Model\Blog;
 use Blog\Form\BlogForm;
+use BjyAuthorize\Guard\Controller;
 
-class BlogController extends AbstractActionController
+class BlogController extends AbstractActionController 
 {
     protected $blogTable;
 
@@ -16,7 +17,7 @@ class BlogController extends AbstractActionController
        // return new ViewModel();
         return new ViewModel(array(
             'blogs' => $this->getBlogTable()->fetchAll(),
-            'currentRoute' => "blog", 
+            'currentRoute' => "",
        ));
   
     }

@@ -7,8 +7,11 @@
 {% for blog in blogs %}
     <div class="span6">
         <h2>{{ blog.title }}</h2>
-        <p>2{{ blog.lead|raw }}</p>
-        <p><a class="btn btn-success" href="blog/view/{{ blog.id }}" target="_self">{{ blog.title }} &raquo;</a></p>
+        
+        <p><span class="label label-important">{{blog.badge}}</span></p>
+        <p>{{ blog.lead|raw }}</p>
+
+        <a class="btn btn-success" href="blog/view/{{ blog.id }}" target="_self">{{ blog.title }} &raquo;</a></p>
     </div>
 {% endfor %}
 
