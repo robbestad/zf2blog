@@ -88,8 +88,8 @@ return array(
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
+        'not_found_template'       => 'error/404.phtml',
+        'exception_template'       => 'error/index.phtml',
         'template_map' => array(
             'layout/layout'    	   => __DIR__ . '/../view/layout/layout.twig',
             'application/index/index'       => __DIR__ . '/../view/application/index/index.twig', 

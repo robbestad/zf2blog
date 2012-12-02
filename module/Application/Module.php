@@ -14,6 +14,7 @@ use Zend\Mvc\MvcEvent;
 use Application\View\Helper\AbsoluteUrl;
 use Application\View\Helper\DetectMobile;
 use Application\View\Helper\GetPath;
+use Application\View\Helper\GetRole;
 
 
 class Module
@@ -65,6 +66,11 @@ class Module
                 	$locator = $sm->getServiceLocator(); // $sm is the view helper manager, so we need to fetch the main service manager
                     return new GetPath();
                 },
+                'getRole' => function($sm){
+                	$locator = $sm->getServiceLocator(); // $sm is the view helper manager, so we need to fetch the main service manager
+                    return new GetRole();
+                    
+                }
                 
 
             ),

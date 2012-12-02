@@ -16,15 +16,16 @@ class Module
             $matchedAction = $controller->getEvent()->getRouteMatch()->getParams()['action'];
             //$allowedRoutes = array('zfcuser/login', 'zfcuser/register','home','about','games','blog');
             $allowedRoutes = array('zfcuser/login', 'zfcuser/register');
-            //var_dump($controller->zfcUserAuthentication()->getIdentity());
+            $role=$controller->zfcUserAuthentication()->getIdentity()->getRole();
             
-            if (in_array($matchedRoute, $allowedRoutes) || $controller->zfcUserAuthentication()->hasIdentity()) {
+            //if (in_array($matchedRoute, $allowedRoutes) || $controller->zfcUserAuthentication()->hasIdentity()) {
+            if(!empty($role) && $role=="admin"){
                 return; // they're logged in or on the login page, allow
             }
             
             // otherwise, redirect to the login page
-            return $controller->redirect()->toRoute('zfcuser/login');
-            var_dump($matchedRoute);
+            //return $controller->redirect()->toRoute('zfcuser/login');
+            //var_dump($matchedRoute);
               
              
         });

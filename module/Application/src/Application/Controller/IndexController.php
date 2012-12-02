@@ -24,6 +24,7 @@ class IndexController extends AbstractActionController
             'currentRoute' => "home!!!", 
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
             'mobileDevice' => $detect->isMobile(),
+            
        ));
     }
     
