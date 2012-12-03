@@ -18,8 +18,7 @@ class IndexController extends AbstractActionController
 {
 	public function indexAction()
     {
-    
-	    $detect = new Mobile_Detect();
+  $detect = new Mobile_Detect();
         return new ViewModel(array(
             'currentRoute' => "home!!!", 
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
