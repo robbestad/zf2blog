@@ -50,7 +50,38 @@ Set up configuration
 Important. This application will fail if you do not set up the connection
 to a MySQL host.
 Steps:
-1. 
+
+1. Database.local.php
+Create a file name database.local.php in /config with the following content
+
+<pre>
+//MYSQL
+$dbParams = array(
+    'database'  => 'insert_value',
+    'username'  => 'insert_value',
+    'password'  => 'insert_value',
+    'hostname'  => 'localhost',
+);
+
+return array(
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => function ($sm) use ($dbParams) {
+                return new Zend\Db\Adapter\Adapter(array(
+                    'driver'    => 'pdo',
+                    'dsn'       => 'mysql:dbname='.$dbParams['database'].';host='.$dbParams['hostname'],
+                    'database'  => $dbParams['database'],
+                    'username'  => $dbParams['username'],
+                    'password'  => $dbParams['password'],
+                    'hostname'  => $dbParams['hostname'],
+                ));
+            },
+        ),
+    ),
+);
+</pre>
+
+
 Virtual Host
 ------------
 Afterwards, set up a virtual host to point to the public/ directory of the
