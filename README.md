@@ -81,6 +81,7 @@ return array(
 );
 </pre>
 
+2. Create a folder named cache in /data and make it writable (for Twig templating)
 
 Virtual Host
 ------------
