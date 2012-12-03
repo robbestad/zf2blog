@@ -52,7 +52,7 @@ to a MySQL host.
 Steps:
 
 1. Database.local.php
-Create a file name database.local.php in /config with the following content
+Create a file name database.local.php in /config/autoload/ with the following content
 
 <pre>
 //MYSQL
