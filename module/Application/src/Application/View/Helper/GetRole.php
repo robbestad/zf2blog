@@ -1,4 +1,5 @@
 <?php
+/*
 // ./module/Application/src/Application/View/Helper/GetRole.php
 namespace Application\View\Helper;
  
@@ -18,3 +19,4 @@ class GetRole extends AbstractHelper
     }
     
 }
+*/
