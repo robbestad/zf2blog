@@ -13,10 +13,10 @@ class Module
         $sharedEvents->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e) {
             $controller    = $e->getTarget();
             $matchedRoute  = $controller->getEvent()->getRouteMatch()->getMatchedRouteName();
-            $matchedAction = $controller->getEvent()->getRouteMatch()->getParams()['action'];
+            $matchedAction = $controller->getEvent()->getRouteMatch()->getParams();
             //$allowedRoutes = array('zfcuser/login', 'zfcuser/register','home','about','games','blog');
             $allowedRoutes = array('zfcuser/login', 'zfcuser/register');
-            $role=$controller->zfcUserAuthentication()->getIdentity()->getRole();
+            //$role=$controller->zfcUserAuthentication()->getIdentity()->getRole();
             
             //if (in_array($matchedRoute, $allowedRoutes) || $controller->zfcUserAuthentication()->hasIdentity()) {
             if(!empty($role) && $role=="admin"){
