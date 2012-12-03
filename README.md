@@ -83,6 +83,8 @@ return array(
 
 2. Create a folder named cache in /data and make it writable (for Twig templating)
 
+3. You must allow htaccess to be readable
+
 Virtual Host
 ------------
 Afterwards, set up a virtual host to point to the public/ directory of the
