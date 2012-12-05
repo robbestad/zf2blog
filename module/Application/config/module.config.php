@@ -88,7 +88,7 @@ return array(
     ),
     'module_layouts' => array(
         'Application' => 'layout/layout.twig',
-        'Blog' => 'layout/christmas.twig',
+        'Blog' => 'layout/layout.twig',
     ),
 
     'controllers' => array(
@@ -100,7 +100,7 @@ return array(
         'display_not_found_reason' => false,
         'display_exceptions'       => false,
         'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404.twig',
+        'not_found_template'       => 'error/404.phtml',
         'exception_template'       => 'error/index.phtml',
         'template_map' => array(
             'application/index/index'       => __DIR__ . '/../view/application/index/index.twig', 

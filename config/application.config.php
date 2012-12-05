@@ -7,6 +7,7 @@ return array(
         'ZfcTwig',
         'Mobile_Detect',
         'Blog',
+        'Games',
         'EdpModuleLayouts',
     ),
     'module_listener_options' => array(

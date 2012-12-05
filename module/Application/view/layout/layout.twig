@@ -27,7 +27,7 @@
 
     {% block meta %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+     {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
     {{ headMeta() }}
     {% endblock %}
 
@@ -96,7 +96,7 @@
                     {% if 'Games' in controllerName %}
 					class="active"
 					{% endif %}
-					><a href="{{ url('home') }}">Games</a></li>
+					><a href="{{ url('games') }}">Games</a></li>
                 
                     
                     <li 
