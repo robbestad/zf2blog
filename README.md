@@ -4,86 +4,36 @@ ZF2Blog
 Introduction
 ------------
 This is a simple blog application using the ZF2 MVC layer and module
-systems. 
-
+systems. It is developed by Sven Anders Robbestad and in use on www.robbestad.com.
 
 Installation
 ------------
 
-Using Composer (recommended)
-----------------------------
-The recommended way to get a working copy of this project is to clone the repository
-and use `composer` to install dependencies using the `create-project` command:
-
-    curl -s https://getcomposer.org/installer | php --
-    php composer.phar create-project --repository-url="http://packages.zendframework.com" zendframework/skeleton-application path/to/install
-
-Alternately, clone the repository and manually invoke `composer` using the shipped
-`composer.phar`:
-
+Clone the repository by issuing the following command:
+    
     cd my/project/dir
-    git clone git://github.com/svenanders/ZF2Blog.git
-    cd ZF2Blog 
+    git clone https://github.com/svenanders/zf2blog.git
+
+Then update the project:
+
+    cd zf2blog 
     php composer.phar self-update
     php composer.phar install
 
-(The `self-update` directive is to ensure you have an up-to-date `composer.phar`
-available.)
+(The `self-update` directive is to ensure you have an up-to-date `composer.phar` available.)
 
-Another alternative for downloading the project is to grab it via `curl`, and
-then pass it to `tar`:
-
-    cd my/project/dir
-    curl -#L https://github.com/svenanders/ZF2Blog/tarball/master | tar xz --strip-components=1
-
-You would then invoke `composer` to install dependencies per the previous
-example.
-
-Using Git submodules
+Configuration
 --------------------
-Alternatively, you can install using native git submodules:
 
-    git clone git://github.com/svenanders/ZF2Blog.git --recursive
-
-Set up configuration
---------------------
-Important. This application will fail if you do not set up the connection
-to a MySQL host.
 Steps:
 
-1. Database.local.php
-Create a file name database.local.php in /config/autoload/ with the following content
+1. Rename the database.local.php.dist in /config/autoload/ to database.local.php
 
-<pre>
-//MYSQL
-$dbParams = array(
-    'database'  => 'insert_value',
-    'username'  => 'insert_value',
-    'password'  => 'insert_value',
-    'hostname'  => 'localhost',
-);
+2. Insert the necessary variables: database, username, password and host
 
-return array(
-    'service_manager' => array(
-        'factories' => array(
-            'Zend\Db\Adapter\Adapter' => function ($sm) use ($dbParams) {
-                return new Zend\Db\Adapter\Adapter(array(
-                    'driver'    => 'pdo',
-                    'dsn'       => 'mysql:dbname='.$dbParams['database'].';host='.$dbParams['hostname'],
-                    'database'  => $dbParams['database'],
-                    'username'  => $dbParams['username'],
-                    'password'  => $dbParams['password'],
-                    'hostname'  => $dbParams['hostname'],
-                ));
-            },
-        ),
-    ),
-);
-</pre>
+3. Create a folder named cache in /data and make it writable (for Twig templating)
 
-2. Create a folder named cache in /data and make it writable (for Twig templating)
-
-3. You must allow htaccess to be readable
+4. You must allow htaccess to be readable
 
 Virtual Host
 ------------
