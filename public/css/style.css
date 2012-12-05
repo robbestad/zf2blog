@@ -2,7 +2,7 @@ body {
     padding-top: 60px;
     padding-bottom: 0;
     position: relative;
-    padding-top: 40px;
+    padding-top: 55px;
 /*
 background-color: white;
 background-image: linear-gradient(90deg, transparent 50%, rgba(222,222,222,.5) 50%);
@@ -497,9 +497,49 @@ h2 + .row {
 }
 
 
+/* OVERRIDE MEDIA QUERIES */
+.textarea-large{
+	width:800px;
+        min-height:200px;
+}
+.textarea-small{
+    height:100px;
+    width:800px;
+}
+.input_large{
+	width:800px;
+}
+
+label{
+	width: 50px;
+}
+form#blog label span{
+	padding: 0px 10px 0px 0px;
+}
+
+.div-center{
+	margin: 15px 0px 0 5px;
+}
+ 
+iframe{
+    padding: 5px 0 0 0;
+    height:200px;
+    width:390px;
+    border:0;
+    box-shadow: -18px 0 15px -10px rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 1px lightgray;
+-webkit-hyphens: auto;
+
+}
+
+
+
 /* Responsive
 -------------------------------------------------- */
-
+  .container-fluid{
+    margin-top: 53px; /* Offset from top headerr */
+  
+  }
 
 /* Desktop
 ------------------------- */
@@ -513,7 +553,7 @@ h2 + .row {
   }
 
   .container-fluid{
-      padding: 0px;
+   /*   padding: 0px; */
   }
 
 
@@ -530,6 +570,7 @@ h2 + .row {
   .jumbotron {
     margin-top: -20px; /* Offset bottom margin on .navbar */
   }
+
 
 
 
@@ -616,8 +657,9 @@ h2 + .row {
 	 width:100%;
  }
  .container-fluid{
-	  margin:0;
+	 /* margin:0;
 	  padding:0;
+	  */
   }
   .navbar-fixed-top{
 	position: fixed;
@@ -631,30 +673,6 @@ h2 + .row {
 		 width: 85% !important;
 	}
 
-}
-
-/* OVERRIDE MEDIA QUERIES */
-.textarea-large{
-	width:800px;
-        min-height:200px;
-}
-.textarea-small{
-    height:100px;
-    width:800px;
-}
-.input_large{
-	width:800px;
-}
-
-label{
-	width: 50px;
-}
-form#blog label span{
-	padding: 0px 10px 0px 0px;
-}
-
-.div-center{
-	margin: 15px 0px 0 5px;
 }
 
 
@@ -736,13 +754,25 @@ form#blog label span{
                 margin-left: 14px;
                 padding-left:10px;
             }
-            
-          iframe{
-                margin-right: 14px;
-                margin-left: 14px;
-                width:90%;
-                border:0;
+      }
+      
+      @media (max-width:321px){
+      iframe{
+                margin: 0 0 10px 0;
+                height:165px;
+                width:275px;
             }
       }
       
+      @media (max-width:361px){
+      iframe{
+                margin: 0 0 10px 0;
+                height:175px;
+                width:300px;
+            }
+      }
+      
+      
+      
       #overview{background: white}
+     
