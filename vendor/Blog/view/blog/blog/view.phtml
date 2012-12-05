@@ -1,0 +1,28 @@
+<?php
+if($this->zfcUserIdentity()){
+?>
+<div class="btn-group" >
+  <button class="btn btn-primary">Action</button>
+  <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  
+  <p>
+  <ul class="dropdown-menu btn-warning">
+    <a href="/blog/edit/<?php echo $this->blogs->id; ?>">Edit this post</a>
+    <a href="">Hide from the world</a>
+  </ul>
+  </p>
+  
+</div>
+<?php
+}
+?>
+
+
+<h1><?php echo $this->blogs->title; ?></h1>
+
+<img class="img-polaroid pull-right" src="http://localhost:8080/resources/timthumb.php?src=/images/anim/100/004.gif">
+<p><span class="label label-inverse"><?php echo $this->blogs->badge; ?></span></p>
+<?php echo $this->blogs->content; ?>
+

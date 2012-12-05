@@ -1,0 +1,17 @@
+{% block title %}
+{{ headTitle('Edit - ') }}
+{% endblock %}
+
+
+{{ form().openTag(form)|raw }}
+{{ formRow(form.get('id'))|raw }}
+{{ formRow(form.get('title'))|raw }}
+{{ formRow(form.get('lead'))|raw }}
+{{ formRow(form.get('badge'))|raw }}
+{{ formRow(form.get('content'))|raw }}
+{{ formRow(form.get('submit'))|raw }}
+
+
+
+{{ form().closeTag(form)|raw }}
+
