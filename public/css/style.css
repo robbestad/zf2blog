@@ -139,6 +139,10 @@ body > .navbar .brand:hover {
 -------------------------------------------------- */
 
 /* padding for in-page bookmarks and fixed navbar */
+.navbar .btn-navbar {
+padding: 7px 20px;
+}
+
 section {
   padding-top: 30px;
 }
@@ -521,16 +525,7 @@ form#blog label span{
 	margin: 15px 0px 0 5px;
 }
  
-iframe{
-    padding: 5px 0 0 0;
-    height:200px;
-    width:390px;
-    border:0;
-    box-shadow: -18px 0 15px -10px rgba(0, 0, 0, .5);
-    text-shadow: 1px 1px 1px lightgray;
--webkit-hyphens: auto;
 
-}
 
 
 
@@ -692,7 +687,9 @@ iframe{
   }
 }
 
-
+.margin-right{
+  margin-right:10px;
+}
 
 
 /* STICKY FOOTER */
@@ -755,23 +752,36 @@ iframe{
                 padding-left:10px;
             }
       }
-      
-      @media (max-width:321px){
+   
+      @media (min-width: 0px){
       iframe{
                 margin: 0 0 10px 0;
-                height:165px;
-                width:275px;
+                height:200px;
+                width:100%;
+                box-shadow: -17px 6px 11px -13px rgba(0, 0, 0, 0);
+                border:0;
             }
+      .span5{
+          margin-left: 20px;
+        }
       }
-      
-      @media (max-width:361px){
+
+
+      @media (min-width:479px){
       iframe{
-                margin: 0 0 10px 0;
-                height:175px;
-                width:300px;
-            }
+          padding: 0;
+          height:200px;
+          width:390px;
+          border:0;
+          box-shadow: -17px 6px 11px -13px rgba(0, 0, 0, .5);
+
+        }
       }
+
       
+      #push{
+        padding-left:10px;
+      }
       
       
       #overview{background: white}

@@ -68,6 +68,9 @@ return array(
         ),
     ),
 
+
+
+
     'service_manager' => array(
         'factories' => array(
             'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
@@ -83,11 +86,11 @@ return array(
             ),
         ),
     ),
-  /*  'module_layouts' => array(
-        'Application' => 'error/404.twig',
-        'Blog' => 'error/404.twig',
+    'module_layouts' => array(
+        'Application' => 'layout/layout.twig',
+        'Blog' => 'layout/christmas.twig',
     ),
-*/
+
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController'
