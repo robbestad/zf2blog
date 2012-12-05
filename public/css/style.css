@@ -140,7 +140,8 @@ body > .navbar .brand:hover {
 
 /* padding for in-page bookmarks and fixed navbar */
 .navbar .btn-navbar {
-padding: 7px 40px;
+padding: 7px 20px;
+margin-right: 20px;
 }
 
 section {
