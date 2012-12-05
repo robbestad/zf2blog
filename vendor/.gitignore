@@ -1,6 +1,7 @@
 !.gitignore
 .composer
 composer
+twig
 zendframework
 zf-commons
 autoload.php
