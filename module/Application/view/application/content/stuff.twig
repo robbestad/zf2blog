@@ -1,15 +1,9 @@
+ {% include basePath('application/content/stuff.twig') %}   
+    
+<h3>DEBUG</h3>
 
-<iframe src="logo/index.html" scrolling='no'></iframe>
-
-
-<div class="linebreak">&nbsp;</div>
-
-<h1 class="lead">Robbestad.com</h1>
-Welcome to robbestad.com Welcome to robbestad.com Welcome to robbestad.com Welcome to robbestad.com
-
-<!--
-<div class="linebreak">&nbsp;</div>
--->
-
-
-
+<p>url:{{AbsoluteUrl()}}  {{absoluteUrl()}}</p>
+<p>system:{{detectMobile()}}</p>
+<p>controller:{{controllerName}}</p>
+<p>path:{{GetPath()}} {{getPath()}}</p>
+<p>agent:{{userAgent}}</p>
