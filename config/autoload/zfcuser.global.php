@@ -19,6 +19,7 @@ $settings = array(
      *
      * Name of Entity class to use. Useful for using your own entity class
      * instead of the default one provided. Default is ZfcUser\Entity\User.
+     * The entity class should implement ZfcUser\Entity\UserInterface
      */
     //'user_entity_class' => 'ZfcUser\Entity\User',
 
@@ -29,7 +30,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    'enable_registration' => true,
+    //'enable_registration' => true,
 
     /**
      * Enable Username
@@ -49,7 +50,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    'enable_display_name' => false,
+    //'enable_display_name' => true,
 
     /**
      * Modes for authentication identity match
@@ -60,7 +61,7 @@ $settings = array(
      * Default value: array containing 'email'
      * Accepted values: array containing one or more of: email, username
      */
-    'auth_identity_fields' => array( 'email' ),
+    //'auth_identity_fields' => array( 'email' ),
 
     /**
      * Login form timeout
@@ -98,7 +99,7 @@ $settings = array(
      * Determines if a captcha should be utilized on the user registration form.
      * Default value is false.
      */
-    'use_registration_form_captcha' => true,
+    //'use_registration_form_captcha' => false,
 
     /**
      * Form Captcha Options
@@ -107,14 +108,14 @@ $settings = array(
      * this to configure which Zend\Captcha adapter to use, and the options to
      * pass to it. The default uses the Figlet captcha.
      */
-    'form_captcha_options' => array(
+    /*'form_captcha_options' => array(
         'class'   => 'figlet',
         'options' => array(
             'wordLen'    => 5,
             'expiration' => 300,
             'timeout'    => 300,
         ),
-    ),
+    ),*/
 
     /**
      * Use Redirect Parameter If Present
@@ -142,7 +143,7 @@ $settings = array(
      * Accepted values: A valid route name within your application
      * 
      */
-    //'login_redirect_route' => 'home',
+    //'login_redirect_route' => 'zfcuser',
     
     /**
      * Logout Redirect Route
@@ -175,8 +176,32 @@ $settings = array(
      *
      * Accepted values: integer between 4 and 31
      */
-    'password_cost' => 14,
+    //'password_cost' => 14,
 
+    /**
+     * Enable user state usage
+     * 
+     * Should user's state be used in the registration/login process?
+     */
+    'enable_user_state' => true,
+    
+    /**
+     * Default user state upon registration
+     * 
+     * What state user should have upon registration?
+     * Allowed value type: integer
+     */
+    'default_user_state' => null,
+    
+    /**
+     * States which are allowing user to login
+     * 
+     * When user tries to login, is his/her state one of the following?
+     * Include null if you want user's with no state to login as well.
+     * Allowed value types: null and integer
+     */
+    'allowed_login_states' => array( null,1 ),
+    
     /**
      * End of ZfcUser configuration
      */
@@ -193,4 +218,3 @@ return array(
         ),
     ),
 );
-

@@ -55,6 +55,19 @@ return array(
             ), */
         ),
     ),
+    'di' => array(
+        'instance' => array(
+            'Zend\View\HelperLoader' => array(
+                'parameters' => array(
+                'map' => array(
+                        'zfcUserIdentity' => 'ZfcUser\View\Helper\ZfcUserIdentity',
+                        'zfcUserLoginWidget' => 'ZfcUser\View\Helper\ZfcUserLoginWidget',
+                    ),
+                ),
+            ),
+        ),
+    ),
+
     'service_manager' => array(
         'factories' => array(
             'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',

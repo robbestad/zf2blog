@@ -385,6 +385,7 @@ background-size: 13px, 29px, 37px, 53px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
+  padding-top:60px;
 }
 .jumbotron p {
   font-size: 24px;
@@ -552,10 +553,7 @@ h2 + .row {
 /* Landscape phones
 ------------------------- */
 @media (max-width: 480px) {
-  /* Remove padding above jumbotron */
-  body {
-    padding-top: 0;
-  }
+ 
 
   /* Change up some type stuff */
   h2 small {
@@ -564,7 +562,8 @@ h2 + .row {
 
   /* Downsize the jumbotrons */
   .jumbotron h1 {
-    font-size: 45px;
+    font-size: 36px;
+    padding-top: 10px;
   }
   .jumbotron p,
   .jumbotron .btn {
@@ -573,6 +572,11 @@ h2 + .row {
   .jumbotron .btn {
     display: block;
     margin: 0 auto;
+  }
+  
+  .jumbotron{
+	  margin: 10px 0 0;
+	  padding: 30px 5px 0 0;
   }
 
   /* Do our best to make tables work in narrow viewports */
@@ -606,7 +610,6 @@ h2 + .row {
 }
 
 
-@media (max-width: 500px){
  body{
 	 padding:0;
 	 margin:0;
@@ -619,13 +622,10 @@ h2 + .row {
   .navbar-fixed-top{
 	position: fixed;
   }
-  .jumbotron{
-	  margin: 10px 0 0;
-	  padding: 30px 5px 0 0;
-  }
+
 }
 
-@media (min-width: 480px){
+@media (min-width: 481px){
 
 	.syntaxhighlighter, .prettyprint{
 		 width: 85% !important;
@@ -657,12 +657,23 @@ form#blog label span{
 	margin: 15px 0px 0 5px;
 }
 
+
 @media (max-width:758px){
     .textarea-large, .textarea-small, .input_large{
         min-width:180px;
         max-width:380px;
     }
 }
+
+
+
+@media (max-width:361){
+   /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 28px;
+  }
+}
+
 
 
 
