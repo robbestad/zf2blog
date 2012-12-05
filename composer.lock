@@ -1,55 +1,6 @@
 {
-    "hash": "fa2965710d8d376a687c3e7011288fd2",
+    "hash": "bb86156d43b58f248bcc49ef44ba8361",
     "packages": [
-        {
-            "name": "bjyoungblood/bjy-authorize",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git://github.com/bjyoungblood/BjyAuthorize.git",
-                "reference": "6c692f2a99fb409f6bafc2732b3489f289566616"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/bjyoungblood/BjyAuthorize/archive/6c692f2a99fb409f6bafc2732b3489f289566616.zip",
-                "reference": "6c692f2a99fb409f6bafc2732b3489f289566616",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "zendframework/zendframework": "2.0.*",
-                "zf-commons/zfc-base": "dev-master",
-                "zf-commons/zfc-user": "dev-master"
-            },
-            "suggest": {
-                "zf-commons/zfc-user-doctrine-orm": "dev-master"
-            },
-            "time": "2012-10-29 19:12:39",
-            "type": "library",
-            "installation-source": "source",
-            "autoload": {
-                "psr-0": {
-                    "BjyAuthorize": "src/"
-                },
-                "classmap": [
-                    "./"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Ben Youngblood",
-                    "email": "bx.youngblood@gmail.com",
-                    "homepage": "http://bjyoungblood.com/"
-                }
-            ],
-            "description": "Easy-use loader and manager for Zend\\Acl with built-in route and dispatch protection",
-            "homepage": "https://github.com/bjyoungblood/BjyAuthorize",
-            "keywords": [
-                "zf2",
-                "acl",
-                "zfc-user"
-            ]
-        },
         {
             "name": "twig/twig",
             "version": "v1.11.1",
@@ -253,23 +204,23 @@
         },
         {
             "name": "zf-commons/zfc-twig",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "git://github.com/ZF-Commons/ZfcTwig.git",
-                "reference": "79d0ec318acebf764df42a54de92c62f05c7b850"
+                "reference": "1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcTwig/archive/79d0ec318acebf764df42a54de92c62f05c7b850.zip",
-                "reference": "79d0ec318acebf764df42a54de92c62f05c7b850",
+                "url": "https://github.com/ZF-Commons/ZfcTwig/archive/1.0.zip",
+                "reference": "1.0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "twig/twig": "1.11.*"
             },
-            "time": "2012-12-01 20:53:40",
+            "time": "2012-11-29 16:45:54",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -277,6 +228,7 @@
                     "ZfcTwig\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Kyle Spraggs",
@@ -303,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/ZF-Commons/ZfcUser.git",
-                "reference": "ca85fe3799191108e5349e4389a0e386fc236d90"
+                "reference": "8c769842045e1235d77dcfbe8268627e25c5170e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcUser/archive/ca85fe3799191108e5349e4389a0e386fc236d90.zip",
-                "reference": "ca85fe3799191108e5349e4389a0e386fc236d90",
+                "url": "https://github.com/ZF-Commons/ZfcUser/archive/8c769842045e1235d77dcfbe8268627e25c5170e.zip",
+                "reference": "8c769842045e1235d77dcfbe8268627e25c5170e",
                 "shasum": ""
             },
             "require": {
@@ -316,7 +268,7 @@
                 "zf-commons/zfc-base": "dev-master",
                 "zendframework/zendframework": "2.*"
             },
-            "time": "2012-11-21 08:32:27",
+            "time": "2012-12-04 10:34:01",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -327,6 +279,7 @@
                     "./Module.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Kyle Spraggs",
@@ -353,8 +306,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "zf-commons/zfc-user": 20,
-        "zf-commons/zfc-base": 20,
-        "zf-commons/zfc-twig": 20,
-        "bjyoungblood/bjy-authorize": 20
+        "zf-commons/zfc-base": 20
     }
 }
