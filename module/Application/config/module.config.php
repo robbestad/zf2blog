@@ -74,6 +74,7 @@ return array(
     'service_manager' => array(
         'factories' => array(
             'translator' => 'Zend\I18n\Translator\TranslatorServiceFactory',
+            
         ),
     ),
     'translator' => array(
