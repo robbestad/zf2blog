@@ -13,6 +13,7 @@ class Blog implements InputFilterAwareInterface
     public $content;
     public $title;
     public $badge;
+    public $activepost;
     
     protected $inputFilter;
 
@@ -23,9 +24,11 @@ class Blog implements InputFilterAwareInterface
     {
         $this->id     = (isset($data['id'])) ? $data['id'] : null;
         $this->title = (isset($data['title'])) ? $data['title'] : null;
+        $this->activepost = (isset($data['activepost'])) ? $data['activepost'] : null;
         $this->lead  = (isset($data['lead'])) ? $data['lead'] : null;
         $this->badge  = (isset($data['badge'])) ? $data['badge'] : null;
         $this->content  = (isset($data['content'])) ? $data['content'] : null;
+       
     }
 
     public function getArrayCopy()
@@ -52,6 +55,7 @@ class Blog implements InputFilterAwareInterface
                     array('name' => 'Int'),
                 ),
             )));
+
 
             $inputFilter->add($factory->createInput(array(
                 'name'     => 'content',
@@ -89,6 +93,13 @@ class Blog implements InputFilterAwareInterface
                         ),
                     ),
                 ),
+            )));
+
+
+            $inputFilter->add($factory->createInput(array(
+                'name'     => 'activepost',
+                'required' => false,
+                
             )));
 
             

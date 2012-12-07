@@ -54,8 +54,32 @@ class BlogForm extends Form
             ),
         ));
         
+        $this->add( array(
+            'type' => 'Zend\Form\Element\Radio',
+            'name' => 'activepost',
+            'options' => array(
+                'value_options' => array(
+                    '1' => 'Visible',
+                    '0' => 'Hide',
+                ),
+                'label' => 'Visibility',
+            ),
+        ) );
+/*
+        $this->add(array(
+                'type' => 'Zend\Form\Element\Checkbox',
+                'name' => 'activepost',
+                'useHiddenElement' => false,
+                'options' => array(
+                    'label' => 'Active',
+                    'checkedValue'   => false,
+                    'uncheckedValue' => true,
+                ),
+                
+            
+        ));
         
-        
+        */
         $this->add(array(
             'name' => 'badge',
             'attributes' => array(

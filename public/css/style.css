@@ -503,6 +503,16 @@ h2 + .row {
 
 
 /* OVERRIDE MEDIA QUERIES */
+fieldset{
+  padding: 0 0 10px 0;
+}
+fieldset legend{
+border:0;
+margin: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+}
 .textarea-large{
 	width:800px;
         min-height:200px;
@@ -516,7 +526,7 @@ h2 + .row {
 }
 
 label{
-	width: 50px;
+	width: 100px;
 }
 form#blog label span{
 	padding: 0px 10px 0px 0px;

@@ -1,22 +1,28 @@
 <?php
 if($this->zfcUserIdentity()){
-
-$title = 'Edit '.$title;
-$this->headTitle($title);
-?>
-<h1><?php echo $this->escapeHtml($title); ?></h1>
-
-<?php
+#echo '<div class="row">'.PHP_EOL.'<div class="span12">';
+#echo $this->id;
 $form = $this->form;
 $form->setAttribute('action', 
     $this->url('blog', array('action' => 'edit', 'id'=>$this->id)));
 $form->prepare();
+$error=$this->form->getMessages();
 
+/*
+if(!empty($error)) 
+	foreach($this->form->getMessages() as $err){
+			print_r($err);
+	}
+	*/
 echo $this->form()->openTag($form) . PHP_EOL;
 echo $this->formHidden($form->get('id')) . PHP_EOL;
+echo $this->formRow($form->get('activepost')) . PHP_EOL;
 echo $this->formRow($form->get('title')) . PHP_EOL;
+echo $this->formRow($form->get('badge')) . PHP_EOL;
 echo $this->formRow($form->get('lead')) . PHP_EOL;
+echo $this->formRow($form->get('content')) . PHP_EOL;
 echo $this->formInput($form->get('submit')) . PHP_EOL;
 echo $this->form()->closeTag($form) . PHP_EOL;
 
+#echo '</div>'.PHP_EOL.'</div>';
 }

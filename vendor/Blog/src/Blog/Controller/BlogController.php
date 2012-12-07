@@ -6,7 +6,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Blog\Model\Blog;
 use Blog\Form\BlogForm;
-use BjyAuthorize\Guard\Controller;
+#use BjyAuthorize\Guard\Controller;
 
 class BlogController extends AbstractActionController 
 {
@@ -66,17 +66,19 @@ class BlogController extends AbstractActionController
 
         $form = new BlogForm();
         $form->bind($blog);
-        $form->get('submit')->setAttribute('value', 'Edit');
+        $form->get('submit')->setAttribute('value', 'Update');
+        $form->get('submit')->setAttribute('class', 'btn btn-info');
         
         $request = $this->getRequest();
         if ($request->isPost()) {
-            $form->setData($request->getPost());
+          $form->setData($request->getPost());
+      
             if ($form->isValid()) {
                 $this->getBlogTable()->saveBlog($blog);
 
                 // Redirect to list of blogs
                 return $this->redirect()->toRoute('blog');
-            }
+            } 
             
         }
 

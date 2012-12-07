@@ -6,10 +6,11 @@ use Zend\Db\TableGateway\AbstractTableGateway;
 use Zend\Db\Adapter\Adapter;
 use Zend\Db\ResultSet\ResultSet;
 
+
 class BlogTable extends AbstractTableGateway
 {
     protected $table = 'posts';
-   // protected $logger;
+    #protected $logger;
 
     public function __construct(Adapter $adapter)
     {
@@ -50,7 +51,10 @@ class BlogTable extends AbstractTableGateway
             'title'  => $blog->title,
             'content' => $blog->content,
             'badge'  => $blog->badge,
+            'activepost' => $blog->activepost,
          );
+
+        //throw new \Exception("Could not find row $data");
         
         $id = (int)$blog->id;
         if ($id == 0) {
@@ -59,8 +63,9 @@ class BlogTable extends AbstractTableGateway
             $this->insert($data);
         } else {
             if ($this->getBlog($id)) {
-            //    $this->logger->info("Edit blog ID {$id}: {$blog->title}");
-                $this->update($data, array('id' => $id));
+
+            //$this->logger->info("Edit blog ID {$id}: {$blog->title}");
+               $this->update($data, array('id' => $id));
             } else {
                 throw new \Exception('Form id does not exist');
             }

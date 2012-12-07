@@ -53,7 +53,7 @@ class Module
                 'Blog\Model\BlogTable' =>  function($sm) {
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
                     $table = new BlogTable($dbAdapter);
-                   // $table->setLogger($sm->get('logger'));
+                    #$table->setLogger($sm->get('logger'));
                     return $table;
                 }
             ),
