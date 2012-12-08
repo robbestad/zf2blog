@@ -1,0 +1,23 @@
+<?php
+
+if($this->zfcUserIdentity()){
+?>
+<div class="btn-group" >
+  <button class="btn btn-primary">Action</button>
+  <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <p>
+  <ul class="dropdown-menu btn-warning">
+    <a href="/blog/edit/<?php echo $this->blogs->id; ?>">Edit this post</a>
+  </ul>
+  </p>
+</div>
+
+<h1><?php echo $this->blogs->title; ?></h1>
+<p><span class="label label-inverse"><?php echo $this->blogs->badge; ?></span></p>
+<?php echo $this->blogs->content; ?>
+
+<?php
+}
+?>
