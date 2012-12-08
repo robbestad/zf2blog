@@ -24,5 +24,11 @@ echo $this->formRow($form->get('content')) . PHP_EOL;
 echo $this->formInput($form->get('submit')) . PHP_EOL;
 echo $this->form()->closeTag($form) . PHP_EOL;
 
+
+$form = $this->form;
+$form->setAttribute('action', $this->url('blog', array('action' => 'delete', 'id'=>$this->id)));
+echo $this->form()->openTag($form) . PHP_EOL;
+echo $this->formInput($form->get('submit')) . PHP_EOL;
+echo $this->form()->closeTag($form) . PHP_EOL;
 #echo '</div>'.PHP_EOL.'</div>';
 }

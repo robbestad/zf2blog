@@ -6,7 +6,6 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Blog\Model\Blog;
 use Blog\Form\BlogForm;
-#use BjyAuthorize\Guard\Controller;
 
 class BlogController extends AbstractActionController 
 {
@@ -17,7 +16,6 @@ class BlogController extends AbstractActionController
        // return new ViewModel();
         return new ViewModel(array(
             'blogs' => $this->getBlogTable()->fetchAll(),
-            'currentRoute' => "",
        ));
   
     }
@@ -28,10 +26,20 @@ class BlogController extends AbstractActionController
        $id = (int)$this->params('id');
         return new ViewModel(array(
             'blogs' => $this->getBlogTable()->getBlog($id),
-            'currentRoute' => "blog", 
        ));
   
     }
+
+     public function upcomingAction()
+    {
+       // return new ViewModel();
+        return new ViewModel(array(
+            'blogs' => $this->getBlogTable()->fetchUpcoming(),
+       ));
+  
+    }
+
+
 
     public function addAction()
     {
@@ -91,6 +99,7 @@ class BlogController extends AbstractActionController
 
     public function deleteAction()
     {
+
         $id = (int)$this->params('id');
         if (!$id) {
             return $this->redirect()->toRoute('blog');

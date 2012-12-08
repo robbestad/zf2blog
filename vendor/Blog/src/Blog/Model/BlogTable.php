@@ -5,6 +5,9 @@ namespace Blog\Model;
 use Zend\Db\TableGateway\AbstractTableGateway;
 use Zend\Db\Adapter\Adapter;
 use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\Sql\Select;
+use Zend\Db\Sql\Sql;
+
 
 
 class BlogTable extends AbstractTableGateway
@@ -15,6 +18,7 @@ class BlogTable extends AbstractTableGateway
     public function __construct(Adapter $adapter)
     {
         $this->adapter = $adapter;
+        
         $this->resultSetPrototype = new ResultSet();
         $this->resultSetPrototype->setArrayObjectPrototype(new Blog());
 
@@ -28,9 +32,43 @@ class BlogTable extends AbstractTableGateway
     
     public function fetchAll()
     {
-    	$resultSet = $this->select();
+    	#$resultSet = $this->select(array('activepost'=>"1"));
+        #return $resultSet;
+        $select = new Select();
+         $select->from('posts')
+        ->columns(array('id', 'title', 'activepost', 'lead', 'content', 'badge'))
+        #->join('categorypost', 'post.id = categorypost.postID', array('id' => 'id'))
+        ->order(array('id DESC', 'title DESC'))
+        ->where('activepost = 1');
+
+        $statement = $this->adapter->createStatement();
+        $select->prepareStatement($this->adapter, $statement);
+
+        $resultSet = new ResultSet();
+        $resultSet->initialize($statement->execute());
+
         return $resultSet;
     }
+
+    public function fetchUpcoming()
+    {
+         # $resultSet = $this->select(array('activepost'=>"0"));
+         $select = new Select();
+         $select->from('posts')
+        ->columns(array('id', 'title', 'activepost', 'lead', 'content', 'badge'))
+        #->join('categorypost', 'post.id = categorypost.postID', array('id' => 'id'))
+        ->order(array('id DESC', 'title DESC'))
+        ->where('activepost = 0');
+
+        $statement = $this->adapter->createStatement();
+        $select->prepareStatement($this->adapter, $statement);
+
+        $resultSet = new ResultSet();
+        $resultSet->initialize($statement->execute());
+
+        return $resultSet;
+    }
+
 
     public function getBlog($id)
     {
