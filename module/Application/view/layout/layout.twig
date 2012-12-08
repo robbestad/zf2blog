@@ -105,7 +105,12 @@
 					{% endif %}
 					><a href="{{ url('blog') }}">Blog</a></li>
 					
-					<li><a href="/user">Login</a></li>
+                    {% if(zfcUserIdentity().id>0)  %} 
+                        <li>Welcome {{zfcUserIdentity().user}}</li>
+                    {% else %}
+                            <li><a href="/user">Login</a></li>
+                {% endif %}
+                
                 
 
 					
@@ -118,7 +123,8 @@
 <div class="container-fluid">
 
         <div class="span12">
-    	{{ content | raw }}
+           {#this: {{ zfcUserIdentity()|join }} #}
+        {{ content | raw }}
 		</div>
 	
     
