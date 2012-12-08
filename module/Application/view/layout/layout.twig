@@ -106,7 +106,7 @@
 					><a href="{{ url('blog') }}">Blog</a></li>
 					
                     {% if(zfcUserIdentity().id>0)  %} 
-                        <li>Welcome {{zfcUserIdentity().user}}</li>
+                        <li><a href="/user">Welcome {{zfcUserIdentity().email}}</a></li>
                     {% else %}
                             <li><a href="/user">Login</a></li>
                 {% endif %}
