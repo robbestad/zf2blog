@@ -12,8 +12,6 @@
 #}
 
 
-
-
 {% if 'computer' in detectMobile() %}
 {% endif %}
 
@@ -81,35 +79,40 @@
             <ul class="nav">
             		
             		<li 
-                    {% if 'Index' in controllerName %}
+                    {% if '/' == getPath() %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('home') }}">Home</a></li>
-                
+
                 	<li 
-                    {% if 'About' in controllerName %}
+                    {% if 'about' in getPath() %}
 					class="active"
 					{% endif %}
-					><a href="{{ url('home') }}">About</a></li>
+					><a href="{{ url('about') }}">About</a></li>
                 
                 	<li 
-                    {% if 'Games' in controllerName %}
+                    {% if 'games' in getPath() %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('games') }}">Games</a></li>
-                
-                    
+                 
                     <li 
                     {% if 'blog' in getPath() %}
 					class="active"
 					{% endif %}
 					><a href="{{ url('blog') }}">Blog</a></li>
 					
+                    <li 
+                        {% if '/user/login' == getPath() %}
+                        class="active"
+                        {% endif %}
+                        >
                     {% if(zfcUserIdentity().id>0)  %} 
-                        <li><a href="/user">Welcome {{zfcUserIdentity().email}}</a></li>
+                        <a href="/user">Welcome {{zfcUserIdentity().email}}</a></li>
                     {% else %}
-                            <li><a href="/user">Login</a></li>
+                            <a href="/user">Login</a>
                 {% endif %}
+                </li>
                 
                 
 
@@ -123,6 +126,7 @@
 <div class="container-fluid">
 
         <div class="span12">
+            {{getPath() }}
            {#this: {{ zfcUserIdentity()|join }} #}
         {{ content | raw }}
 		</div>
