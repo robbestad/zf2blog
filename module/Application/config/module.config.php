@@ -20,6 +20,16 @@ return array(
                     ),
                 ),
             ),
+           'about' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/about/',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'about',
+                    ),
+                ),
+            ),
            
             
           /*  
@@ -89,6 +99,7 @@ return array(
     ),
     'module_layouts' => array(
         'Application' => 'layout/layout.twig',
+        #'About' => 'layout/layout.twig',
         'Blog' => 'layout/layout.twig',
     ),
 
@@ -104,8 +115,7 @@ return array(
         'not_found_template'       => 'error/404.phtml',
         'exception_template'       => 'error/index.phtml',
         'template_map' => array(
-            'application/index/index'       => __DIR__ . '/../view/application/index/index.twig', 
-            //'application/index/about'       => __DIR__ . '/../views/application/index/index.twig', 
+            'applsdication/index/index'       => __DIR__ . '/../view/application/index/index.twig', 
             'error/404'               => __DIR__ . '/../view/error/404.twig',
             'error/index'             => __DIR__ . '/../view/error/index.twig',
         ),

@@ -27,10 +27,12 @@ public function indexAction()
        ));
     }
     
-    public function about()
+    public function aboutAction()
     {
          return new ViewModel(array(
-         ));
+            'userAgent' => $_SERVER['HTTP_USER_AGENT'],
+            
+       ));
     }
     
 }
