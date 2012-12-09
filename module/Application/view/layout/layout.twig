@@ -3,12 +3,12 @@
 /**
 *
 * Possible vars that can be used:
-* fileabsoluteUrl <- the absolute URL for the web page
+* fileabsoluteUrl() <- the absolute URL for the web page
 * detectMobile() <- contains either "computer", "tablet" or "phone"
 * controllerName() <- provides the absolute controllername (eg. Application\Controller\Index)
 * getPath() <- current path (eg. / for index.html, /blog for tld.com/blog)
+* zfcUserIdentity() <- if user is logged in
 */
-
 #}
 
 
@@ -126,8 +126,6 @@
 <div class="container-fluid">
 
         <div class="span12">
-            {{getPath() }}
-           {#this: {{ zfcUserIdentity()|join }} #}
         {{ content | raw }}
 		</div>
 	
