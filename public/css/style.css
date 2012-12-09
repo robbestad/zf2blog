@@ -571,6 +571,9 @@ form#blog label span{
 /* Tablet to desktop
 ------------------------- */
 @media (min-width: 768px) and (max-width: 980px) {
+  .span4{
+    width:210px;
+  }
   /* Remove any padding from the body */
   body {
     padding-top: 0;
