@@ -503,6 +503,9 @@ h2 + .row {
 
 
 /* OVERRIDE MEDIA QUERIES */
+.marginright{
+margin-right: 10px;
+}
 .leftmargin{
 margin-left: 10px;
 }
