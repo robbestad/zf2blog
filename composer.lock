@@ -1,5 +1,5 @@
 {
-    "hash": "bb86156d43b58f248bcc49ef44ba8361",
+    "hash": "44f7b63424bae37e6a45ce8759b78ccc",
     "packages": [
         {
             "name": "twig/twig",
@@ -204,23 +204,23 @@
         },
         {
             "name": "zf-commons/zfc-twig",
-            "version": "1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/ZF-Commons/ZfcTwig.git",
-                "reference": "1.0"
+                "reference": "1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcTwig/archive/1.0.zip",
-                "reference": "1.0",
+                "url": "https://github.com/ZF-Commons/ZfcTwig/archive/1.0.1.zip",
+                "reference": "1.0.1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "twig/twig": "1.11.*"
             },
-            "time": "2012-11-29 16:45:54",
+            "time": "2012-12-11 05:32:57",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -255,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/ZF-Commons/ZfcUser.git",
-                "reference": "8c769842045e1235d77dcfbe8268627e25c5170e"
+                "reference": "18c4fc2e71a53b558e1feec51c9c5fb10a070188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ZF-Commons/ZfcUser/archive/8c769842045e1235d77dcfbe8268627e25c5170e.zip",
-                "reference": "8c769842045e1235d77dcfbe8268627e25c5170e",
+                "url": "https://github.com/ZF-Commons/ZfcUser/archive/18c4fc2e71a53b558e1feec51c9c5fb10a070188.zip",
+                "reference": "18c4fc2e71a53b558e1feec51c9c5fb10a070188",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +268,7 @@
                 "zf-commons/zfc-base": "dev-master",
                 "zendframework/zendframework": "2.*"
             },
-            "time": "2012-12-04 10:34:01",
+            "time": "2012-12-08 23:49:26",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -306,6 +306,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "zf-commons/zfc-user": 20,
-        "zf-commons/zfc-base": 20
+        "zf-commons/zfc-base": 20,
+        "zf-commons/zfc-twig": 20
     }
 }
