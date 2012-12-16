@@ -30,6 +30,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
+    //'enable_registration' => true,
     'enable_registration' => false,
 
     /**
@@ -50,7 +51,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    //'enable_display_name' => true,
+    'enable_display_name' => true,
 
     /**
      * Modes for authentication identity match
@@ -91,7 +92,7 @@ $settings = array(
      *
      * Accepted values: boolean true or false
      */
-    //'login_after_registration' => true,
+    'login_after_registration' => true,
 
     /**
      * Registration Form Captcha
@@ -99,7 +100,7 @@ $settings = array(
      * Determines if a captcha should be utilized on the user registration form.
      * Default value is false.
      */
-    //'use_registration_form_captcha' => false,
+    'use_registration_form_captcha' => true,
 
     /**
      * Form Captcha Options
@@ -108,14 +109,14 @@ $settings = array(
      * this to configure which Zend\Captcha adapter to use, and the options to
      * pass to it. The default uses the Figlet captcha.
      */
-    /*'form_captcha_options' => array(
+    'form_captcha_options' => array(
         'class'   => 'figlet',
         'options' => array(
             'wordLen'    => 5,
             'expiration' => 300,
             'timeout'    => 300,
         ),
-    ),*/
+    ),
 
     /**
      * Use Redirect Parameter If Present
@@ -176,8 +177,7 @@ $settings = array(
      *
      * Accepted values: integer between 4 and 31
      */
-    //'password_cost' => 14,
-
+    'password_cost' => 14,
     /**
      * Enable user state usage
      * 
@@ -191,8 +191,7 @@ $settings = array(
      * What state user should have upon registration?
      * Allowed value type: integer
      */
-    'default_user_state' => null,
-    
+    'default_user_state' => 1,
     /**
      * States which are allowing user to login
      * 
