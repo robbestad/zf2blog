@@ -44,6 +44,10 @@ background-size: 13px, 29px, 37px, 53px;
 
 }
 
+iframe #dsq1{
+box-shadow:0;
+}
+
 .container-fluid{
 	margin: 0em 1em auto;
 	box-shadow: -18px 0 15px -10px rgba(0, 0, 0, .5);
