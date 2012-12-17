@@ -45,7 +45,7 @@ background-size: 13px, 29px, 37px, 53px;
 }
 
 #dsq1{
-box-shadow:0;
+box-shadow:0 0 0 0;
 }
 
 .container-fluid{
