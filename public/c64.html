@@ -1,11 +1,21 @@
-
+<!DOCTYPE html>
 <html>
     <head>
     <title>Commodore 64</title>
-    <style type="text/css">@font-face{ font-family:C64base; font-style:normal; font-weight:normal; src:url(fonts/c64.ttf); } BODY{ padding:0;margin:0;font-family:C64base; text-align:center; font-size:12pt} IMG{padding:0;margin:0} .bg-type1{background-color:#a0a0ff} .bg-type2{background-color:#4040e0} .font-type1{color:#a0a0ff;text-transform:uppercase} .text-space{letter-spacing:2pt} .basicscreen{ margin: 5% auto 0 auto; text-align:left; width:550pt; height:350pt; padding:2px} ul,li{margin:0;padding:0;list-style-type:none} .txt-header{padding-top:15pt} .txt-header-list LI{text-align:center;padding:0 0 15pt 0} .txt-real{line-height:14pt}</style>
+    <style type="text/css">@font-face{ font-family:C64base; font-style:normal; font-weight:normal; src:url(fonts/c64.ttf); } BODY{ padding:0;margin:0;font-family:C64base; text-align:center; font-size:12pt} IMG{padding:0;margin:0} .bg-type1{background-color:#a0a0ff} .bg-type2{background-color:#4040e0} .font-type1{color:#a0a0ff;text-transform:uppercase} .text-space{letter-spacing:2pt} .basicscreen{ margin: 5% auto 0 auto; text-align:left; width:550pt; height:350pt; padding:2px} ul,li{margin:0;padding:0;list-style-type:none} 
+        .txt-header{padding-top:15pt} .txt-header-list LI{text-align:center;padding:0 0 15pt 0} .txt-real{line-height:14pt}
+        #editable{height:25px;width:100%;padding:0px;margin:0px;border:0px;outline:0px solid transparent; font-family:C64base; font-style:normal; font-weight:normal; src:url(fonts/c64.ttf); 
+        background-color:#4040e0; font-size:12pt; color:#a0a0ff;text-transform:uppercase;
+        letter-spacing: 2pt;
+        } 
+        #readout{ height:100%;letter-spacing: 2pt;font-size:12pt;text-transform: uppercase;}
+
+        
+    </style>
     </head>
     <body class="bg-type1">
     <div class="bg-type2 basicscreen font-type1 text-space">
+     <div id="c64">
         <div class="txt-header">
         <ul class="txt-header-list">
             <li>**** COMMODORE 64 BASIC V2 ****</li>
@@ -13,8 +23,66 @@
         </ul>
         READY.<br>
         </div>
-        <img src="prompt.gif">
+        <br/>    
+        <div id="readout"></div>
+        <input type="text" contenteditable="true" id="editable">
+       </div>
     </div>
     </body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="/js/keyboard.0.4.1.min.js"></script>
+    <script type="text/javascript">
+    //$('#editable').get().hideFocus = true;
+    $(function() {
+    $('#editable').on('keydown', updateReadout);
+    $('#editable').on('keyup', updateReadout);
+
+function updateReadout() {
+    var keys, keysString;
+    keys = KeyboardJS.activeKeys();
+    if(keys.length) {
+      var gameList='10 Loderunner "*"';
+
+        keysString = keys.join(', ');
+        console.log(keysString);
+        if(keysString=="enter"){
+            var parseString=$("#editable").val()
+            console.log(parseString)
+            $("#editable").val('')
+            switch(parseString){
+                case "list": 
+                    $("#readout").text(gameList); 
+                break;
+                default: $("#readout").text(parseString); break;
+            }
+    
+        }
+    }
+
+   }
+    $("#editable").focus();
+    $("#editable").setCursorToTextEnd();
+$("#readout").css("min-height","25px"); 
+    
+});
+
+    (function($){
+    $.fn.setCursorToTextEnd = function() {
+        $initialVal = this.val();
+        this.val('');
+        this.val($initialVal);
+    };
+    })(jQuery);
+
+    $(document).ready(function () {
+        $("#editable").focus();
+        $("#editable").setCursorToTextEnd();
+
+
+        //$("#c64").html("LOADING");
+    });
+     
+    </script>
+
 </html>
 
