@@ -59,7 +59,7 @@ box-shadow:0 0 0 0;
 	background: url("http://leaverou.github.com/prefixfree/css/../img/noise.png") white;
 	background: url("http://leaverou.github.com/prefixfree/css/../img/raisedfist.png") bottom right no-repeat, -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white), url("http://leaverou.github.com/prefixfree/css/../img/noise.png") white;
 	*/
-	font: 100%/1.6 Arvo, sans-serif;
+	font: 100%/1.6 Georgia, sans-serif;
 	text-shadow: 1px 1px 1px lightgray;
 		-webkit-hyphens: auto;
 }
@@ -91,6 +91,7 @@ div.container a.brand {
  /*   background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent; */
     margin-left: 0;
     padding: 8px 20px 12px 40px;
+    font-family: Georgia,Tahoma,Palatino,Andale Mono
 }
 
 /*
@@ -118,6 +119,7 @@ blink {
 
 body > .navbar {
   font-size: 13px;
+  font-family:Georgia;
 }
 /* Change the docs' brand */
 /*
@@ -554,7 +556,7 @@ form#blog label span{
 /* Responsive
 -------------------------------------------------- */
   .container-fluid{
-    margin-top: 50px; /* Offset from top headerr */
+    margin-top: 40px; /* Offset from top headerr */
   
   }
 
@@ -567,6 +569,7 @@ form#blog label span{
     margin-left: 0;
     padding-left: 10px;
     padding-right: 10px;
+
   }
 
   .container-fluid{
@@ -704,6 +707,12 @@ form#blog label span{
 }
 
 
+@media (min-width:1200px){
+.row {
+  margin-left: -50px;
+  margin-right:20px;
+}
+}
 
 @media (max-width:361){
    /* Downsize the jumbotrons */
@@ -740,8 +749,9 @@ form#blog label span{
       /* Set the fixed height of the footer here */
       #push,
       #footer {
-          background-color: #f5f5f5;
+        
         height: 60px;
+        background: transparent;
       }
       #push,
       #footer {
@@ -765,7 +775,8 @@ form#blog label span{
       /* Lastly, apply responsive CSS fixes as necessary */
       @media (max-width: 767px) {
         .span6, .muted, .span12 {
-         padding: 5px 5px 5px 5px
+         padding: 5px 5px 5px 5px;
+         
         }
       }
 
