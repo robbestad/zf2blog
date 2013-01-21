@@ -90,11 +90,18 @@
 					{% endif %}
 					><a href="{{ url('about') }}">About</a></li>
                 
+                    <li 
+                    {% if 'about' in getPath() %}
+                    class="active"
+                    {% endif %}
+                    ><a href="{{ url('donate') }}">Donate</a></li>
+                
+
                 	<li 
                     {% if 'games' in getPath() %}
 					class="active"
 					{% endif %}
-					><a href="{{ url('games') }}">Games</a></li>
+					><a href="{{ url('games') }}">Arcade</a></li>
                  
                     <li 
                     {% if 'blog' in getPath() %}

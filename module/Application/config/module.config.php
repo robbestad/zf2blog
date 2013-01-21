@@ -30,6 +30,16 @@ return array(
                     ),
                 ),
             ),
+           'donate' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/donate/',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'donate',
+                    ),
+                ),
+            ),
            
             
           /*  
