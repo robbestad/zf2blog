@@ -34,5 +34,14 @@ public function indexAction()
             
        ));
     }
+
+
+    public function donateAction()
+    {
+         return new ViewModel(array(
+            'userAgent' => $_SERVER['HTTP_USER_AGENT'],
+            
+       ));
+    }
     
 }
