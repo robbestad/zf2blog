@@ -30,36 +30,14 @@
     {% endblock %}
 
     {% block link %}
-    {% do headLink().appendStylesheet(basePath('/css/bootstrap.min.css')) %}
-    {% do headLink().appendStylesheet(basePath('/css/bootstrap-responsive.min.css')) %}
-        
-    {% do headLink().appendStylesheet(basePath('/css/prettify.css')) %}
-    {% do headLink().appendStylesheet(basePath('/css/code.css')) %}
-    {% do headLink().appendStylesheet(basePath('/css/sh/shCore.css')) %}
-    {% do headLink().appendStylesheet(basePath('/css/sh/shCoreEclipse.css')) %}
-    
-
+    {% do headLink().appendStylesheet(basePath('/min/?g=css')) %}
+    <!-- icons -->
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
-    {% do headLink().appendStylesheet(basePath('/css/style.css')) %}
-    
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
     {% do headLink({'rel': 'apple-touch-icon', 'href': '/images/icons/ios-icon.png'}) %}
-    
     <!-- Will be displayed in most browsers other than old IE versions -->
     {% do headLink({'rel': 'icon', 'href': '/images/icons/vector-social-media/32px/star.png'}) %}
-
     {{ headLink() }}
-    {% endblock %}
-    
-
-	
-	
-    {% block headscript %}
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-     {% do headScript().prependFile(basePath('/js/html5.js')) %}
-    <![endif]-->
-  
     {% endblock %}
 </head>
 
@@ -145,107 +123,10 @@
         </div>
     </div>
     
-  
-
-<!-- REQUIRED - jQuery library -->            
-<!-- load jQuery from local file -->
-<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>            
-<script type="text/javascript" src="/js/loader.js"></script>            
-<!-- RASTERIZE.js -->
-<!--<script type="text/javascript" src="/js/raster.js"></script>-->
-            
-<!-- REQUIRED - feature detection & script loader -->
-<!--<script type="text/javascript" src="/js/modernizr-2.0.min.js"></script>-->
-
-
-<!-- Syntax highlighter -->
-<!-- Include required JS files -->
-<script type="text/javascript" src="/js/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
-<script type="text/javascript" src="/js/shCore.js"></script>
-<script type="text/javascript" src="/js/shBrushPhp.js"></script>
-
-<!-- TWITTER BOOTSTRAP -->
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<!-- REQUIRED - all the javascripts  -->      
+<script src="{{ basePath('/min/?g=js') }}"></script>
 <script src="/js/google-code-prettify/prettify.js"></script>
-   
-   
 <script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>
 <script src="{{ basePath('/js/google-code-prettify/lang-sql.js') }}"></script>
-   
-   
-   <!--
- <script type="text/javascript" src="/js/widgets.js"></script>
-    <script src="/js/bootstrap-transition.js"></script>
-    <script src="/js/bootstrap-alert.js"></script>
-    <script src="/js/bootstrap-modal.js"></script>
-    <script src="/js/bootstrap-dropdown.js"></script>
-    <script src="/js/bootstrap-scrollspy.js"></script>
-    <script src="/js/bootstrap-tab.js"></script>
-    <script src="/js/bootstrap-tooltip.js"></script>
-    <script src="/js/bootstrap-popover.js"></script>
-    <script src="/js/bootstrap-button.js"></script>
-    <script src="/js/bootstrap-carousel.js"></script>
-    <script src="/js/bootstrap-typeahead.js"></script>
-    <script src="/js/bootstrap-affix.js"></script>-->
-    <!-- <script src="/js/application.js"></script>-->
-    
-
-<!-- GOOGLE ANALYTICS -->
-<!--
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-9624976-6']);
-_gaq.push(['_setDomainName', 'robbestad.no']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
--->
-<!-- GA DONE -->
-<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
-<script type="text/javascript">
-$(document).ready(function() {
-SyntaxHighlighter.all();
-$(".toolbar").css("visibility","hidden");
-
- $(".loader").funloader()
-
-})
-</script>
-
-<!-- IMPORTANT FOR STYLISH CSS  -->
-<script src="{{ basePath('/js/prefixfree.min.js"') }}></script>
-<script>
-StyleFix.register(function(css, raw) {
-    if (PrefixFree.functions.indexOf('radial-gradient') > -1) {
-        css = css.replace(/radial-gradient\(([a-z-\s]+\s+)?at ([^,]+)(?=,)/g, function($0, shape, center){
-            return 'radial-gradient(' + center + (shape? ', ' + shape : '');
-        });
-    }
-    
-    return css;
-});
-</script>
-   
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36729472-2']);
-  _gaq.push(['_setDomainName', 'svenardo.com']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
 </body>
 </html>
