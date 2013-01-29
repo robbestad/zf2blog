@@ -14,7 +14,8 @@
 
 return array(
     'js' => array(
-    			'//js/jquery.js',
+    	//		'//js/jquery.js',
+                '//js/jquery-1.9.0.min.js',
     			'//js/bootstrap.min.js',
     			'//js/html5.js',
     			'//js/loader.js',
