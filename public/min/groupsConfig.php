@@ -22,9 +22,9 @@ return array(
     			'//js/XRegExp.js', 
     			'//js/shCore.js',
     			'//js/shBrushPhp.js',
-
     			'//js/analytics.js',
     			'//js/prefixfree.js',
+    			'//js/prism.js',
     			
     			),
     
@@ -35,5 +35,6 @@ return array(
     	'//css/sh/shCore.css',
     	'//css/sh/shCoreEclipse.css',
     	'//css/style.css',
+    	'//css/prism.css',
     	),
 );
