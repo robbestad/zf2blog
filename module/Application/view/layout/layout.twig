@@ -31,6 +31,8 @@
 
     {% block link %}
     {% do headLink().appendStylesheet(basePath('/min/?g=css')) %}
+    {% do headLink().appendStylesheet(basePath('/min/?g=regular')) %}
+
     <!-- icons -->
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
@@ -55,7 +57,7 @@
               
           <div class="nav-collapse collapse" style="height: 0px;">
             <ul class="nav">
-            		
+            		<!--
             		<li 
                     {% if '/' == getPath() %}
 					class="active"
@@ -67,7 +69,7 @@
 					class="active"
 					{% endif %}
 					><a href="{{ url('about') }}">About</a></li>
-                
+                -->
                     <li 
                     {% if 'about' in getPath() %}
                     class="active"

@@ -109,7 +109,7 @@ return array(
     ),
     'module_layouts' => array(
         'Application' => 'layout/layout.twig',
-        #'About' => 'layout/layout.twig',
+        'Games' => 'layout/arcade.twig',
         'Blog' => 'layout/layout.twig',
     ),
 
