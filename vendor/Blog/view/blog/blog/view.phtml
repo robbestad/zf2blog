@@ -20,21 +20,7 @@ if($this->zfcUserIdentity()){
 <?php
 }
 ?>
-<div class="btn-group" >
-  <button class="btn btn-primary">Action</button>
-  <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  
-  <p>
-  <ul class="dropdown-menu btn-info">
-    <a class="btn-info" href="/blog/edit/<?php echo $this->blogs->id; ?>">Edit this post</a>
-    <a class="btn-warning" href="/blog/delete/<?php echo $this->blogs->id; ?>">Delete this post</a>
- 
-  </ul>
-  </p>
-  
-</div>
+
 
 <h1><?php echo $this->blogs->title; ?></h1>
 <p><span class="label label-inverse"><?php echo $this->blogs->badge; ?></span></p>
