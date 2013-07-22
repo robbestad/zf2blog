@@ -1,4 +1,5 @@
 <?php
+define( 'ALLOW_SYMLINKS_OUTSIDE_DOCUMENT_ROOT', TRUE );
 define ('ALLOW_EXTERNAL', FALSE);
 define ('FILE_CACHE_DIRECTORY', '');
 define ('MAX_FILE_SIZE', 524288); //512KB

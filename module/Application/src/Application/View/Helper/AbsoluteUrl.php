@@ -17,6 +17,7 @@ class AbsoluteUrl extends AbstractHelper
     public function __invoke()
     {
     	//return var_dump(zfcUserIdentity());
+    
         return $this->request->getUri()->normalize();
     }
 }

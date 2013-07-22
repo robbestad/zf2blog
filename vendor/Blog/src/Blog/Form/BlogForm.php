@@ -35,9 +35,11 @@ class BlogForm extends Form
             'attributes' => array(
                 'type'  => 'textarea',
                 'class' => 'textarea-large',
+                'id' => 'content',
             ),
             'options' => array(
                 'label' => 'Content',
+
             ),
         ));
 

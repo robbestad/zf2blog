@@ -823,6 +823,9 @@ class timthumb {
             }
             return $this->error("Could not find your website document root and the file specified doesn't exist in timthumbs directory. We don't support serving files outside timthumb's directory without a document root for security reasons.");
         } //Do not go past this point without docRoot set
+				
+				// allow symlinks
+				if( ALLOW_SYMLINKS_OUTSIDE_DOCUMENT_ROOT && file_exists ($this->docRoot . '/' . $src)) return $this->docRoot . '/' . $src;
 
         //Try src under docRoot
         if(file_exists ($this->docRoot . '/' . $src)) {
