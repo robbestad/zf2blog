@@ -2,6 +2,8 @@
 {{ headTitle('Edit - ') }}
 {% endblock %}
 
+if($this->zfcUserIdentity()){
+
 {{ translate('Discover Modules') }}
 
 {{ form().openTag(form)|raw }}
