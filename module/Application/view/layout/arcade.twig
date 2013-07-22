@@ -30,12 +30,8 @@
     {% endblock %}
 
     {% block link %}
-    {% do headLink().appendStylesheet(basePath('/min/?g=new')) %}
-    {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
-    {% do headLink().appendStylesheet(basePath('/min/?g=regular')) %}
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-    
+    {% do headLink().appendStylesheet(basePath('/min/?g=css')) %}
+    {% do headLink().appendStylesheet(basePath('/min/?g=arcade')) %}
     <!-- icons -->
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
@@ -46,11 +42,15 @@
     {% endblock %}
 </head>
 
-<body onload="prettyPrint()">
-{#
+<body onload="prettyPrint()" >
+
+
+
+<div class="container">
+        
 <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="navbar-container">
           <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -60,25 +60,11 @@
               
           <div class="nav-collapse collapse" style="height: 0px;">
             <ul class="nav">
-            		<!--
-            		<li 
-                    {% if '/' == getPath() %}
-					class="active"
-					{% endif %}
-					><a href="{{ url('home') }}">Home</a></li>
-
-                	<li 
-                    {% if 'about' in getPath() %}
-					class="active"
-					{% endif %}
-					><a href="{{ url('about') }}">About</a></li>
-                -->
                     <li 
                     {% if 'about' in getPath() %}
                     class="active"
                     {% endif %}
-                    ><a href="{{ url('donate') }}">Donate</a></li>
-                
+                    ><a href="{{ url('donate') }}">License</a></li>
 
                 	<li 
                     {% if 'games' in getPath() %}
@@ -112,39 +98,79 @@
         </div>
       </div>
     </div>
-#}
 
-{#
-<div class="container">
 
-        <div class="span12">
-        {{ content | raw }}
-		</div>
+	{{ content | raw }}
+
+
+     
+    </div>
+	</div>    
 	
-    
-    </div>
-    #}
+	<!-- REQUIRED - all the javascripts  -->      
+	<script src="{{ basePath('/min/?g=js') }}"></script>
+	<script src="{{ basePath('/min/?g=jsarcade') }}"></script>
+	<script src="/js/google-code-prettify/prettify.js"></script>
+	<script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>
+	<script src="{{ basePath('/js/google-code-prettify/lang-sql.js') }}"></script>
+	
+	<script type="text/javascript">
+	$(window).load(function() {
+	    $('#slider').nivoSlider();
+	});
+	
+	$(document).ready(function() {
+		rightbarControl($("#rightbarcontent").html());
+			});
+	
+	
 
-    {% if getPath() == "/" %} {% include basePath('application/index/splash.twig') %} {% endif %}
-    
-    <div style="background:#fff; overflow:hidden">
-    <div id="preview" style="background:#fff; overflow:hidden">
-    <div class="text_content">
+	$(window).resize(function() {
+		rightbarControl($("#rightbarcontent").html());
+	});
 
-      {{ content | raw }}
 
-    {% if getPath() == "/" %}{% include basePath('application/index/main.twig') %} {% endif %}
+	
+	var wasPortrait = -1;
+	var checkOrientation = function() {
+	    var isPortrait = (window.innerHeight > window.innerWidth);
+	    if( isPortrait === wasPortrait ) { return; // Nothing to do here }
+	    wasPortrait = isPortrait;
+		alert("switchd");
+	    // Do your stuff...
+	};
+	};
+	//window.addEventListener( 'orientationchange', checkOrientation, false );
 
-    <div id="push">  
-        <p class="muted credit"><center>&copy; Sven A Robbestad. All rights reserved.</center></p>
-    </div>
-    </div>
 
-<!-- REQUIRED - all the javascripts  -->      
-<script src="{{ basePath('/min/?g=js') }}"></script>
-<script src="/js/google-code-prettify/prettify.js"></script>
-<script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>
-<script src="{{ basePath('/js/google-code-prettify/lang-sql.js') }}"></script>
+	window.addEventListener('orientationchange', function(){
+	     /* update layout per new orientation */
+	     			switch ( window.orientation ) {
+			
+			case 0:
+			
+			break;
+			
+			case 90:
+			//alert('landscape mode screen turned to the left'+document.width);
+			  
+			break;
+			
+			case -90:
+			//alert('landscape mode screen turned to the right'+document.width);
+			 // $(".container").css('-webkit-transform', 'scale(0.8,0.8)');
+			  
+		
+			break;
+			
+			}
+
+	});
+	
+	
+	
+	
+	</script>
 
 </body>
 </html>

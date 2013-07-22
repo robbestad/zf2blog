@@ -26,9 +26,9 @@ return array(
     ),
 
     'view_manager' => array(
-	#'template_map' => array(
-        #    'layout/layout'    	   => __DIR__ . '/../view/layout/layout.twig',
-	#),
+	'template_map' => array(
+            'layout/layout'    	   => __DIR__ . '/../view/layout/blog.twig',
+	),
 	'template_path_stack' => array(
             'blog' => __DIR__ . '/../view',
         ),

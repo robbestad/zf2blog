@@ -1,0 +1,577 @@
+body {
+    padding-bottom: 0;
+    position: relative;
+    padding-top: 15px;
+
+	background: white url(/images/bgpattern.png) Repeat Center Center Fixed;
+	background-color: white;
+
+
+}
+/* font */
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('/fonts/League_Gothic-webfont.eot');
+	src: local('☺'), url('/fonts/League_Gothic-webfont.woff') format('woff'), url('/fonts/League_Gothic-webfont.ttf') format('truetype'), url('/fonts/League_Gothic-webfont.svg#webfontpm5EArBj') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+/* SLIDER */
+.slider-wrapper {
+	padding:0;
+/*	margin: 10px 10px 10px 0px;*/
+}
+[class*="span"] {
+float: left;
+min-height: 1px;
+margin-left: 10px;
+}
+.navbar-fixed-top{
+position: fixed;
+}
+
+.gamethumb{
+	padding: 0 0 5px 0;
+	float:left;
+}
+
+.one-quarter{
+	width:25%;
+	
+}
+.white{
+	background-color: white;
+	height : auto !important; /* Ignored by Internet Explorer, applied everywhere else. */
+    height : 100%;            /* Internet Explorer treats as min-height. */
+    min-height : 100%;        /* Internet Explorer ignores this. */
+    display: block;
+}
+
+.span1, .span1, .span3, .span4a, .span5, .span6, .span7, .span8, .span9, .span10, .span12{
+	/*margin:10px 0 0 10px;*/
+	padding: 5px;
+	border: 1px double #9e9e9e;
+	background-color: white;
+	margin:0px;
+}
+.span4{
+	/*margin:10px 0 0 10px;*/
+	padding: 10px;
+	border: 1px double #9e9e9e;
+	background-color: white;
+	margin:0px;
+	
+}
+.span11{
+	padding: 0px;
+	height:10px;
+}
+
+.span4{
+	width:325px; 
+	margin-left:5px;
+}
+.one-quarter{
+	width:150px;
+	display:block;
+	float:left;
+}
+.one-third{
+	width:170px;
+	display:block;
+	float:left;
+	margin-left:10px;
+}
+.gametext{
+	display:block;
+	word-wrap:break-word;
+	clear:left;
+}
+
+#rightbar{
+margin-left: 10px;
+position: absolute;
+visibility: hidden;
+}
+
+@media (min-width:1289px){
+	#rightbar{
+		visibility: visible;
+		overflow: hidden;
+		
+	}
+	#rightbar:after
+	{
+	   content: ".";
+	   display:block;
+	   height:0;
+	   clear:both;
+	   visibility:hidden;
+	}
+}
+
+@media (min-width:975px){
+	#rightbar{
+		visibility: visible;
+	}
+	.span4{
+		width: 303px;
+	}
+}
+@media (min-width:1200px){
+	.span4{
+		width: 379px;
+	}
+
+}
+
+@media (max-width: 990px) {
+	.slider-wrapper {
+		margin-left:10px;
+		width: 95%;
+	}
+	.ticker-wrapper{
+		width:92%;
+	}
+	.span7{
+		width: 94%;
+		margin-left:10px;
+		
+	}
+	.span4{
+		width:245px; 
+	
+	}
+	
+	.span1, .span2a, .span3, .span4, .span5{
+		visibility: hidden;
+		height:0px;
+		width:0px;
+		margin:0px;
+		padding:0px; 
+	}
+	.span8, .span9, .span10{
+		margin:0;
+	}
+	
+}
+@media (min-width: 600px) and (max-width: 979px) {
+	.span7{
+		width: 96%;
+		margin-left:10px;
+	}
+	.one-third{
+		width:150px;
+	}
+	#rightbar{
+		visibility: hidden;
+	}
+	
+}
+@media (min-width: 401px) and (max-width: 599px) {
+	.span7{
+		width: 96%;
+		margin-left:10px;
+	}
+	.one-third{
+		width:100px;
+	}
+	#rightbar{
+		visibility: hidden;
+	}
+	
+}
+
+@media (max-width: 400px) {
+	.span7{
+		width: 97%;
+		margin-left:5px;
+		
+	}
+	.one-third{
+		width:100px;
+		
+	}
+	#rightbar{
+		visibility: hidden;
+	}
+	
+
+
+}
+
+/* all iphones */
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+	.slider-wrapper {
+		margin-left:0px;
+		width: 99%;
+	}
+	.one-third{
+		width:100%;
+		margin-top:15px;
+		
+	}
+	.container{
+		margin:0px;
+		width:100%;
+	}
+	body{
+		padding:0px;
+	}
+	.gamenav{
+		padding-left:50px;
+	}
+	.gamethumb{
+		margin:0 auto;
+	}
+	h5 a{
+		color:black;
+		
+	}
+	.gametext{
+	display:block;
+	word-wrap:break-word;
+	clear:none;
+}
+#rightbar{
+		visibility: hidden;
+	}
+	
+	
+}
+
+/* ipad layouts */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+}
+
+#dsq1{
+box-shadow:0 0 0 0;
+}
+
+.navbar-inverse .navbar-inner {
+	border:none;
+	border-radius: 0px;
+	background: black;
+}
+
+.collapsed {
+	border:none;
+	border-radius: 0px;
+	background: black;
+}
+
+
+.container{
+	margin:auto;
+	background: url(/images/bg.jpg) repeat scroll 0 0 transparent;
+}
+
+
+.span11{
+	padding:0px;
+}
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+ /*   background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent; */
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+    font-family: Georgia,Tahoma,Palatino,Andale Mono
+}
+
+/*
+Bringing back the blink tag
+*/
+@-webkit-keyframes blink {
+  0%     { opacity: 0 } 50% { opacity: 0 }
+  50.01% { opacity: 1 } 100% { opacity: 1 }
+}
+
+blink {
+  -webkit-animation: blink 0.7s infinite linear alternate;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/* EXTRA */
+
+
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+@media (max-width: 980px) {
+ .navbar{
+	text-align: center;
+}
+}
+
+body > .navbar {
+  font-size: 13px;
+  font-family:Georgia;
+}
+/* Sections
+-------------------------------------------------- */
+
+/* padding for in-page bookmarks and fixed navbar */
+.navbar .btn-navbar {
+padding: 7px 20px;
+margin-right: 20px;
+}
+
+section {
+  padding-top: 30px;
+}
+section > .page-header,
+section > .lead {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+section > ul li {
+  margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+.bs-docs-separator {
+  margin: 40px 0 39px;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+
+.linebreak{
+	clear:both;
+	display:block;
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+#patterns {
+
+}
+
+#patterns:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+	#patterns > li {
+		position:relative;
+		width: 300px;
+		height:300px;
+		margin:40px;
+		float:left;
+		list-style:none;
+	}
+
+	#patterns > li:not(:target) {
+		cursor:pointer;
+		background-color:gray;
+		border-radius: 150px;
+		box-shadow: -3px -3px 10px 2px rgba(0,0,0,.3) inset,
+					0 0 0 15px rgba(255, 255, 255, .6) inset,
+					0 0 0 1px rgba(0,0,0,.5),
+					2px 2px 10px rgba(0,0,0,.6);
+					/* Overrride for Webkit bug */
+					-webkit-box-shadow: 0 0 0 15px rgba(255, 255, 255, .6) inset,
+					0 0 0 1px rgba(0,0,0,.5),
+					2px 2px 10px rgba(0,0,0,.6);
+	}
+
+	#patterns > li:target {
+		background: none !important;
+	}
+
+	body[style] #patterns > li:not(:target) {
+		display:none;
+	}
+
+		#patterns > li > div {
+			position:absolute;
+			top:235px;
+			left:55px;
+			width:250px;
+			z-index:2;
+			padding:3px 10px 5px;
+			color:#e50;
+			color: hsla(20,100%,50%,.94);
+			font-size:90%;
+			background:currentColor;
+			box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+		}
+
+		#patterns > li:target > div {
+			position:fixed;
+			top:auto;
+			left:20px;
+			right:20px;
+			bottom:20px;
+			z-index:3;
+			width:auto;
+			padding:10px;
+			font-size:200%;
+		}
+
+		#patterns > li > div:after {
+			content: "";
+			position:absolute;
+			top:-30px;
+			left:30px;
+			border:15px solid transparent;
+			border-bottom-color:currentColor;
+			border-left-width:0;
+		}
+
+		#patterns > li:target > div:after {
+			border-width:30px;
+			border-left-width:0;
+			top:-60px;
+			left:60px;
+		}
+
+			#patterns > li h2,
+			#patterns > li p,
+			#patterns > li textarea {
+				color:white;
+				text-shadow: .05em .05em .1em rgba(0,0,0,.4);
+			}
+
+			#patterns > li h2 {
+				font-size:140%;
+			}
+
+			#patterns > li:target h2 {
+				float: left;
+				margin-bottom: .3em;
+			}
+
+			#patterns > li .bytesize {
+				font-weight:normal;
+				opacity:.7;
+			}
+
+			#patterns > li p {
+				font-size:85%;
+				line-height:1.8;
+				opacity:.7;
+				text-shadow: none;
+			}
+
+			#patterns > li:target p {
+				float: right;
+			}
+
+			#patterns > li textarea {
+				display:none;
+				width:100%;
+				color:white;
+				background: #333538;
+				padding: .5em;
+				border:0;
+				font-family: Consolas, Monaco, 'Andale Mono', monospace;
+				resize:vertical;
+				box-sizing: border-box;
+				box-shadow: 1px 1px 10px black inset;
+				border-radius: 1px; /* Opera bug fix */
+			}
+
+			#patterns > li:target textarea {
+				display:block;
+			}
+
+			#patterns > li .close {
+				display:none;
+				position:absolute;
+				top:-.5em;
+				right:-.5em;
+				width:1.5em;
+				line-height:1.5;
+				height:1.5em;
+				border: .2em solid white;
+				font-size:80%;
+				color:white;
+				background: rgba(20,20,20,.7);
+				text-align:center;
+				text-shadow: 1px 1px 3px black;
+				border-radius:1em;
+				box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+			}
+
+			#patterns > li .close:hover {
+				background:black;
+			}
+
+			#patterns > li:target .close {
+				display:block;
+			}
+
+
+/* Misc
+-------------------------------------------------- */
+
+/* Make tables spaced out a bit more */
+h2 + table,
+h3 + table,
+h4 + table,
+h2 + .row {
+  margin-top: 5px;
+}
+
+
+/* Desktop
+------------------------- */
+@media (max-width: 880px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+}
+
+

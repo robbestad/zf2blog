@@ -13,7 +13,7 @@
 
 
 return array(
-	'js' => array(
+	'js.old' => array(
 		'//js/jquery-1.9.0.min.js',
 		'//js/bootstrap.min.js',
 		'//js/html5.js',
@@ -27,7 +27,37 @@ return array(
 		'//js/incrementable.js',
 		'//js/jquery.ticker.js',
 		'//js/jquery.nivo.slider.js',
+		'//js/spin.min.js',
+		'//js/jquery.spin.js',
+	
 	),
+	
+
+    'js' => array(
+        '//js/jquery-1.9.0.min.js',
+        '//js/html5.js',
+        '//js/loader.js',
+        '//js/XRegExp.js', 
+        '//js/shCore.js',
+        '//js/shBrushPhp.js',
+        '//js/analytics.js',
+        '//js/jquery.ticker.js',
+        '//js/jquery.nivo.slider.js',
+        '//js/spin.min.js',
+        '//js/jquery.spin.js',
+        '//js/html5slider.js',
+        '//js/parallax.js',
+       
+    
+    ),
+    
+    
+	
+    'jsarcade' => array(
+    	'//js/arcade.js',
+    	'//js/reflow.js',
+    	),
+
 
     
     'css' => array('//css/bootstrap.min.css', 
@@ -40,14 +70,26 @@ return array(
 
     	),
 
+
+      'new' => array(
+    	'//css/prettify.css',
+    	'//css/code.css',
+    	'//css/sh/shCore.css',
+    	'//css/sh/shCoreEclipse.css',
+    	'//css/prism.css',
+
+    	),
+
     'regular' => array(
     	'//css/style.css',
+    	
     	),
+
+
     	 
     'arcade' => array(
-    	'//css/arcade.css',
     	'//css/ticker-style.css',
-		'//css/sliderthemes/default/default.css',
+    	'//css/arcade.css',
 		'//css/sliderthemes/bar/bar.css',
 	    '//css/nivo-slider.css',
     	),

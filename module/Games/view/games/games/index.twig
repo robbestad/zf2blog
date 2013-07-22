@@ -6,6 +6,76 @@
 
 
 
+
+
+
+
+<ul id="js-news" class="js-hidden">
+    <li class="news-item"><a href="#">Licensing now available.</a></li>
+    <li class="news-item"><a href="#">SHMUP: 8-bit carnage</a></li>
+    <li class="news-item"><a href="#">This is the 3rd latest news item.</a></li>
+    <li class="news-item"><a href="#">This is the 4th latest news item.</a></li>
+</ul>
+
+<div class="white">
+<div class="span7">
+   <div class="slider-wrapper theme-bar">
+            <div id="slider" class="nivoSlider">
+                <img src="/delete/toystory4.jpg" data-thumb="/delete/toystory4.jpg" alt="" />
+                <a href="http://dev7studios.com"><img src="/delete/up4.jpg" data-thumb="/delete/up4.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="/delete/walle4.jpg" data-thumb="/delete/walle4.jpg" alt="" data-transition="slideInLeft" />
+                <img src="/delete/nemo4.jpg" data-thumb="/delete/nemo4.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+        </div>
+		</center>
+</div>
+<div id="rightbar">
+</div>
+
+
+<div class="span11"></div>
+
+
+      <div class="span7">
+
+<div class="navbar navbar">
+      <div class="navbar-inner">
+        <div class="navbar-container">
+              
+            <ul class="nav gamenav">
+            		<li id="1"><a href="#latestgames">LATEST GAMES</a></li>
+					<li id="2"><a href="#mostpopular">MOST POPULAR</a></li>
+					<li id="3"><a href="#randomgames">RANDOM GAMES</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+{% for i in 1..3 %}
+
+<div class="one-third menulink" id="game{{i}}">
+<h5>Alpha Force</h5> 
+<img src="/thumb.php?src=/images/alphaforce.png" class="gamethumb">
+<span class="gametext">
+Fight the aliens in this modern shoot 'em up.
+</span>
+</div>
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+<!--
+
+
+
 <div class="row">
 <div class="span11">
 
@@ -117,4 +187,14 @@ Made for 48 hours game compo <strong>Ludum Dare 25</strong>. Theme: You are the 
 
 </div>
 
+-->
+
+<div id="orientation">
+
+</div>
+
+<div class="hidden" id="rightbarcontent">
+<h3>This is the arcade</h3>
+bear with
+</div>
 
