@@ -1,0 +1,887 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 0;
+    position: relative;
+    padding-top: 55px;
+
+/*
+
+  background:
+  linear-gradient(135deg, #FAFAFA 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, #FAFAFA 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, #FAFAFA 25%, transparent 25%),
+  linear-gradient(45deg, #FAFAFA 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #AFAFFA;
+  
+
+*/
+
+
+
+
+/*	background-color: #fff;
+	background-image:
+	linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;
+*/
+        
+
+}
+
+#dsq1{
+box-shadow:0 0 0 0;
+}
+
+.container-fluid{
+	margin: 0em 1em auto;
+	box-shadow: -18px 0 15px -10px rgba(0, 0, 0, .5);
+	background-color: #fff;
+        padding:5px;
+	background-image:
+	linear-gradient(#aaa .1em, transparent .1em);
+	/*
+	background: url("http://leaverou.github.com/prefixfree/css/../img/noise.png") white;
+	background: url("http://leaverou.github.com/prefixfree/css/../img/raisedfist.png") bottom right no-repeat, -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white), url("http://leaverou.github.com/prefixfree/css/../img/noise.png") white;
+	*/
+	font: 100%/1.6 Georgia, sans-serif;
+	text-shadow: 1px 1px 1px lightgray;
+		-webkit-hyphens: auto;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+ /*   background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent; */
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+    font-family: Georgia,Tahoma,Palatino,Andale Mono
+}
+
+/*
+Bringing back the blink tag
+*/
+@-webkit-keyframes blink {
+  0%     { opacity: 0 } 50% { opacity: 0 }
+  50.01% { opacity: 1 } 100% { opacity: 1 }
+}
+
+blink {
+  -webkit-animation: blink 0.7s infinite linear alternate;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/* EXTRA */
+
+
+
+/********
+
+SPLASH INFO
+
+*******/
+
+#splash {
+  position: relative;
+  width:100%; height:700px;
+  overflow: hidden; 
+}
+#splash_bg {
+
+  position: fixed;
+  z-index: -1;
+  width:100%; height:700px;
+  overflow: hidden;
+
+  background-image: none;
+  background-position: 50% 50%;
+  background-size: cover;
+  
+}
+#splash_info {
+  position: absolute;
+  width:100%; height:250px;
+  margin:30px 0;
+}
+#splash_title {
+  
+  text-align: center;
+  
+  font-family: Bree Serif;
+  font-size: 60px;
+
+  color:#fff;
+  text-shadow: 0 5px 10px #000;
+
+}
+#splash_funding {
+
+  width: 640px; height: 40px;
+  border-radius: 40px;
+
+  background: rgba(0,0,0,0.7);
+
+  margin: 10px auto;
+  padding: 3px;
+
+  position: relative;
+  
+}
+#splash_funding_bar/*, #splash_funding_bg*/ {
+  /*background: rgba(0,0,0,0.7);*/
+  min-width: 40px;
+  max-width: 100%;
+
+  height:40px;
+  border-radius: 40px;
+  position: absolute;
+}
+/*#splash_funding_bg {
+  width: 640px;
+}*/
+#splash_funding_bar {
+  background: #fff;
+  width: 0;
+
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -ms-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition: width 2s ease-in-out;
+
+}
+
+
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+
+body > .navbar {
+  font-size: 13px;
+  font-family:Georgia;
+}
+/* Change the docs' brand */
+/*
+body > .navbar .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+body > .navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+*/
+
+/* Sections
+-------------------------------------------------- */
+
+/* padding for in-page bookmarks and fixed navbar */
+.navbar .btn-navbar {
+padding: 7px 20px;
+margin-right: 20px;
+}
+
+section {
+  padding-top: 30px;
+}
+section > .page-header,
+section > .lead {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+section > ul li {
+  margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+.bs-docs-separator {
+  margin: 40px 0 39px;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+
+.linebreak{
+	clear:both;
+	display:block;
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+#patterns {
+
+}
+
+#patterns:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+	#patterns > li {
+		position:relative;
+		width: 300px;
+		height:300px;
+		margin:40px;
+		float:left;
+		list-style:none;
+	}
+
+	#patterns > li:not(:target) {
+		cursor:pointer;
+		background-color:gray;
+		border-radius: 150px;
+		box-shadow: -3px -3px 10px 2px rgba(0,0,0,.3) inset,
+					0 0 0 15px rgba(255, 255, 255, .6) inset,
+					0 0 0 1px rgba(0,0,0,.5),
+					2px 2px 10px rgba(0,0,0,.6);
+		/* Overrride for Webkit bug */
+		-webkit-box-shadow: 0 0 0 15px rgba(255, 255, 255, .6) inset,
+					0 0 0 1px rgba(0,0,0,.5),
+					2px 2px 10px rgba(0,0,0,.6);
+	}
+
+	#patterns > li:target {
+		background: none !important;
+	}
+
+	body[style] #patterns > li:not(:target) {
+		display:none;
+	}
+
+		#patterns > li > div {
+			position:absolute;
+			top:235px;
+			left:55px;
+			width:250px;
+			z-index:2;
+			padding:3px 10px 5px;
+			color:#e50;
+			color: hsla(20,100%,50%,.94);
+			font-size:90%;
+			background:currentColor;
+			box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+		}
+
+		#patterns > li:target > div {
+			position:fixed;
+			top:auto;
+			left:20px;
+			right:20px;
+			bottom:20px;
+			z-index:3;
+			width:auto;
+			padding:10px;
+			font-size:200%;
+		}
+
+		#patterns > li > div:after {
+			content: "";
+			position:absolute;
+			top:-30px;
+			left:30px;
+			border:15px solid transparent;
+			border-bottom-color:currentColor;
+			border-left-width:0;
+		}
+
+		#patterns > li:target > div:after {
+			border-width:30px;
+			border-left-width:0;
+			top:-60px;
+			left:60px;
+		}
+
+			#patterns > li h2,
+			#patterns > li p,
+			#patterns > li textarea {
+				color:white;
+				text-shadow: .05em .05em .1em rgba(0,0,0,.4);
+			}
+
+			#patterns > li h2 {
+				font-size:140%;
+			}
+
+			#patterns > li:target h2 {
+				float: left;
+				margin-bottom: .3em;
+			}
+
+			#patterns > li .bytesize {
+				font-weight:normal;
+				opacity:.7;
+			}
+
+			#patterns > li p {
+				font-size:85%;
+				line-height:1.8;
+				opacity:.7;
+				text-shadow: none;
+			}
+
+			#patterns > li:target p {
+				float: right;
+			}
+
+			#patterns > li textarea {
+				display:none;
+				width:100%;
+				color:white;
+				background: #333538;
+				padding: .5em;
+				border:0;
+				font-family: Consolas, Monaco, 'Andale Mono', monospace;
+				resize:vertical;
+				box-sizing: border-box;
+				box-shadow: 1px 1px 10px black inset;
+				border-radius: 1px; /* Opera bug fix */
+			}
+
+			#patterns > li:target textarea {
+				display:block;
+			}
+
+			#patterns > li .close {
+				display:none;
+				position:absolute;
+				top:-.5em;
+				right:-.5em;
+				width:1.5em;
+				line-height:1.5;
+				height:1.5em;
+				border: .2em solid white;
+				font-size:80%;
+				color:white;
+				background: rgba(20,20,20,.7);
+				text-align:center;
+				text-shadow: 1px 1px 3px black;
+				border-radius:1em;
+				box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+			}
+
+			#patterns > li .close:hover {
+				background:black;
+			}
+
+			#patterns > li:target .close {
+				display:block;
+			}
+/* Base class
+------------------------- */
+.jumbotron {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding:0px;
+  text-shadow: 0 4px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+/*
+background:
+radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+background-color: #300;
+background-size: 100px 100px;
+  */
+
+
+     /*
+  background:
+  linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+  linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #EC173A;
+  */
+
+  /*
+  background-color: #026873;
+ background-image: linear-gradient(90deg, rgba(255,255,255,.07) 25%, transparent 25%),
+linear-gradient(90deg, rgba(255,255,255,.13) 25%, transparent 25%),
+linear-gradient(90deg, transparent 25%, rgba(255,255,255,.17) 25%),
+linear-gradient(90deg, transparent 25%, rgba(255,255,255,.19) 25%);
+background-size: 13px, 29px, 37px, 53px;
+*/
+}
+
+
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  padding-top:60px;
+}
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+/* Download button */
+.masthead .btn {
+  padding: 19px 24px;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff; /* redeclare to override the `.jumbotron a` */
+  border: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+.masthead .btn:hover {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+}
+.masthead .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+}
+
+
+/* Pattern overlay
+------------------------- */
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background: url(/images/bs-docs-masthead-pattern.png) repeat center center;
+  opacity: .4;*/
+}
+
+/* Masthead (docs home)
+------------------------- */
+.masthead {
+  padding: 70px 0 80px;
+  margin-bottom: 0;
+  color: #fff;
+
+}
+.masthead h1 {
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.masthead p {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+/* Textual links in masthead */
+.masthead-links {
+  margin: 0;
+  list-style: none;
+}
+.masthead-links li {
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255,255,255,.25);
+}
+
+
+/* Misc
+-------------------------------------------------- */
+
+/* Make tables spaced out a bit more */
+h2 + table,
+h3 + table,
+h4 + table,
+h2 + .row {
+  margin-top: 5px;
+}
+
+
+/* OVERRIDE MEDIA QUERIES */
+.marginright{
+margin-right: 10px;
+}
+.leftmargin{
+margin-left: 10px;
+}
+fieldset{
+  padding: 0 0 10px 0;
+}
+fieldset legend{
+border:0;
+margin: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+}
+.textarea-large{
+	width:800px;
+        min-height:200px;
+}
+.textarea-small{
+    height:100px;
+    width:800px;
+}
+.input_large{
+	width:800px;
+}
+
+label{
+	width: 100px;
+}
+form#blog label span{
+	padding: 0px 10px 0px 0px;
+}
+
+.div-center{
+	margin: 15px 0px 0 5px;
+}
+ 
+
+
+
+
+/* Responsive
+-------------------------------------------------- */
+  .container-fluid{
+    margin-top: 40px; /* Offset from top headerr */
+  
+  }
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .container-fluid{
+   /*   padding: 0px; */
+  }
+
+
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 980px) {
+  .span4{
+    width:210px;
+  }
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Widen masthead and social buttons to fill body padding */
+  .jumbotron {
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+  }
+
+
+
+
+
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+	.row{
+	padding: 5px;
+	}
+	.navbar-fixed-top{
+	position: fixed;
+  }
+}
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+ 
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 36px;
+    padding-top: 10px;
+  }
+  .jumbotron p,
+  .jumbotron .btn {
+    font-size: 18px;
+  }
+  .jumbotron .btn {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .jumbotron{
+	  margin: 10px 0 0;
+	  padding: 30px 5px 0 0;
+  }
+
+  /* Do our best to make tables work in narrow viewports */
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  /* Modal example */
+  .modal-example .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  /* Tighten up footer */
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* Unfloat the back to top in footer to prevent odd text wrapping */
+  .footer .pull-right {
+    float: none;
+  }
+}
+.navbar{
+	text-align: center;
+}
+
+
+ body{
+	 padding:0;
+	 margin:0;
+	 width:100%;
+ }
+ .container-fluid{
+	 /* margin:0;
+	  padding:0;
+	  */
+  }
+  .navbar-fixed-top{
+	position: fixed;
+  }
+
+}
+
+@media (min-width: 481px){
+
+	.syntaxhighlighter, .prettyprint{
+		 width: 85% !important;
+	}
+
+}
+
+
+@media (max-width:758px){
+    .textarea-large, .textarea-small, .input_large{
+        min-width:180px;
+        max-width:380px;
+    }
+}
+
+
+@media (min-width:1200px){
+.row {
+  margin-left: -50px;
+  margin-right:20px;
+}
+}
+
+@media (max-width:361){
+   /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 28px;
+  }
+}
+
+.margin-right{
+  margin-right:10px;
+}
+
+
+/* STICKY FOOTER */
+
+  /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        
+        height: 60px;
+        background: transparent;
+      }
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        .span6, .muted, .span12 {
+         padding: 5px 5px 5px 5px;
+         
+        }
+      }
+
+     
+      @media (min-width:339px){
+          #push, #footer,#overview,.container-fluid {
+                margin-right: 14px;
+                margin-left: 14px;
+                padding-left:10px;
+            }
+      }
+   
+      @media (min-width: 0px){
+      iframe{
+                margin: 0 0 10px 0;
+                height:200px;
+                width:100%;
+                box-shadow: -17px 6px 11px -13px rgba(0, 0, 0, 0);
+                border:0;
+            }
+      .span5{
+          margin-left: 20px;
+        }
+      }
+
+
+      @media (min-width:479px){
+      iframe{
+          padding: 0;
+          height:200px;
+          width:390px;
+          border:0;
+          box-shadow: -17px 6px 11px -13px rgba(0, 0, 0, .5);
+
+        }
+      }
+
+      
+      #push{
+        padding-left:10px;
+      }
+      
+      
+      #overview{background: white}
+     
