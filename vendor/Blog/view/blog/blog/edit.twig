@@ -2,8 +2,8 @@
 {{ headTitle('Edit - ') }}
 {% endblock %}
 
-if($this->zfcUserIdentity()){
-
+<?php if($this->zfcUserIdentity()){
+?>
 {{ translate('Discover Modules') }}
 
 {{ form().openTag(form)|raw }}
@@ -104,4 +104,4 @@ if($this->zfcUserIdentity()){
       log.innerHTML += "<div>redo:composer</div>";
     });
 </script>
-
+<?php } 
