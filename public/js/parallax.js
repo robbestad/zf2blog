@@ -1,7 +1,6 @@
 
 /////////
 // Parallax Background 
-/*
 (function(){
 	var background = document.getElementById("splash_bg");
 	window.onscroll = function(){
@@ -10,7 +9,6 @@
 		document.getElementById("splash_bg").style.top = -offset+"px";
 	};
 })();
-*/
 
 /////////
 // Swinging Click
