@@ -29,7 +29,6 @@ SPLASH INFO
 #splash_bg {
     background-position: 50% 50%;
     background-size: cover;
-    background:url(/images/city.jpg);
     height: 580px;
     overflow: hidden;
     position: fixed;
@@ -698,16 +697,21 @@ and (max-device-width : 568px) {
       background: rgba(255,255,255,1.0);
 
   }
-
    #splash{
     height:380px;
-    background: rgba(255, 229, 180,1.0);
+    background-color: #0088cc;
   }
 
 
+
+  #sharebox{
+    width:320px; text-align: center; margin:auto; font-size:18px; 
+  }
+  
+
   #splash_bg{
     height:360px;
-    background: rgba(255, 229, 180,1.0);
+    background-color: #0088cc;
   }
 
   #video_container{

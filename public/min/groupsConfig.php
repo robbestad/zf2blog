@@ -13,25 +13,6 @@
 
 
 return array(
-	'js.old' => array(
-		'//js/jquery-1.9.0.min.js',
-		'//js/bootstrap.min.js',
-		'//js/html5.js',
-		'//js/loader.js',
-		'//js/XRegExp.js', 
-		'//js/shCore.js',
-		'//js/shBrushPhp.js',
-		'//js/analytics.js',
-		'//js/prefixfree.js',
-		'//js/prism.js',
-		'//js/incrementable.js',
-		'//js/jquery.ticker.js',
-		'//js/jquery.nivo.slider.js',
-		'//js/spin.min.js',
-		'//js/jquery.spin.js',
-	
-	),
-	
 
     'js' => array(
         '//js/jquery-1.9.0.min.js',
@@ -71,7 +52,7 @@ return array(
     	),
 
 
-      'new' => array(
+      'prettycode' => array(
     	'//css/prettify.css',
     	'//css/code.css',
     	'//css/sh/shCore.css',
@@ -80,10 +61,15 @@ return array(
 
     	),
 
-    'regular' => array(
+    'web' => array(
     	'//css/style.css',
     	
     	),
+
+    'mobile' => array(
+        '//css/mobile.css',
+        
+        ),
 
 
     	 
