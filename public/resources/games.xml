@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>RSS Title</title>
+ <description>This is an example of an RSS feed</description>
+ <link>http://www.someexamplerssdomain.com/main.html</link>
+ <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
+ <pubDate>Mon, 06 Sep 2009 16:45:00 +0000 </pubDate>
+ <ttl>1800</ttl>
+ 
+ <item>
+  <title>Jetman Jr</title>
+  <description><![CDATA[<h5>Jetman Jr</h5> <img src="/thumb.php?src=/images/jetmanjr_small.png" class="gamethumb"><span class="gametext">Rescure the miners.</span>]]></description>
+  <link>/licensing/</link>
+  <guid>1</guid>
+  <pubDate>Mon, 24 May 2013 16:45:00 +0000 </pubDate>
+ </item>
+ 
+  <item>
+  <title>Alpha Force</title>
+  <description><![CDATA[<a href="http://play.svenardo.com/alphaforce/"><h5>&nbsp;Alpha Force</h5></a> <a href="http://play.svenardo.com/alphaforce/"><img src="/thumb.php?src=/images/alphaforce.png" class="gamethumb"></a><span class="gametext">Fight the aliens in this modern shoot 'em up.</span>]]></description>
+  <link>http://play.svenardo.com/carnage/</link>
+  <guid>1</guid>
+  <pubDate>Mon, 24 May 2013 16:45:00 +0000 </pubDate>
+ </item>
+ <item>
+  <title>Dr Squared</title>
+  <description><![CDATA[<h5>Dr. Squared</h5> <img src="/thumb.php?src=/images/alphaforce.png" class="gamethumb"><span class="gametext">Fight the aliens in this modern shoot 'em up.</span>]]></description>
+  <link>http://play.svenardo.com/carnage/</link>
+  <guid>1</guid>
+  <pubDate>Mon, 24 May 2013 16:45:00 +0000 </pubDate>
+ </item>
+ 
+
+</channel>
+</rss>

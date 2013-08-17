@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>Games</title>
+ <description>Games feed from Svenardo</description>
+ <link>http://www.svenardo.com/index.html</link>
+ <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
+ <pubDate>Mon, 06 Sep 2009 16:45:00 +0000 </pubDate>
+ <ttl>1800</ttl>
+ 
+ <item>
+<title>Chess</title>
+  <description><![CDATA[<h5>Realtime Chess</h5> <a href="http://play.svenardo.com/chess"><img src="/thumb.php?src=/images/chess_sharp.png" class="gamethumb"></a><span class="gametext">Play Chess without turns.</span>]]></description>
+  <link>http://play.svenardo.com/chess</link>
+  <guid>1</guid>
+  <pubDate>Mon, 24 May 2013 16:45:00 +0000 </pubDate>
+ </item>
+ 
+  <item>
+  <title>The Labyrinth</title>
+  <description><![CDATA[<h5>The Labyrinth</h5> <a href="http://play.svenardo.com/thelabyrinth/"><img src="/thumb.php?src=/images/labyrinth_sharp.png" class="gamethumb"></a><span class="gametext">Be the canvas, steer the ball</span>]]></description>
+  <link>http://play.svenardo.com/thelabyrinth/</link>
+  <guid>1</guid>
+  <pubDate>Mon, 24 May 2013 16:45:00 +0000 </pubDate>
+ </item>
+ <item>
+  <title>Pacman</title>
+  <description><![CDATA[<h5>Pacman</h5>  <a href="http://play.svenardo.com/pacman/"><img src="/thumb.php?src=/images/pacs.png" class="gamethumb"></a><span class="gametext">A faithful remake.</span>]]></description>
+  <link>http://play.svenardo.com/pacman/</link>
+  <guid>1</guid>
+  <pubDate>Mon, 24 May 2013 16:45:00 +0000 </pubDate>
+ </item>
+</channel>
+</rss>
