@@ -25,6 +25,23 @@
 
     {% block meta %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon-precomposed" href="http://www.svenardo.com/apple-touch-icon.png">
+    <link rel="icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
+
+    <meta name="keywords" content="chess, touch, arcade, real time">
+    <meta name="description" content="Svenardo is a developer who enjoys working with HTML5, Javascript, PHP, Python, Objective C and related software and tech.">
+    <meta property="og:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
+    <meta property="twitter:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
+    <meta property="og:title" content="Svenardo the developer" />
+    <meta property="og:type" content="game" />
+    <meta property="og:site_name" content="Svenardo.com" />
+    <meta property="og:url" content="http://www.svenardo.com/games" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="http://www.svenardo.com/games" />
+    <meta property="twitter:title" content="Svenardo the developer" />
+    <link rel="image_src" type="image/png" href="http://www.svenardo.com/apple-touch-icon.png" />
      {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
     {{ headMeta() }}
     {% endblock %}
@@ -44,20 +61,23 @@
 
 <body onload="prettyPrint()" >
 
-
+<div id="overlay"> </div>
+<div id="splash_bg"></div>
 
 <div class="container">
-        
 <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="navbar-container">
+   <!--
           <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="{{ url('home') }}">Svenardo</a>
-              
+-->
+          <a class="brand" href="{{ url('games') }}">Svenardo.com ARCADE</a> 
+
+           <!--   
           <div class="nav-collapse collapse" style="height: 0px;">
             <ul class="nav">
                     <li 
@@ -95,6 +115,7 @@
 					
             </ul>
           </div>
+        -->
         </div>
       </div>
     </div>
@@ -117,11 +138,8 @@
 	<script type="text/javascript">
 	$(window).load(function() {
 	    $('#slider').nivoSlider();
+        checko();
 	});
-	
-	$(document).ready(function() {
-		rightbarControl($("#rightbarcontent").html());
-			});
 	
 	
 
@@ -129,6 +147,34 @@
 		rightbarControl($("#rightbarcontent").html());
 	});
 
+    function checko(){
+        console.log( window.orientation );
+          switch ( window.orientation ) {
+            
+            case 0:
+            case 180:
+             $("#overlay").css('zIndex', '-99999');
+             
+            break;
+            
+            case 90:
+            //alert('landscape mode screen turned to the left'+document.width);
+              $("#overlay").css('zIndex', '999999');
+             
+            break;
+            
+            case -90:
+            //alert('landscape mode screen turned to the right'+document.width);
+             // $(".container").css('-webkit-transform', 'scale(0.8,0.8)');
+              //$("body").css('paddingTop', '20px');
+              $("#overlay").css('zIndex', '999999');
+             
+              
+        
+            break;
+            
+            }
+    }; 
 
 	
 	var wasPortrait = -1;
@@ -145,20 +191,26 @@
 
 	window.addEventListener('orientationchange', function(){
 	     /* update layout per new orientation */
-	     			switch ( window.orientation ) {
+	     switch ( window.orientation ) {
 			
 			case 0:
-			
+            case 180:
+			 $("#overlay").css('zIndex', '-99999');
+             
 			break;
 			
 			case 90:
 			//alert('landscape mode screen turned to the left'+document.width);
-			  
+			  $("#overlay").css('zIndex', '999999');
+             
 			break;
 			
 			case -90:
 			//alert('landscape mode screen turned to the right'+document.width);
 			 // $(".container").css('-webkit-transform', 'scale(0.8,0.8)');
+              //$("body").css('paddingTop', '20px');
+              $("#overlay").css('zIndex', '999999');
+             
 			  
 		
 			break;
@@ -168,7 +220,7 @@
 	});
 	
 	
-	
+
 	
 	</script>
 
