@@ -1,0 +1,82 @@
+{{ doctype() }}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    {% block title %}
+    {{ headTitle('Svenardo.com - Crystalis') }}
+    {% endblock %}
+
+    {% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon-precomposed" href="http://www.svenardo.com/apple-touch-icon.png">
+    <link rel="icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
+
+    <meta name="keywords" content="chess, touch, arcade, real time">
+    <meta name="description" content="Svenardo is a developer who enjoys working with HTML5, Javascript, PHP, Python, Objective C and related software and tech.">
+    <meta property="og:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
+    <meta property="twitter:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
+    <meta property="og:title" content="Svenardo the developer" />
+    <meta property="og:type" content="game" />
+    <meta property="og:site_name" content="Svenardo.com" />
+    <meta property="og:url" content="http://www.svenardo.com" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="http://www.svenardo.com" />
+    <meta property="twitter:title" content="Svenardo the developer" />
+    <link rel="image_src" type="image/png" href="http://www.svenardo.com/apple-touch-icon.png" />
+     {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
+    {{ headMeta() }}
+    {% endblock %}
+
+    {% block link %}
+
+    {% if 'phone' in detectMobile() %} 
+        {% do headLink().appendStylesheet(basePath('/min/?g=mobile')) %}
+    {% else %}
+        {% do headLink().appendStylesheet(basePath('/min/?g=web')) %}
+    {% endif %}
+
+
+    {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    
+    <!-- icons -->
+    {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+    {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
+    {% do headLink({'rel': 'apple-touch-icon', 'href': '/images/icons/ios-icon.png'}) %}
+    <!-- Will be displayed in most browsers other than old IE versions -->
+    {% do headLink({'rel': 'icon', 'href': '/images/icons/vector-social-media/32px/star.png'}) %}
+    {{ headLink() }}
+    {% endblock %}
+</head>
+
+<body>
+
+
+
+    <div style="background:#fff; overflow:hidden">
+    <div id="preview" style="background:#fff; overflow:hidden">
+    <div class="text_content">
+    
+    {% if 'phone' in detectMobile() %} 
+    {% include ('index/mobile') %} 
+    {% else %}
+    {% include ('index/main') %} 
+    {% endif %}
+
+
+    <div id="push">  
+        <p class="muted credit"><center>&copy; Sven A Robbestad. All rights reserved.</center></p>
+    </div>
+    </div>
+
+<!-- REQUIRED - all the javascripts  -->      
+<script src="{{ basePath('/min/?g=js') }}"></script>
+
+</body>
+</html>
