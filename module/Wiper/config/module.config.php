@@ -2,28 +2,23 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Games\Controller\Games' => 'Games\Controller\GamesController',
+            'Wiper\Controller\Wiper' => 'Wiper\Controller\WiperController',
         ),
     ),
     
     'router' => array(
         'routes' => array(
-            'games' => array(
-                'type'    => 'segment',
+            'wiper' => array(
+                'type'    => 'literal',
                 'options' => array(
-                    'route'    => '/games[/:action][/:id]',
-                    'constraints' => array(
-                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id'     => '[0-9]+',
-                    ),
+                    'route'    => '/wiper',
                     'defaults' => array(
-                        'controller' => 'Games\Controller\Games',
+                        'controller' => 'Wiper\Controller\Wiper',
                         'action'     => 'index',
                     ),
                 ),
 
             ),
-          
         ),
     ),
 
@@ -32,7 +27,7 @@ return array(
         #    'layout/layout'    	   => __DIR__ . '/../view/layout/layout.twig',
 	#),
 	'template_path_stack' => array(
-            'games' => __DIR__ . '/../view',
+            'wiper' => __DIR__ . '/../view',
               
         ),
     ),

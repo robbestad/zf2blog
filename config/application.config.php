@@ -8,6 +8,7 @@ return array(
         'Mobile_Detect',
         'Blog',
         'Games',
+        'Wiper',
         'EdpModuleLayouts',
     ),
     'module_listener_options' => array(

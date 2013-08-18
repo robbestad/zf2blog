@@ -33,8 +33,7 @@ Steps:
 
 3. Create a folder named cache in /data and make it writable (for Twig templating)
 
-4. You must allow htaccess to be readable
-
+4. You must allow htaccess to be readable. Also, make sure the rewrite module in Apache2 is enabled and that you configure the server to allow overriding the htaccess 
 Virtual Host
 ------------
 Afterwards, set up a virtual host to point to the public/ directory of the
