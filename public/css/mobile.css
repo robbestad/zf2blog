@@ -120,6 +120,7 @@ SPLASH INFO
   font-family: Bree Serif;
   
   background: rgb(189, 41, 41);
+
   color:#fff;
   
   font-size:45px;
@@ -699,7 +700,7 @@ and (max-device-width : 568px) {
   }
    #splash{
     height:380px;
-    background-color: #0088cc;
+    background:url(/images/citymobile.jpg);
   }
 
 
@@ -711,7 +712,8 @@ and (max-device-width : 568px) {
 
   #splash_bg{
     height:360px;
-    background-color: #0088cc;
+    
+    
   }
 
   #video_container{
