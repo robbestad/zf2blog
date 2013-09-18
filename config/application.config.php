@@ -1,15 +1,18 @@
 <?php
 return array(
     'modules' => array(
-        'Application',
         'ZfcBase',
         'ZfcUser',
         'ZfcTwig',
         'Mobile_Detect',
         'Blog',
         'Games',
-        'Wiper',
+        'Twigly',
+        'ZendDeveloperTools',
+        'BjyProfiler', 
         'EdpModuleLayouts',
+        'ZF2NetteDebug',
+        'Application',
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(

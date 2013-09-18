@@ -20,45 +20,45 @@
     <meta charset="utf-8">
 
     {% block title %}
-    {{ headTitle('BLOG') }}
+        {{ headTitle('BLOG') }}
     {% endblock %}
 
     {% block meta %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
-    {{ headMeta() }}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
+        {{ headMeta() }}
     {% endblock %}
 
     {% block link %}
-    {% do headLink().appendStylesheet(basePath('/min/?g=new')) %}
-    {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
-    {% do headLink().appendStylesheet(basePath('/min/?g=regular')) %}
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-    
-    <!-- icons -->
-    {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
-    {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
-    {% do headLink({'rel': 'apple-touch-icon', 'href': '/images/icons/ios-icon.png'}) %}
-    <!-- Will be displayed in most browsers other than old IE versions -->
-    {% do headLink({'rel': 'icon', 'href': '/images/icons/vector-social-media/32px/star.png'}) %}
-    {{ headLink() }}
+        {% do headLink().appendStylesheet(basePath('/min/?g=new')) %}
+        {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
+        {% do headLink().appendStylesheet(basePath('/min/?g=regular')) %}
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
+        <!-- icons -->
+        {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+        {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
+        {% do headLink({'rel': 'apple-touch-icon', 'href': '/images/icons/ios-icon.png'}) %}
+        <!-- Will be displayed in most browsers other than old IE versions -->
+        {% do headLink({'rel': 'icon', 'href': '/images/icons/vector-social-media/32px/star.png'}) %}
+        {{ headLink() }}
     {% endblock %}
 </head>
 
 <body onload="prettyPrint()">
 
-     {#% include basePath('application/index/splash.twig') %#}   
-     {#% include basePath('application/index/index.twig') %#}   
+{#% include basePath('application/index/splash.twig') %#}
+{#% include basePath('application/index/index.twig') %#}
 
-      {{ content | raw }}
-        
-        <div id="push">  
-            <p class="muted credit"><center>&copy; Sven A Robbestad. All rights reserved.</center></p>
-        </div>
-    </div>
-    
-<!-- REQUIRED - all the javascripts  -->      
+{{ content | raw }}
+
+<div id="push">
+    <p class="muted credit"><center>&copy; Sven A Robbestad. All rights reserved.</center></p>
+</div>
+</div>
+
+<!-- REQUIRED - all the javascripts  -->
 <script src="{{ basePath('/min/?g=js') }}"></script>
 <script src="/js/google-code-prettify/prettify.js"></script>
 <script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>

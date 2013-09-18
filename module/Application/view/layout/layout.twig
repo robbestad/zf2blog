@@ -20,162 +20,95 @@
     <meta charset="utf-8">
 
     {% block title %}
-    {{ headTitle('Svenardo.com - Sven Anders Robbestad') }}
+        {{ headTitle('Svenardo.com - Sven Anders Robbestad') }}
     {% endblock %}
 
     {% block meta %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="apple-touch-icon-precomposed" href="http://www.svenardo.com/apple-touch-icon.png">
-    <link rel="icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="apple-touch-icon-precomposed" href="http://www.svenardo.com/apple-touch-icon.png">
+        <link rel="icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
 
-    <meta name="keywords" content="chess, touch, arcade, real time">
-    <meta name="description" content="Svenardo is a developer who enjoys working with HTML5, Javascript, PHP, Python, Objective C and related software and tech.">
-    <meta property="og:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
-    <meta property="twitter:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
-    <meta property="og:title" content="Svenardo the developer" />
-    <meta property="og:type" content="game" />
-    <meta property="og:site_name" content="Svenardo.com" />
-    <meta property="og:url" content="http://www.svenardo.com" />
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:url" content="http://www.svenardo.com" />
-    <meta property="twitter:title" content="Svenardo the developer" />
-    <link rel="image_src" type="image/png" href="http://www.svenardo.com/apple-touch-icon.png" />
-     {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
-    {{ headMeta() }}
+        <meta name="keywords" content="chess, touch, arcade, real time">
+        <meta name="description" content="Svenardo is a developer who enjoys working with HTML5, Javascript, PHP, Python, Objective C and related software and tech.">
+        <meta property="og:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
+        <meta property="twitter:image" content="http://www.svenardo.com/apple-touch-icon.png"/>
+        <meta property="og:title" content="Svenardo the developer" />
+        <meta property="og:type" content="game" />
+        <meta property="og:site_name" content="Svenardo.com" />
+        <meta property="og:url" content="http://www.svenardo.com" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="http://www.svenardo.com" />
+        <meta property="twitter:title" content="Svenardo the developer" />
+        <link rel="image_src" type="image/png" href="http://www.svenardo.com/apple-touch-icon.png" />
+        {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
+        {{ headMeta() }}
     {% endblock %}
 
     {% block link %}
 
-    {% if 'phone' in detectMobile() %} 
-        {% do headLink().appendStylesheet(basePath('/min/?g=prettycode')) %}
-        {% do headLink().appendStylesheet(basePath('/min/?g=mobile')) %}
-    {% elseif getPath() == "/" %}
-        {% do headLink().appendStylesheet(basePath('/min/?g=prettycode')) %}
-        {% do headLink().appendStylesheet(basePath('/min/?g=web')) %}
-    {% endif %}
+        {% if 'phone' in detectMobile() %}
+            {% do headLink().appendStylesheet(basePath('/min/?g=prettycode')) %}
+            {% do headLink().appendStylesheet(basePath('/min/?g=mobile')) %}
+        {% elseif getPath() == "/" %}
+            {% do headLink().appendStylesheet(basePath('/min/?g=prettycode')) %}
+            {% do headLink().appendStylesheet(basePath('/min/?g=web')) %}
+        {% endif %}
 
 
-    {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-    
-    <!-- icons -->
-    {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
-    {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
-    {% do headLink({'rel': 'apple-touch-icon', 'href': '/images/icons/ios-icon.png'}) %}
-    <!-- Will be displayed in most browsers other than old IE versions -->
-    {% do headLink({'rel': 'icon', 'href': '/images/icons/vector-social-media/32px/star.png'}) %}
-    {{ headLink() }}
+        {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
+        <!-- icons -->
+        {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
+        {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
+        {% do headLink({'rel': 'apple-touch-icon', 'href': '/images/icons/ios-icon.png'}) %}
+        <!-- Will be displayed in most browsers other than old IE versions -->
+        {% do headLink({'rel': 'icon', 'href': '/images/icons/vector-social-media/32px/star.png'}) %}
+        {{ headLink() }}
     {% endblock %}
 </head>
 
-<body onload="prettyPrint()">
-{#
-<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="{{ url('home') }}">Svenardo</a>
-              
-          <div class="nav-collapse collapse" style="height: 0px;">
-            <ul class="nav">
-            		<!--
-            		<li 
-                    {% if '/' == getPath() %}
-					class="active"
-					{% endif %}
-					><a href="{{ url('home') }}">Home</a></li>
+<body>
 
-                	<li 
-                    {% if 'about' in getPath() %}
-					class="active"
-					{% endif %}
-					><a href="{{ url('about') }}">About</a></li>
-                -->
-                    <li 
-                    {% if 'about' in getPath() %}
-                    class="active"
-                    {% endif %}
-                    ><a href="{{ url('donate') }}">Donate</a></li>
-                
+{% if getPath() == "/" %} {% include basePath('application/index/splash.twig') %} {% endif %}
 
-                	<li 
-                    {% if 'games' in getPath() %}
-					class="active"
-					{% endif %}
-					><a href="{{ url('games') }}">Arcade</a></li>
-                 
-                    <li 
-                    {% if 'blog' in getPath() %}
-					class="active"
-					{% endif %}
-					><a href="{{ url('blog') }}">Blog</a></li>
-					
-                    <li 
-                        {% if '/user/login' == getPath() %}
-                        class="active"
-                        {% endif %}
-                        >
-                    {% if(zfcUserIdentity().id>0)  %} 
-                        <a href="/user">Welcome {{zfcUserIdentity().email}}</a></li>
-                    {% else %}
-                            <a href="/user">Login</a>
-                {% endif %}
-                </li>
-                
-                
-
-					
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-#}
-
-{#
-<div class="container">
-
-        <div class="span12">
-        {{ content | raw }}
-		</div>
-	
-    
-    </div>
-    #}
-
-    {% if getPath() == "/" %} {% include basePath('application/index/splash.twig') %} {% endif %}
-    
-    <div style="background:#fff; overflow:hidden">
+<div style="background:#fff; overflow:hidden">
     <div id="preview" style="background:#fff; overflow:hidden">
-    <div class="text_content">
+        <div class="text_content">
 
-      {{ content | raw }}
+        {#
+            {{ content | raw }}
 
 
-    {% if 'phone' in detectMobile() %} 
-        {% include basePath('application/index/mobile.twig') %}
-    {% elseif getPath() == "/" %}
-        {% include basePath('application/index/main.twig') %} 
-    {% endif %}
+            {% if 'phone' in detectMobile() %}
+                {% include basePath('application/index/mobile.twig') %}
+            {% elseif getPath() == "/" %}
+                {% include basePath('application/index/main.twig') %}
+            {% endif %}
+            #}
 
-    <div id="push">  
-        <p class="muted credit"><center>&copy; Sven A Robbestad. All rights reserved.</center></p>
-    </div>
-    </div>
+            {% block pagecontent %}
+                <h1>Layout</h1>
+                <p class="important">
+                    Welcome on my awesome layout.
+                </p>
+            {% endblock %}
 
-<!-- REQUIRED - all the javascripts  -->      
-<script src="{{ basePath('/min/?g=js') }}"></script>
-<script src="/js/google-code-prettify/prettify.js"></script>
-<script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>
-<script src="{{ basePath('/js/google-code-prettify/lang-sql.js') }}"></script>
+
+            <div id="push">
+                <p class="muted credit"><center>&copy; Sven A Robbestad. All rights reserved.</center></p>
+            </div>
+        </div>
+
+        <!-- REQUIRED - all the javascripts  -->
+        <script src="{{ basePath('/min/?g=js') }}"></script>
+        <script src="/js/google-code-prettify/prettify.js"></script>
+        <script src="{{ basePath('/js/google-code-prettify/lang-css.js') }}"></script>
+        <script src="{{ basePath('/js/google-code-prettify/lang-sql.js') }}"></script>
 
 </body>
 </html>

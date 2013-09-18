@@ -65,10 +65,13 @@ return array(
     	'//css/style.css',
     	
     	),
+   'topcoat' => array(
+        '//css/topcoat-mobile-light.css',
+        '//css/topcoat-style.css'        
+        ),
 
     'mobile' => array(
         '//css/mobile.css',
-        
         ),
 
 

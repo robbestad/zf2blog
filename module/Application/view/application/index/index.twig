@@ -1,8 +1,9 @@
-<!--
-    <h1>HTML5 Games</h1>
+{% extends "layout/layout.twig" %}
 
-    <p>
-        When you click on buy you gain access to every HTML5 games built 
-        on Svenardo.com. 
-    </p>
--->
+{% block pagecontent %}
+    {% if 'phone' in detectMobile() %}
+        {% include basePath('application/index/mobile.twig') %}
+    {% elseif getPath() == "/" %}
+        {% include basePath('application/index/main.twig') %}
+    {% endif %}
+{% endblock %}

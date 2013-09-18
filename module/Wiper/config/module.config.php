@@ -2,10 +2,23 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Wiper\Controller\Wiper' => 'Wiper\Controller\WiperController',
+            'Wiper\Controller\WiperController' => 'Wiper\Controller\WiperController',
         ),
     ),
-    
+     'di' => array(
+            'instance' => array(
+                'ZfTwig\TwigEnvironment' => array(
+                    'parameters' => array(
+                        'options' => array(
+                            'cache' => 'data/cache/twig',
+                            'auto_reload' => false,
+                            'debug' => true,
+                            'cache' => 'compilation_cache'
+                        )
+                    )
+                )
+            )
+        ),
     'router' => array(
         'routes' => array(
             'wiper' => array(
@@ -13,7 +26,7 @@ return array(
                 'options' => array(
                     'route'    => '/wiper',
                     'defaults' => array(
-                        'controller' => 'Wiper\Controller\Wiper',
+                        'controller' => 'Wiper\Controller\WiperController',
                         'action'     => 'wiper',
                     ),
                 ),
@@ -24,7 +37,7 @@ return array(
                 'options' => array(
                     'route'    => '/wiper',
                     'defaults' => array(
-                        'controller' => 'Wiper\Controller\Wiper',
+                        'controller' => 'Wiper\Controller\WiperController',
                         'action'     => 'wiper',
                     ),
                 ),
@@ -43,4 +56,5 @@ return array(
 	),
 
     ),
+
 );

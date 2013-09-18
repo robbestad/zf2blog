@@ -3,15 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+{#
 
     {% block title %}
     {{ headTitle('Svenardo.com - Crystalis') }}
     {% endblock %}
-
+#}
     {% block meta %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
+{#
     <link rel="apple-touch-icon-precomposed" href="http://www.svenardo.com/apple-touch-icon.png">
     <link rel="icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="http://www.svenardo.com/favicon.ico" type="image/x-icon">
@@ -28,23 +30,22 @@
     <meta property="twitter:url" content="http://www.svenardo.com" />
     <meta property="twitter:title" content="Svenardo the developer" />
     <link rel="image_src" type="image/png" href="http://www.svenardo.com/apple-touch-icon.png" />
-     {#% do headMeta('viewport', 'width=device-width, initial-scale=1.0') %#}
+
     {{ headMeta() }}
     {% endblock %}
 
     {% block link %}
 
     {% if 'phone' in detectMobile() %} 
-        {% do headLink().appendStylesheet(basePath('/min/?g=mobile')) %}
+        {% do headLink().appendStylesheet(basePath('/min/?g=topcoat')) %}
     {% else %}
-        {% do headLink().appendStylesheet(basePath('/min/?g=web')) %}
+        {% do headLink().appendStylesheet(basePath('/min/?g=topcoat')) %}
     {% endif %}
 
 
-    {#% do headLink().appendStylesheet(basePath('/min/?g=regular')) %#}
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-    
+#}    
     <!-- icons -->
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/favicon.ico'}) %}
     {% do headLink({'rel': 'shortcut icon', 'href': '/images/icons/favicon.ico'}) %}
@@ -75,8 +76,8 @@
     </div>
     </div>
 
-<!-- REQUIRED - all the javascripts  -->      
+<!-- REQUIRED - all the javascripts       
 <script src="{{ basePath('/min/?g=js') }}"></script>
-
+-->
 </body>
 </html>

@@ -1,1 +1,18 @@
-asda
+
+{% block title %}
+{{ headTitle('Posts') }}
+{% endblock %}
+{% set foo = 'foooooo' %}
+<center>
+<pre>
+{#% debug foo %#}
+</pre>
+--:-- {{ data.0 }} --:--
+<br/>
+{% for a in data %}
+  <h2>{{ a }}1</h2>
+{% endfor %}
+
+
+<br/>
+--
