@@ -36,12 +36,6 @@ public function indexAction()
     }
 
 
-    public function errorAction()
-    {
-        $this->view->message = "Welcome to the Zend Framework with Twig";
-
-    }
-
     public function donateAction()
     {
          return new ViewModel(array(
