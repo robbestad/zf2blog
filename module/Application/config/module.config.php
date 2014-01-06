@@ -123,6 +123,7 @@ return array(
         'exception_template'       =>  'error/index.twig',
         'template_map' => array(
             'application/index/index'       => __DIR__ . '/../view/application/index/index.twig',
+            'blog'       => __DIR__ . '/../view/application/index/index.twig',
             'error/404'               => __DIR__ . '/../view/error/404.twig',
             'error/index'             => __DIR__ . '/../view/error/index.twig',
             'layout/layout'             => __DIR__ . '/../view/layout/layout.twig',
