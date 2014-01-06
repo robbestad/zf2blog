@@ -23,7 +23,7 @@ return array(
            'about' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/about/',
+                    'route'    => '/about',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'about',
@@ -33,10 +33,20 @@ return array(
            'donate' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/donate/',
+                    'route'    => '/donate',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'donate',
+                    ),
+                ),
+            ),
+            'blogview' => array(
+                'type' => 'literal',
+                'options' => array(
+                    'route'    => '/blog',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'blog',
                     ),
                 ),
             ),

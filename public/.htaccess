@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+
+  # ENKELTVID
+  #RewriteCond $0 ^video/
+  #RewriteRule ^/?$ /video/%1? [L,R=301]
+
+  # SEARCH
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?title=([^\&\ ]+)
+  RewriteRule ^/?$ /sok/%1? [L,R=301]
+
+  # ZEND FRAMEWORK 2 RULES
+  RewriteCond %{HTTP_HOST} ^$uri\.$tld$ [NC]
+  RewriteRule ^(.*)$ http://www.$domain$1 [L,R=301]
+  RewriteCond %{REQUEST_FILENAME} -s [OR]
+  RewriteCond %{REQUEST_FILENAME} -l [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^.*$ - [NC,L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^.*$ index.php [NC,L]
+
+
+</IfModule>
