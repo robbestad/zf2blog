@@ -1,6 +1,6 @@
 {
     "name": "svenanders/zendblog",
-    "description": "Blog Application for ZF2",
+    "description": "Blog Application for ZF2, used for svenardo.com",
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
@@ -22,16 +22,23 @@
         "squizlabs/php_codesniffer": "1.*",
         "zendframework/zendpdf": "2.0.*@dev",
         "zendframework/zendservice-recaptcha": "2.0.*@dev",
+        "phpunit/phpunit": "3.7.*",
+        "phpunit/phpunit": "3.7.*",
+        "doctrine/annotations": "1.0.*@dev",
+        "squizlabs/php_codesniffer": "1.*",
+        "zendframework/zendpdf": "2.0.*@dev",
+        "zendframework/zendservice-recaptcha": "2.0.*@dev",
         "phing/phing": "dev-master",
-        "sebastian/diff": "1.0.*@dev",
+        "sebastian/diff": "1.1.*@dev",
         "ircmaxell/security-lib": "dev-master",
         "ircmaxell/random-lib": "dev-master",
         "fabpot/php-cs-fixer": "dev-master",
-        "phpmd/phpmd" : "1.4.*",
-        "zendframework/zend-developer-tools":"dev-master",
-        "bjyoungblood/bjy-profiler":"dev-master",
+        "phpmd/phpmd": "1.4.*",
+        "pdepend/pdepend": "1.1.0",
+        "zendframework/zend-developer-tools": "dev-master",
         "dlu/dluphpsettings": "dev-master",
         "webino/zf2nette-debug": "1.*",
-        "pdepend/pdepend" : "1.1.0"
+        "spiffy/spiffy-config": "dev-master",
+        "bjyoungblood/bjy-profiler": "dev-master"
     }
 }

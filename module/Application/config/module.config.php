@@ -40,8 +40,8 @@ return array(
                     ),
                 ),
             ),
-            'blogview' => array(
-                'type' => 'literal',
+            'blog' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/blog',
                     'defaults' => array(
@@ -107,7 +107,6 @@ return array(
     'module_layouts' => array(
         'Application' => 'layout/layout.twig',
         'Games' => 'layout/arcade.twig',
-        'Blog' => 'layout/layout.twig',
     ),
 
     'controllers' => array(
@@ -123,7 +122,7 @@ return array(
         'exception_template'       =>  'error/index.twig',
         'template_map' => array(
             'application/index/index'       => __DIR__ . '/../view/application/index/index.twig',
-            'blog'       => __DIR__ . '/../view/application/index/index.twig',
+            'application/index/blog'       => __DIR__ . '/../view/application/index/blog.twig',
             'error/404'               => __DIR__ . '/../view/error/404.twig',
             'error/index'             => __DIR__ . '/../view/error/index.twig',
             'layout/layout'             => __DIR__ . '/../view/layout/layout.twig',
