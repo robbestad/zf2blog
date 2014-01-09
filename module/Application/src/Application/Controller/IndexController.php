@@ -42,12 +42,12 @@ public function indexAction()
         //
 
         $request = new Request();
-        $request->setMethod(Request::METHOD_POST);
+        $request->setMethod(Request::METHOD_GET);
         $request->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key=AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI');
-        $r=$request->getPost();
 
-        $r=$request->getContent();
-        var_dump($r);
+        var_dump(
+            $request->getContent()
+        );
 
         echo PHP_EOL."---".PHP_EOL;
          return new ViewModel(array(
