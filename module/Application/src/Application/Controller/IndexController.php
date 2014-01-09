@@ -12,7 +12,7 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Zend\Http\Request;
+use Zend\Http\Client;
 use Mobile_Detect;
 
 class IndexController extends AbstractActionController
@@ -41,17 +41,15 @@ public function indexAction()
     {
         //
 
-        $request = new Request();
-        $request->setMethod(Request::METHOD_GET);
-        $request->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key=AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI');
 
-        var_dump(
-            $request->getContent()
-        );
-
-        echo PHP_EOL."---".PHP_EOL;
-         return new ViewModel(array(
+        $http = new Client();
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key=AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI');
+        $http->setMethod('GET');
+        $response = $http->send();
+       // $http->setAuth($my_api_key, 'x', \Zend_Http_Client::AUTH_BASIC);
+             return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
+            'data' => $response,
 
        ));
     }
