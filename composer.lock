@@ -609,7 +609,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -840,12 +840,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
-                "reference": "c644477c7f16396613a9b5d702217e4aaa1b21ad"
+                "reference": "ff49782b0d87007ec675216f3677644778489d7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/c644477c7f16396613a9b5d702217e4aaa1b21ad",
-                "reference": "c644477c7f16396613a9b5d702217e4aaa1b21ad",
+                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/ff49782b0d87007ec675216f3677644778489d7a",
+                "reference": "ff49782b0d87007ec675216f3677644778489d7a",
                 "shasum": ""
             },
             "require": {
@@ -880,7 +880,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-01-01 09:01:14"
+            "time": "2014-01-07 09:13:46"
         },
         {
             "name": "ircmaxell/random-lib",
@@ -888,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ircmaxell/RandomLib.git",
-                "reference": "bfbe6a730f368979a98c636d1aa16c868111a2b1"
+                "reference": "93933acb5f0d3b71cda3ff8d82ed9a0d1679d298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/bfbe6a730f368979a98c636d1aa16c868111a2b1",
-                "reference": "bfbe6a730f368979a98c636d1aa16c868111a2b1",
+                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/93933acb5f0d3b71cda3ff8d82ed9a0d1679d298",
+                "reference": "93933acb5f0d3b71cda3ff8d82ed9a0d1679d298",
                 "shasum": ""
             },
             "require": {
@@ -901,7 +901,8 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "mikey179/vfsstream": "1.1.*"
+                "mikey179/vfsstream": "1.1.*",
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "extra": {
@@ -933,7 +934,7 @@
                 "random-numbers",
                 "random-strings"
             ],
-            "time": "2013-11-26 17:07:53"
+            "time": "2014-01-08 19:40:54"
         },
         {
             "name": "ircmaxell/security-lib",
