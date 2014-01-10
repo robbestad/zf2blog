@@ -52,11 +52,21 @@ public function indexAction()
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         );
+
+
+
+        $httpClient = new Client();
+        $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
+        $httpClient->getAdapter()->setOptions(array(
+            'sslverifypeer' => false
+        ));
+
         $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
         $http->setMethod('GET');
 //        $http->sets
         echo "send";
         $response = $http->send();
+
        // $http->setAuth($my_api_key, 'x', \Zend_Http_Client::AUTH_BASIC);
              return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
