@@ -52,7 +52,7 @@ public function indexAction()
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         );
-        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["domain"], $config);
         $http->setMethod('GET');
 //        $http->sets
         echo "send";
@@ -69,8 +69,6 @@ public function indexAction()
 
 
 
-        $uri='https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"];
-       // $http->setAuth($my_api_key, 'x', \Zend_Http_Client::AUTH_BASIC);
              return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
             'data' => $response,
