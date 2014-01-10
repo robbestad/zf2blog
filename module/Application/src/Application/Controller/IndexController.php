@@ -42,8 +42,20 @@ public function indexAction()
         //
 
         $google_key=array();
-        $google_key['ip']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
-        $google_key['domain']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
+        $google_key['domain']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
+        $google_key['ip']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
+
+        $http = new Client();
+        $config = array(
+            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+            //'ssltransport' => 'tls'
+            'sslverifypeer' => false,
+            'sslverifyhost' => false,
+        );
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
+        $http->setMethod('GET');
+//        $http->sets
+        echo "send";
 
         $config = array(
             'adapter'      => 'Zend\Http\Client\Adapter\Socket',
@@ -51,23 +63,18 @@ public function indexAction()
             'sslverifyhost' => false,
         );
 
-        $httpClient = new Client();
-        // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
-        $httpClient->getAdapter()->setOptions(array(
-            'sslverifypeer' => false,
-            'sslverifyhost' => false,
-        ));
-        $httpClient->setOptions(array('sslcapath' => '/etc/ssl/certs'));
+        $http->setOptions(array('sslcapath' => '/etc/ssl/certs'));
+        $response = $http->send();
 
 
-        $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
-        $httpClient->setMethod('GET');
 
-        $response = $httpClient->send();
 
-        return new ViewModel(array(
+        $uri='https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"];
+       // $http->setAuth($my_api_key, 'x', \Zend_Http_Client::AUTH_BASIC);
+             return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
             'data' => $response,
+
        ));
     }
 
