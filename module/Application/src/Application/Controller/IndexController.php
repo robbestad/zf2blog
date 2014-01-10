@@ -61,11 +61,11 @@ public function indexAction()
             'sslverifyhost' => false,
         ));
 
-        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
-        $http->setMethod('GET');
+        $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
+        $httpClient->setMethod('GET');
 
 
-        $response = $http->send();
+        $response = $httpClient->send();
 
              return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
