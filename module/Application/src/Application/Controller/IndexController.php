@@ -45,23 +45,20 @@ public function indexAction()
         $google_key['domain']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
         $google_key['ip']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
 
-        $http = new Client();
         $config = array(
             'adapter'      => 'Zend\Http\Client\Adapter\Socket',
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         );
 
-
-
         $httpClient = new Client();
-        $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
+       // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
         $httpClient->getAdapter()->setOptions(array(
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         ));
 
-        $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
+        $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
         $httpClient->setMethod('GET');
 
 
