@@ -47,8 +47,13 @@ public function indexAction()
 
         $http = new Client();
         $config = array(
-            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
-            'ssltransport' => 'tls'
+            //'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+            //'ssltransport' => 'tls'
+             'adapter' => 'Zend\Http\Client\Adapter\Curl',
+             'curloptions' => array(
+                CURLOPT_FOLLOWLOCATION => TRUE,
+                CURLOPT_SSL_VERIFYPEER => FALSE
+            ),
         );
         $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
         $http->setMethod('GET');
