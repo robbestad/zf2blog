@@ -48,7 +48,6 @@ public function indexAction()
         $http = new Client();
         $config = array(
             'adapter'      => 'Zend\Http\Client\Adapter\Socket',
-            //'ssltransport' => 'tls'
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         );
@@ -58,7 +57,8 @@ public function indexAction()
         $httpClient = new Client();
         $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
         $httpClient->getAdapter()->setOptions(array(
-            'sslverifypeer' => false
+            'sslverifypeer' => false,
+            'sslverifyhost' => false,
         ));
 
         $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
