@@ -50,6 +50,7 @@ public function indexAction()
             //'adapter'      => 'Zend\Http\Client\Adapter\Socket',
             //'ssltransport' => 'tls'
              'adapter' => 'Zend\Http\Client\Adapter\Curl',
+            'sslverifypeer' => false,
              'curloptions' => array(
                 CURLOPT_FOLLOWLOCATION => TRUE,
                 CURLOPT_SSL_VERIFYPEER => FALSE
