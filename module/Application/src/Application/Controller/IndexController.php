@@ -76,6 +76,31 @@ public function indexAction()
             'data' => $response,
 
        ));
+
+
+/*
+        $config = array(
+            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+            'sslverifypeer' => false,
+            'sslverifyhost' => false,
+        );
+
+        $httpClient = new Client();
+        // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
+        $httpClient->getAdapter()->setOptions(array(
+            'sslverifypeer' => false,
+            'sslverifyhost' => false,
+        ));
+        $httpClient->setOptions(array('sslcapath' => '/etc/ssl/certs'));
+
+
+        $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
+        $httpClient->setMethod('GET');
+
+        $response = $httpClient->send();
+
+ */
+
     }
 
 
