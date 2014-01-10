@@ -46,58 +46,49 @@ public function indexAction()
         $google_key['ip']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
 
         $http = new Client();
+
         $config = array(
             'adapter'      => 'Zend\Http\Client\Adapter\Socket',
-            //'ssltransport' => 'tls'
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         );
         $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["domain"], $config);
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615', $config);
         $http->setMethod('GET');
-//        $http->sets
-        echo "send";
-
-        $config = array(
-            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
-            'sslverifypeer' => false,
-            'sslverifyhost' => false,
-        );
 
         $http->setOptions(array('sslcapath' => '/etc/ssl/certs'));
+
         $response = $http->send();
 
-
-
-
-             return new ViewModel(array(
+        return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
             'data' => $response,
 
-       ));
-
-
-/*
-        $config = array(
-            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
-            'sslverifypeer' => false,
-            'sslverifyhost' => false,
-        );
-
-        $httpClient = new Client();
-        // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
-        $httpClient->getAdapter()->setOptions(array(
-            'sslverifypeer' => false,
-            'sslverifyhost' => false,
         ));
-        $httpClient->setOptions(array('sslcapath' => '/etc/ssl/certs'));
 
 
-        $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
-        $httpClient->setMethod('GET');
+        /*
+                $config = array(
+                    'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+                    'sslverifypeer' => false,
+                    'sslverifyhost' => false,
+                );
 
-        $response = $httpClient->send();
+                $httpClient = new Client();
+                // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
+                $httpClient->getAdapter()->setOptions(array(
+                    'sslverifypeer' => false,
+                    'sslverifyhost' => false,
+                ));
+                $httpClient->setOptions(array('sslcapath' => '/etc/ssl/certs'));
 
- */
+
+                $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"]);
+                $httpClient->setMethod('GET');
+
+                $response = $httpClient->send();
+
+         */
 
     }
 
