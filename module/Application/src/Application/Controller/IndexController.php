@@ -54,8 +54,8 @@ public function indexAction()
             'sslverifypeer' => false,
             'sslverifyhost' => false,
         );
-        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["domain"], $config);
-        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615?maxPosts=1&key='.$google_key['ip'], $config);
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["server"], $config);
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615?maxPosts=1&key='.$google_key['server'], $config);
         $http->setMethod('GET');
 
         $http->setOptions(array('sslcapath' => '/etc/ssl/certs', 'key' => 'AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU'));
