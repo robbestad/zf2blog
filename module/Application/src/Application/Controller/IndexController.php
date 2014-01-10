@@ -42,8 +42,10 @@ public function indexAction()
         //
 
         $google_key=array();
-        $google_key['domain']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
-        $google_key['ip']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
+        // by ip (allowed: 37.139.9.36, 82.146.75.41)
+        $google_key['server']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
+        // by domain (allowed: robbestad.com & svenardo.com/org)
+        $google_key['browser']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
 
         $http = new Client();
 
@@ -53,16 +55,17 @@ public function indexAction()
             'sslverifyhost' => false,
         );
         $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["domain"], $config);
-        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615', $config);
+        $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615?maxPosts=1&key='.$google_key['ip'], $config);
         $http->setMethod('GET');
 
-        $http->setOptions(array('sslcapath' => '/etc/ssl/certs'));
+        $http->setOptions(array('sslcapath' => '/etc/ssl/certs', 'key' => 'AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU'));
 
         $response = $http->send();
 
         return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
             'data' => $response,
+            'request' => $http->getUri(),
 
         ));
 
