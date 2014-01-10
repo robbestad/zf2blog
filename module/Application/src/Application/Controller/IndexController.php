@@ -42,8 +42,8 @@ public function indexAction()
         //
 
         $google_key=array();
-        $google_key['domain']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
-        $google_key['ip']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
+        $google_key['ip']='AIzaSyC9GRAx6jeCHOAfSJkewQztJpgHB2rtbuU';
+        $google_key['domain']='AIzaSyCFEB9AVhg1QrjaS372KWt5sDW0qwu9ybI';
 
         $config = array(
             'adapter'      => 'Zend\Http\Client\Adapter\Socket',
@@ -52,7 +52,7 @@ public function indexAction()
         );
 
         $httpClient = new Client();
-       // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
+        // $httpClient->setAdapter('Zend\Http\Client\Adapter\Socket');
         $httpClient->getAdapter()->setOptions(array(
             'sslverifypeer' => false,
             'sslverifyhost' => false,
@@ -61,13 +61,11 @@ public function indexAction()
         $httpClient->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
         $httpClient->setMethod('GET');
 
-
         $response = $httpClient->send();
 
-             return new ViewModel(array(
+        return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
             'data' => $response,
-
        ));
     }
 
