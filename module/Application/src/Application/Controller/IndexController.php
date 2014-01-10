@@ -50,6 +50,7 @@ public function indexAction()
             'adapter'      => 'Zend\Http\Client\Adapter\Socket',
             //'ssltransport' => 'tls'
             'sslverifypeer' => false,
+            'sslverifyhost' => false,
         );
         $http->setUri('https://www.googleapis.com/blogger/v3/blogs/3058415513828304615&key='.$google_key["ip"], $config);
         $http->setMethod('GET');
