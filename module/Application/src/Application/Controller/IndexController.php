@@ -12,9 +12,8 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Zend\Http\Client;
 use Mobile_Detect;
-use Application\FetchFromBlogger;
+use Application\Service\FetchFromBlogger;
 
 class IndexController extends AbstractActionController
 {
