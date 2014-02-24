@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game>	
+	<promoter>
+  		<product>aea0156cfdb9a539cacc70bf2f4c2b13e7639dfb</product>
+	</promoter>
+	
+	<title>Rocket Doge</title>
+	<release-date>24 Feb, 2014</release-date>
+	<website>http://www.svenardo.com/</website>
+
+	<description>	
+		Doge has got a rocket. Time to fly!
+	</description>
+	
+	<press-can-request-copy>FALSE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+			<name>Apple App Store</name>
+			<link>https://itunes.apple.com/us/app/rocketdoge/id813052886</link>
+		</platform>
+	</platforms>
+	
+
+	<prices>
+		<price>
+			<currency>USD</currency>
+			<value>FREE</value>
+		</price>
+	</prices>
+
+	<trailers>
+		<trailer>
+			<name>This video showcases the addictive gameplay found in Rocket Doge</name>
+			<youtube>uFa3uc4lAiY</youtube>
+		</trailer>
+		
+	</trailers>
+	
+	
+	
+	<quotes>
+		<quote>
+			<description>«Such game. Very fun. So good. Much happiness.»</description>
+			<name>Pieoven</name>
+			<website>Itunes</website>
+			<link>https://itunes.apple.com/us/app/rocketdoge/id813052886</link>
+		</quote>
+		
+		<quote>
+			<description>«Wow. Much cool. Much better than Flappy Bird. Wow.»</description>
+			<name>Deathpuff12</name>
+			<website>Itunes</website>
+			<link>https://itunes.apple.com/us/app/rocketdoge/id813052886</link>
+		</quote>
+
+
+		<quote>
+			<description>«Much game, such doge, wow. Doge out of ten, amaze.»</description>
+			<name>Yoursavior8132</name>
+			<website>Itunes</website>
+			<link>https://itunes.apple.com/us/app/rocketdoge/id813052886</link>
+		</quote>
+		
+	</quotes>
+
+	<credits>
+		<credit>
+			<person>Sven Anders Robbestad</person>
+			<website>www.svenardo.com</website>
+			<role>Developer</role>
+		</credit>
+	</credits>
+
+	<additionals>
+		<additional>
+			<title>Download game</title>
+			<description>Available for free from</description>
+			<link>https://itunes.apple.com/us/app/rocketdoge/id813052886</link>
+		</additional>
+		
+	</additionals>
+
+
+	 <analytics>UA-36729472-1</analytics> 
+
+</game>

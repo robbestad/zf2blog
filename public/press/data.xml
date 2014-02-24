@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- example file containing base tags -->
+
+<game>	
+	<title>Svenardo.com</title>
+	<founding-date>September 1, 2011</founding-date>
+	<website>http://www.svenardo.com/</website>
+	<based-in>Hokksund, Norway</based-in>
+	
+	<press-contact>press@svenardo.com</press-contact>
+	<phone>+47 90 03 51 74</phone>
+	<address>
+		<line>Bermingrudveien 41</line>
+		<line>3300 Hokksund</line>
+	</address>
+
+	<socials>
+		<social>
+			<name>twitter.com/svenardocom</name>
+		</social>
+		<!--
+		<social>
+			<name>facebook.com/svenardo</name>
+		</social>-->
+		<social>
+			<name>Skype</name>
+			<link>callto:sarobbestad
+			</link>
+		</social>
+	</socials>
+
+	<description>	
+		Svenardo is a one man game studio. Its primary mission is 
+		to make fun mobile games.
+	</description>
+		
+	<histories>
+		<history>
+			<header>Early history</header>
+			<text>From 2011 to the end of 2013, Svenardo.com produced HTML5 javascript games meant to be played in the browser. Some of the more notable games produced in this era are Jetman Jr, 8-bit Carnage and Realtime Chess, both which landed considerable acclaim and picked up a lot of interest.</text>
+		</history>
+		<history>
+			<header>2014 and onwards</header>
+			<text>From january 2014 Svenardo.com has shifted focus to producing native mobile games, primarily for the iOS.</text>
+		</history>
+	</histories>
+		
+	<trailers>
+		<trailer>
+			<name>This video showcases some of the javascript games developed in the early era of Svenardo.com</name>
+			<youtube>PPboKUV1Opc</youtube>
+		</trailer>
+		
+	</trailers>
+	
+	<awards>
+		<award>
+			<description>Realtime Chess winner in its category</description>
+			<info>RTS Ludum Dare 44, Fall, 2013</info>
+		</award>
+		<award>
+			<description>Github Runner-up for best game</description>
+			<info>December, 2012</info>
+		</award>
+		
+	</awards>
+	
+	<quotes>
+		<quote>
+			<description>«The cooldown periods are a brilliant element; they allow for strategic play and keep the game from devolving into a clickfest»</description>
+			<name>Paul Hack</name>
+			<website>Indiegames</website>
+			<link>http://indiegames.com/2013/08/browser_pick_youve_never_playe.html</link>
+		</quote>
+		<quote>
+			<description>«You can crank out about four million games in the space it’d take to play a regular session of Chess»</description>
+			<name>Logan Booker</name>
+			<website>Kotaku.com.au</website>
+			<link>http://www.kotaku.com.au/2013/08/this-real-time-chess-game-is-not-for-the-faint-of-heart/</link>
+		</quote>
+		
+	</quotes>
+	 <analytics>UA-36729472-1</analytics> 
+	<press-can-request-copy>TRUE</press-can-request-copy> <!-- can be true or false -->
+	<monetization-permission>monetize</monetization-permission> <!-- can be: 	false (no video allowed),
+																			 	ask (permission on case-per-case basis),
+																			 	non-commercial (no monetization allowed),
+																			 	monetize (full permission) -->	
+	<additionals>
+		<additional>
+			<title>Company Link</title>
+			<description>This takes you to Svenardo.com</description>
+			<link>http://www.svenardo.com</link>
+		</additional>
+	</additionals>
+	
+	<credits>
+		<credit>
+			<person>Sven Anders Robbestad</person>
+			<role>Manager &amp; Creator, Freelancer</role>
+		</credit>
+	
+	</credits>
+	
+	<contacts>
+		<contact>
+			<name>Inquiries</name>
+			<mail>robbestad@gmail.com</mail>
+		</contact>
+		<contact>
+			<name>Twitter</name>
+			<link>http://twitter.com/svenardocom</link>
+		</contact>
+	
+		<contact>
+			<name>Web</name>
+			<link>http://www.svenardo.com</link>
+		</contact>
+	</contacts>
+</game>
