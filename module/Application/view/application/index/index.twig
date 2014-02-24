@@ -1,9 +1,5 @@
-{% extends "layout/layout.twig" %}
+{% extends "layout/newlayout.twig" %}
 
 {% block pagecontent %}
-    {% if 'phone' in detectMobile() %}
-        {% include basePath('application/index/mobile.twig') %}
-    {% elseif getPath() == "/" %}
-        {% include basePath('application/index/main.twig') %}
-    {% endif %}
+        {% include basePath('application/index/site.twig') %}
 {% endblock %}

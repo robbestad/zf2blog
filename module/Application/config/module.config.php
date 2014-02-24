@@ -20,13 +20,13 @@ return array(
                     ),
                 ),
             ),
-           'about' => array(
+           'rocketdoge' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/about',
+                    'route'    => '/rocketdoge',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
-                        'action'     => 'about',
+                        'action'     => 'games',
                     ),
                 ),
             ),
@@ -105,7 +105,7 @@ return array(
         ),
     ),
     'module_layouts' => array(
-        'Application' => 'layout/layout.twig',
+        'Application' => 'layout/newlayout.twig',
         'Games' => 'layout/arcade.twig',
     ),
 
@@ -122,10 +122,11 @@ return array(
         'exception_template'       =>  'error/index.twig',
         'template_map' => array(
             'application/index/index'       => __DIR__ . '/../view/application/index/index.twig',
+            'games'       => __DIR__ . '/../view/application/index/index.twig',
             'application/index/blog'       => __DIR__ . '/../view/application/index/blog.twig',
             'error/404'               => __DIR__ . '/../view/error/404.twig',
             'error/index'             => __DIR__ . '/../view/error/index.twig',
-            'layout/layout'             => __DIR__ . '/../view/layout/layout.twig',
+            'layout/layout'             => __DIR__ . '/../view/layout/newlayout.twig',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
