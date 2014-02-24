@@ -28,7 +28,7 @@ public function indexAction()
        ));
     }
     
-    public function aboutAction()
+    public function gamesAction()
     {
          return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
