@@ -10,7 +10,7 @@
 
 	<description>	
 		Every Doge has its day!
-		
+
 		In Rocket Doge, the well known and popular Doge is outfitted
 		with a rocket. Take control of Doge and pick up Doge coins while avoiding the numerous enemies that is trying to stop you. Rocket Doge is an addictive, just-one-more-go game that has been well received since its launch. The game is free and available now for iPhone and iPod. It will be available for iPad later this week. 
 	</description>
@@ -38,6 +38,14 @@
 		</trailer>
 		
 	</trailers>
+
+
+	<features>
+		<feature>Neverending gameplay</feature>
+		<feature>Absolutely free. No freemium «features»</feature>
+		<feature>Pick up and play in seconds</feature>
+		<feature>Everybody loves doge</feature>
+	</features>
 	
 	
 	
