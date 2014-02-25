@@ -38,7 +38,20 @@
 		</trailer>
 		
 	</trailers>
-
+<socials>
+		<social>
+			<name>twitter.com/svenardocom</name>
+		</social>
+		
+		<social>
+			<name>https://www.facebook.com/rocketdoge</name>
+		</social>
+		<social>
+			<name>Skype</name>
+			<link>callto:sarobbestad
+			</link>
+		</social>
+	</socials>
 
 	<features>
 		<feature>Neverending gameplay</feature>
