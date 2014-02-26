@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
 
+  Redirect 301 /rocketdoge/index.html http://www.svenardo.com/rocketdoge
+
 	RewriteEngine on
 
   # ENKELTVID
