@@ -32,10 +32,10 @@ public function indexAction()
     {
          return new ViewModel(array(
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
+            'game'=>$_SERVER ["REQUEST_URI"]
             
        ));
     }
-
 
     public function blogAction()
     {

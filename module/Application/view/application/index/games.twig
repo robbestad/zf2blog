@@ -1,0 +1,15 @@
+{% extends "layout/newlayout.twig" %}
+
+ {% block pageheader %}
+         {% if game == "/rocketdoge" %}
+             <header id="doge" class="nav-link">
+             {% include basePath('application/games/doge_header.twig') %}
+             </header>
+         {% endif %}
+ {% endblock %}
+
+{% block pagecontent %}
+    {% if game == "/rocketdoge" %}
+        {% include basePath('application/games/doge_game.twig') %}
+    {% endif %}
+{% endblock %}

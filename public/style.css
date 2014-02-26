@@ -277,7 +277,10 @@ background-size:cover !important;
 -webkit-background-size:cover
 }
 
-header { background:url(images/city.jpg) 50% 0 no-repeat }
+#homepage { background:url(images/city.jpg) 50% 0 no-repeat }
+#doge { background:url(images/doge.png) 50% 0 no-repeat }
+
+
 /*
 section.single { background:url(images/city.jpg) 50% 0 no-repeat }
 section.highlight .bg1 { background:url(images/parallax-bg/02.jpg) 50% 0 no-repeat }

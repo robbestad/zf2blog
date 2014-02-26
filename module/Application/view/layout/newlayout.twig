@@ -90,13 +90,12 @@
 
 
 
-
-<!-- header - homepage -->
-<header id="homepage" class="nav-link">
-    {% if getPath() == "/" %} {% include basePath('application/index/test.twig') %} {% endif %}
-</header> <!-- end header - homepage -->
-
-
+    {% block pageheader %}
+        <!-- header - homepage -->
+        <header id="homepage" class="nav-link">
+            {% if getPath() == "/" %} {% include basePath('application/index/test.twig') %} {% endif %}
+        </header> <!-- end header - homepage -->
+    {% endblock %}
 
     {% block pagecontent %}
 
